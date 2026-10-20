@@ -8,7 +8,7 @@ keywords: framing, frame, stud, studs, plate, top plate, header, king stud, jack
 
 ## What you'll do
 
-Frame the building from what you drew. BimCraft lays out the studs, plates and headers in the walls, the joists in the floors and the rafters (or trusses) in the roof, sizes them from labelled default tables, keeps them with the model and makes them again whenever what they frame changes. The **Lumber** schedule is the cut list.
+Frame the building from what you drew. Bildra lays out the studs, plates and headers in the walls, the joists in the floors and the rafters (or trusses) in the roof, sizes them from labelled default tables, keeps them with the model and makes them again whenever what they frame changes. The **Lumber** schedule is the cut list.
 
 ## Frame it
 

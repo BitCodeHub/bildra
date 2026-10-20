@@ -6,7 +6,7 @@
  * What a painted element carries (plain IFC4 / IFC2X3, so other BIM programs open it):
  *   · the property set `CadCraft_Render`: `Material` = a library id for the whole element, and `Material X+` … `Material Z-`
  *     for the faces whose normal runs along that axis of the element's own placement (a wall's two sides are Y+ and Y−
- *     for walls drawn in BimCraft; a slab's top is Z+, its underside Z−). '' = none. This is what BimCraft reads back.
+ *     for walls drawn in Bildra; a slab's top is Z+, its underside Z−). '' = none. This is what Bildra reads back.
  *   · its body items styled (IfcStyledItem) with a surface style named "<material> (CadCraft)": the material's colour
  *     (IfcSurfaceStyleRendering) and, in IFC4, an IfcSurfaceStyleWithTextures naming it (IfcImageTexture, URLReference
  *     `cadcraft-material:<id>`) — other programs show the colour; the texture name tells a person what it was.

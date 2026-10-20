@@ -14,7 +14,7 @@ Put the house on its site. The ground becomes part of the model: shown in 3D, cu
 
 1. Open {{ui:Build}} and choose {{ui:Terrain}}.
 2. Either:
-   - **Open a survey file…**: survey points (PNEZD, PENZD or plain easting, northing, elevation; comma, tab or space separated), contours in a DXF or DWG (polylines at their elevation, 3D polylines), a LAS or LAZ scan (ground points kept, thinned to about one per square meter), a GeoTIFF or ASCII elevation grid, or a **LandXML** surface such as CivilCraft exports (its own points and triangles are kept; when the file holds several surfaces, BimCraft asks which one is the ground; its units come from the file). Choose the file's units first (LandXML says its own).
+   - **Open a survey file…**: survey points (PNEZD, PENZD or plain easting, northing, elevation; comma, tab or space separated), contours in a DXF or DWG (polylines at their elevation, 3D polylines), a LAS or LAZ scan (ground points kept, thinned to about one per square meter), a GeoTIFF or ASCII elevation grid, or a **LandXML** surface such as CivilCraft exports (its own points and triangles are kept; when the file holds several surfaces, Bildra asks which one is the ground; its units come from the file). Choose the file's units first (LandXML says its own).
    - Or type a **Spot elevation** (from this level's floor, so `-1'` is a foot below it) and click spots on the plan, change the elevation and click more, then **Make the ground**. Three spots are enough to start.
 
 Survey coordinates far from the model (state plane, UTM) are moved onto the house, and the elevations are set so the ground at the house is about 8" under the first floor. **Raise the ground** in **Properties** corrects that by any amount.

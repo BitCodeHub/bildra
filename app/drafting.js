@@ -9,11 +9,11 @@
  *           (a closed one ends on its first point)
  *   hatch   'Annotation' / 'Annotation2D': an IfcAnnotationFillArea (outer IfcPolyline, inner ones for holes) with an IfcStyledItem
  *           naming an IfcFillAreaStyle — IfcFillAreaStyleHatching per line family of the pattern (one per angle; dots, zigzags
- *           and short strokes are BimCraft's drawing of it), or an IfcColourRgb for Solid. Styles are shared by name
+ *           and short strokes are Bildra's drawing of it), or an IfcColourRgb for Solid. Styles are shared by name
  *           ("CadCraft drafting: <pattern> x<scale>").
  *   CadCraft_Drafting   View ('plan:<level GlobalId>' | 'rcp:<level GlobalId>' | 'callout:<id>'), Kind ('lines' | 'hatch'),
  *           Pattern (a key of PATTERNS, hatch only), PatternScale (1 = the pattern's own spacing)
- * Other programs see the curves and the fill area (and its hatching); BimCraft shows each only in its own view (never in 3D,
+ * Other programs see the curves and the fill area (and its hatching); Bildra shows each only in its own view (never in 3D,
  * never in another view), on screen, on sheets and in the PDF.
  *
  *   PATTERNS  [{ key, solid?, families: [{ angle (degrees), gap (mm at scale 1), group?: [offsets] }] }]   six, no import
@@ -36,7 +36,7 @@ import { round } from './model-write.js';
 export const DRAFT_PSET = 'CadCraft_Drafting';
 const OBJECT_TYPE = 'Drafting';
 /** The six patterns: line families (angle in degrees, gap between lines in mm at scale 1; `group` = more lines at these
- *  offsets after each one), plus what BimCraft adds when it draws them (dots for concrete, zigzags for insulation). */
+ *  offsets after each one), plus what Bildra adds when it draws them (dots for concrete, zigzags for insulation). */
 export const PATTERNS = [
   { key: 'solid', solid: true, families: [] },
   { key: 'diagonal', families: [{ angle: 45, gap: 150 }] },
@@ -110,7 +110,7 @@ function fillStyle(w, pattern, scale) {
     const cs = w.v4 ? w.make('IFCCURVESTYLE', null, null, null, w.H(black()), null) : w.make('IFCCURVESTYLE', null, null, null, w.H(black()));
     styles.push(w.H(w.make('IFCFILLAREASTYLEHATCHING', w.H(cs), w.T('IFCPOSITIVELENGTHMEASURE', round(w.u(f.gap * scale))), null, null, round(f.angle * Math.PI / 180 * angleK(w), 9))));
   }
-  if (!styles.length) styles.push(w.H(black()));   // insulation: drawn by BimCraft; other programs get a plain black fill style
+  if (!styles.length) styles.push(w.H(black()));   // insulation: drawn by Bildra; other programs get a plain black fill style
   return w.v4 ? w.make('IFCFILLAREASTYLE', w.L(name), styles, null) : w.make('IFCFILLAREASTYLE', w.L(name), styles);
 }
 /** The annotation's shape for a drafting item (replacing any it had). */

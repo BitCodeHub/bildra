@@ -352,7 +352,7 @@ export function setPdf(sheets, { paper = 'tabloid', title = '', attach = null } 
   objs.push('<< /Type /Pages /Kids [' + sheets.map((_, i) => (6 + 2 * i) + ' 0 R').join(' ') + '] /Count ' + n + ' >>');
   objs.push('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>');
   objs.push('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>');
-  objs.push('<< /Title ' + lit(title) + ' /Producer (BimCraft) >>');   // i18n-ignore: PDF metadata (the program's name)
+  objs.push('<< /Title ' + lit(title) + ' /Producer (Bildra) >>');   // i18n-ignore: PDF metadata (the program's name)
   const streams = [], streamHead = [];
   sheets.forEach((s, i) => {
     objs.push(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${num(PW * PT)} ${num(PH * PT)}] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents ${7 + 2 * i} 0 R >>`);

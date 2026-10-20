@@ -29,7 +29,7 @@ Under the data, {{ui:Record work done}}: the day it was done, the work, who did 
 - Maker and model in `Pset_ManufacturerTypeInformation`, serial number, barcode and the installed day in `Pset_ManufacturerOccurrence`, the warranty in `Pset_Warranty`, the service life in `Pset_ServiceLife`, on the element itself. When the element's type already carries a maker or model, it shows until you type your own.
 - Each maintenance entry is an IFC **task** of the maintenance kind, tied to the element, with its dates (in IFC4 also as the task's own times) and a `CadCraft_Maintenance` set with the day, who did it and the next due day.
 - Values another element shares are copied first: changing one asset never changes its neighbours.
-- In older IFC2X3 files the dates are written as text (YYYY-MM-DD); that version wants a separate date record there, which BimCraft does not write.
+- In older IFC2X3 files the dates are written as text (YYYY-MM-DD); that version wants a separate date record there, which Bildra does not write.
 
 ## CSV
 

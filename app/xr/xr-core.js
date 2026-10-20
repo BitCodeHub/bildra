@@ -1,10 +1,10 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
  * xr-core.js — the maths and data of design review in a headset (0.6 LC.19), DOM-free and import-free so Node tests drive
- * it as the page does. Shared by ModelCraft and BimCraft: canonical in modelcraft/dev/xr/, byte-identical copy in
+ * it as the page does. Shared by ModelCraft and Bildra: canonical in modelcraft/dev/xr/, byte-identical copy in
  * bimcraft/dev/xr/ (node tools/xr/sync.mjs).
  *
- * Spaces. The app's own space ("app"): ModelCraft Z up, BimCraft Y up (its viewer's), metres. The model's space in the
+ * Spaces. The app's own space ("app"): ModelCraft Z up, Bildra Y up (its viewer's), metres. The model's space in the
  * headset ("model"): the app's turned so Y is up (upMatrix). The headset's space ("xr"): WebXR's local-floor, metres, Y up,
  * the floor at y = 0. The model sits in the headset's space through the **rig** = {at: model point under the person's feet
  * (or the table's centre), yaw (radians about Y), scale, anchor: where that model point sits in xr space}:

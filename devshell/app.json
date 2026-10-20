@@ -3,7 +3,7 @@
     "version": 1,
     "app": {
         "slug": "bimcraft",
-        "name": "BimCraft",
+        "name": "Bildra",
         "layer": "blue",
         "role": "BIM review & editing",
         "tagline": "Open the model. Check it. Change it.",

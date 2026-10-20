@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * res-ui.js — the residential tools in BimCraft's plan view (0.5 part 4, track RC; session bim-residential). Mounted
+ * res-ui.js — the residential tools in Bildra's plan view (0.5 part 4, track RC; session bim-residential). Mounted
  * through model-ui.js extend() (bimcraft.js calls mountRes(modelUi) right after mountModel), so it shares the plan, the
  * model bar, the commit queue, picking, Properties and Delete with the building tools. Markup: ui.inc's "Build" menu
  * ([data-res-tools] with [data-mtool] buttons) and one options row per tool ([data-mopts="<tool>"]).

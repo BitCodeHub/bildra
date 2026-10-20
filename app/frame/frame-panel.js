@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * frame-panel.js — the frame analysis panel both apps show (0.6 LC.4; DetailCraft's Analysis tab, BimCraft's Analysis
+ * frame-panel.js — the frame analysis panel both apps show (0.6 LC.4; DetailCraft's Analysis tab, Bildra's Analysis
  * panel): model assumptions, load cases and combinations, loads on the selected members, Run, results in a table and on
  * the model, the report (PDF, CSV) and the model as a CraftScript file for PartCraft's frame3d. An analysis aid, not a
  * code check — the panel says so first. Imports only the other lib/frame modules: the page's DOM helper, words and model

@@ -36,7 +36,7 @@ Shown in italics under a model's name.
 
 ## How Start here is chosen
 
-BimCraft applies the reasoning an experienced user would:
+Bildra applies the reasoning an experienced user would:
 
 1. Candidates are readable project files (`.rvt`, `.rte`) that are not linked by another model and not starters.
 2. Centrals and backup-only models count only when nothing better exists.

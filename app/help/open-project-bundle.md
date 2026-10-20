@@ -16,11 +16,11 @@ A bundle holds:
 - the layouts as PDF and DWG,
 - a list of what IFC leaves out: the views (each with its storey, layer combination and scale), the layouts and the drawings placed on them, property definitions in their groups, classifications, and standards such as layers, pen sets, line types, fills, surfaces and composites.
 
-Bundles are written by an open-source script that runs inside Archicad and asks Archicad itself for these lists. The script is being tested and is not published yet. BimCraft never reads `.pln` or `.tpl` files directly; see [Open .pln and .pla project files](topic:pln-project-files).
+Bundles are written by an open-source script that runs inside Archicad and asks Archicad itself for these lists. The script is being tested and is not published yet. Bildra never reads `.pln` or `.tpl` files directly; see [Open .pln and .pla project files](topic:pln-project-files).
 
 ## Open a bundle
 
-1. Click {{ui:Choose a file}}, or drop the `.ccbundle.zip` on BimCraft.
+1. Click {{ui:Choose a file}}, or drop the `.ccbundle.zip` on Bildra.
 2. The model opens as any IFC does, and the **Project bundle** section appears on the left, under the file's facts.
 
 Nothing is uploaded: the bundle is read on your computer, one file at a time, so a large model is not copied twice.
@@ -37,7 +37,7 @@ Under **Views**, views are grouped by the folders they had in the project. Click
 To show everything again, use {{ui:Show all}} in {{ui:Show}} and tick every storey.
 
 :::note
-BimCraft finds the layers through the IFC file's layer assignments. If the IFC was exported without them, a layer combination hides nothing, and the status line says 0 elements hidden.
+Bildra finds the layers through the IFC file's layer assignments. If the IFC was exported without them, a layer combination hides nothing, and the status line says 0 elements hidden.
 :::
 
 ## Open a layout
@@ -56,13 +56,13 @@ Pick an element. **Property groups** shows its properties under the groups the p
 ## Standards and notes
 
 - **Standards** counts the layers, layer combinations, pen sets, line types, fills, surfaces, composites and materials in the bundle.
-- **Notes** lists what the script could not get from that version of Archicad, any field BimCraft could not read, and any file the bundle names but does not hold.
+- **Notes** lists what the script could not get from that version of Archicad, any field Bildra could not read, and any file the bundle names but does not hold.
 
 ## Troubleshooting
 
 - **"… is a zip but not a project bundle."** The zip has no `manifest.json`. Unzip it and open the `.ifc` inside.
-- **"… is a newer project bundle than this BimCraft reads."** Update BimCraft.
+- **"… is a newer project bundle than this Bildra reads."** Update Bildra.
 - **"… does not hold the model its manifest names."** The zip was cut short or edited. Make the bundle again.
 - **A view shows every storey.** Its storey is not in the model's IFC (the status line says so). Check that the IFC export included that storey.
 
-See also [Working between two BIM programs](topic:two-bim-programs) and [What BimCraft reads from each format](topic:file-formats).
+See also [Working between two BIM programs](topic:two-bim-programs) and [What Bildra reads from each format](topic:file-formats).

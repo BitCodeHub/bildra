@@ -172,6 +172,6 @@ html.cc-phone .cc-in-list { left: 0; }
 html.cc-phone .cc-in-pin { display: none; }
 html.cc-phone .cc-inbar .cc-in-rbody.cc-in-folded { display: flex; }
 html.cc-phone .cc-inbar.cc-in-peek > .cc-in-rbody { position: static; border-bottom: 0; }
-/* The open panels must cover what an app floats over its drawing next to the toolbar (BimCraft's Draw bar, z 3, beside its
-   toolbar, z 2): lift a positioned toolbar while they are open, as BimCraft does for its own open menus. */
+/* The open panels must cover what an app floats over its drawing next to the toolbar (Bildra's Draw bar, z 3, beside its
+   toolbar, z 2): lift a positioned toolbar while they are open, as Bildra does for its own open menus. */
 [role="toolbar"]:has(> .cc-inbar.cc-in-peek) { z-index: 7; }

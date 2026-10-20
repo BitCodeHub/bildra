@@ -56,9 +56,9 @@ You cannot undo past a save: after saving, the list starts again. The saved file
 
 ## Why your edit changes only one element
 
-Exporters save space by sharing data. One property set may be shared by twenty doors, and one value ("Fire rating: 60 min") may be listed in ninety sets. If BimCraft simply changed the shared value, every element that shares it would change too.
+Exporters save space by sharing data. One property set may be shared by twenty doors, and one value ("Fire rating: 60 min") may be listed in ninety sets. If Bildra simply changed the shared value, every element that shares it would change too.
 
-So BimCraft copies before it writes:
+So Bildra copies before it writes:
 
 - If the property set you edit is shared with other elements, your element gets its own copy of the set, and only the copy changes.
 - If the value is shared with other sets, your set gets its own copy of the value.
@@ -77,6 +77,6 @@ The neighbors keep their old data. This is called *copy-on-write*. It adds a few
 - **Typing units.** `2400 mm` is refused. Type `2400`.
 - **Changing a type property when you meant one element.** Look for the "(type)" note before you type. If you want one element to differ, change an instance property or its Tag or Name instead.
 - **Expecting the original file to change.** Saving always downloads a new file. Replace the original yourself if that is what you want, and keep a copy.
-- **Pressing {{key:Mod+S}} with no changes.** BimCraft only saves when there is something to save; otherwise the browser's own "Save page" may open. Close it.
+- **Pressing {{key:Mod+S}} with no changes.** Bildra only saves when there is something to save; otherwise the browser's own "Save page" may open. Close it.
 - **Saving twice and expecting two small files.** Each save holds every edit since you opened the model.
-- **Expecting edits to go back into a project file.** BimCraft writes IFC only. Bring the edited IFC into your authoring program the way you import any IFC.
+- **Expecting edits to go back into a project file.** Bildra writes IFC only. Bring the edited IFC into your authoring program the way you import any IFC.

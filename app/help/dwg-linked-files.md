@@ -17,14 +17,14 @@ Make a drawing complete: show the drawings it links to (external references, or 
 3. Click the drawing.
 4. Look at the {{ui:Properties}} panel on the right, under **Linked drawings** and **Images**.
 
-BimCraft looks for each linked drawing by its name ("*name*.dwg"), in the same folder as the drawing first, then anywhere in the folder you opened. Pictures are found the same way, and also by a similar name: an eTransmit or Revit export often adds the project's name in front, so `logo.png` is found as `Tower-logo-5425051.png`.
+Bildra looks for each linked drawing by its name ("*name*.dwg"), in the same folder as the drawing first, then anywhere in the folder you opened. Pictures are found the same way, and also by a similar name: an eTransmit or Revit export often adds the project's name in front, so `logo.png` is found as `Tower-logo-5425051.png`.
 
 ## The other way: add files by hand
 
 1. Open the drawing on its own.
 2. On the right, under **Linked drawings**, click {{ui:Add linked drawings…}}. Under **Images**, the button is {{ui:Add pictures…}}; both open the same chooser.
 3. Choose the linked `.dwg` files and the picture files. You can choose several at once.
-4. Wait while BimCraft opens the drawing again with them.
+4. Wait while Bildra opens the drawing again with them.
 
 ## What you should see
 
@@ -44,5 +44,5 @@ The {{ui:Drawing}} panel on the left shows "*n* of *m* loaded" for linked drawin
 
 - **Opening only the drawing.** "This drawing shows its own content only until its linked drawings are added. Opening the whole project folder finds them automatically."
 - **Opening a folder too small.** If the links live in a sibling folder, open the parent folder instead.
-- **Renamed links.** BimCraft matches linked drawings by name. A link renamed on disk is not found; add it by hand.
-- **Links of links.** BimCraft loads the drawings the open drawing links to. Drawings linked inside those are not looked for, so they usually do not show in this build.
+- **Renamed links.** Bildra matches linked drawings by name. A link renamed on disk is not found; add it by hand.
+- **Links of links.** Bildra loads the drawings the open drawing links to. Drawings linked inside those are not looked for, so they usually do not show in this build.

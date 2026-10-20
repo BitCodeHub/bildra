@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
  * frame-draw.js — what frame analysis results look like on a 3D view (0.6 LC.4), as plain geometry each app hands to
- * three.js in its own coordinates (DetailCraft: mm, Z up; BimCraft: through its viewer transform). DOM-free; imports
+ * three.js in its own coordinates (DetailCraft: mm, Z up; Bildra: through its viewer transform). DOM-free; imports
  * frame-solve.js.
  *
  *   resultGeometry(sol, key, { mode, scale, n }) → { mode, max, scale, lines: [x,y,z, x,y,z …] (segments),

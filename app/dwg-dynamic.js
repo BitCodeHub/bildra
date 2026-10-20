@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
  * dwg-dynamic.js — dynamic blocks in a cc-dwg drawing model, read only (0.5 DB.11; the model shapes are cad-files' DB.2,
- * docs/DWG-DYNAMIC-BLOCKS.md). Import-free and DOM-free. Canonical here in BimCraft; ModelCraft ships a byte-identical
+ * docs/DWG-DYNAMIC-BLOCKS.md). Import-free and DOM-free. Canonical here in Bildra; ModelCraft ships a byte-identical
  * copy (`node bin/test-bimcraft.mjs --dynamic` fails when it differs: change this one, then copy it over).
  *
  * A dynamic block's definition has `block.dynamic = { params: [{ kind, label, states: [{ name, entities: [handles] }] }…] }`;

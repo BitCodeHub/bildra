@@ -28,7 +28,7 @@ Look at a laser scan of a building next to its model: check that what was built 
 - **Map coordinates**: the model has a map conversion (IfcMapConversion) and the cloud is in the same projected system: the cloud is placed through it. If the two name different systems, the status line says so.
 - **Centered on the model**: when neither puts the cloud near the model, its middle goes on the model's middle and its lowest point on the model's floor. Pick another choice to override it.
 
-When the file does not say its units, BimCraft reads meters and offers {{ui:Units}} in the bar.
+When the file does not say its units, Bildra reads meters and offers {{ui:Units}} in the bar.
 
 ## Trace the as-built lines
 
@@ -36,7 +36,7 @@ Click {{ui:Trace in CadCraft}} to hand the cloud to the drafting app in a new ta
 
 ## How many points
 
-A scan can hold hundreds of millions of points. BimCraft reads every point once and keeps an even share of them to draw: {{ui:Show}} in the bar sets how many (1, 2, 5 or 10 million). More points need more memory and a faster graphics card. Counts per LiDAR class are of every point in the file.
+A scan can hold hundreds of millions of points. Bildra reads every point once and keeps an even share of them to draw: {{ui:Show}} in the bar sets how many (1, 2, 5 or 10 million). More points need more memory and a faster graphics card. Counts per LiDAR class are of every point in the file.
 
 :::note
 Files are read on this computer; nothing is uploaded. LAS 1.0–1.4 and LAZ are read (LAZ files up to 1 GB, held in memory while they are read); E57 files up to 6 million points and 512 MB for now (larger scans: export LAS or LAZ); PLY, PCD and PTX in full; text clouds are `x y z`, with color (`r g b`) and intensity columns when they are there.

@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * res-terrain.js — the site's ground in the BimCraft model (0.5 part 4, RC.10): a surface from survey points, contours, a
+ * res-terrain.js — the site's ground in the Bildra model (0.5 part 4, RC.10): a surface from survey points, contours, a
  * LAS / LAZ cloud, a GeoTIFF or a few spot elevations (CivilCraft's surface engine, tin.js, a shared copy); the house's
  * building pad cut into it with daylight slopes and cut / fill volumes; driveways, walks and patios draped on it; contours
  * for the plan; LandXML for CivilCraft. No DOM: bin/test-bimcraft.mjs --res.
@@ -121,7 +121,7 @@ export function buildGround({ points = [], lines = [], boundary = null }) {
   return buildSurface({ points, breaklines: lines.map((pts) => ({ pts })), boundary, maxEdge: 0 });
 }
 
-// LandXML in (0.6 DF.24, session bim-draw): CivilCraft's surfaces become BimCraft's ground, its own triangles kept
+// LandXML in (0.6 DF.24, session bim-draw): CivilCraft's surfaces become Bildra's ground, its own triangles kept
 const LX_UNITS = { meter: ['m', 1], millimeter: ['mm', 1], centimeter: ['m', 0.01], kilometer: ['m', 1000], foot: ['ft', 1], intlFoot: ['ft', 1], USSurveyFoot: ['ftUS', 1], inch: ['ft', 1 / 12] };
 export function readLandXmlSurfaces(text) {
   const root = parseXml(String(text));
@@ -222,7 +222,7 @@ export function cutFill(existing, finished, { cell = 250 } = {}) {
   }
   return { cut: cut / 1e9, fill: fill / 1e9 };
 }
-export function landXml(surfaces, { name = 'BimCraft site', unit = 'mm' } = {}) {
+export function landXml(surfaces, { name = 'Bildra site', unit = 'mm' } = {}) {
   const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
   const k = unit === 'm' ? 0.001 : unit === 'ft' ? 1 / FT : 1;
   const out = ['<?xml version="1.0" encoding="UTF-8"?>', '<LandXML xmlns="http://www.landxml.org/schema/LandXML-1.2" version="1.2" date="' + new Date().toISOString().slice(0, 10) + '">',

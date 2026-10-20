@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * render-bim.js — BimCraft's adapter for the shared renderer (0.5 RC.11; render/ is a byte-identical copy of ModelCraft's,
- * tools/render/sync.mjs). BimCraft's own file: it turns what the 3D view shows into the renderer's plain scene.
+ * render-bim.js — Bildra's adapter for the shared renderer (0.5 RC.11; render/ is a byte-identical copy of ModelCraft's,
+ * tools/render/sync.mjs). Bildra's own file: it turns what the 3D view shows into the renderer's plain scene.
  *
  *   bimSite(api, mid) → {lat, lon, north: [x, y]} | null   IfcSite's RefLatitude / RefLongitude and the context's TrueNorth
  *   bimSun(site, settings, place) → [x, y, z] | null       toward the sun in viewer space (Y up), June 21 15:00 unless the

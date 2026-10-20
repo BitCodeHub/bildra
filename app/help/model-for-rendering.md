@@ -35,5 +35,5 @@ Enscape runs inside another design program and has no file to open a whole proje
 - Bring a **small part** (furniture, a fixture) in as a custom asset from a .glb: isolate it first, then save. Enscape advises small assets (a few tens of thousands of triangles).
 
 :::note
-Plug-ins and a live link to these programs need their makers' own kits and are not built. The FBX and Datasmith formats have no published specification, so BimCraft does not write them; glTF is the open route.
+Plug-ins and a live link to these programs need their makers' own kits and are not built. The FBX and Datasmith formats have no published specification, so Bildra does not write them; glTF is the open route.
 :::

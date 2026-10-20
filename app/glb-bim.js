@@ -12,7 +12,7 @@
  *              site ({lat, lon, north} | null), names: { storey(mi, storey) → text, material(id) → text, colour(hex) → text },
  *              texSize = 256, generator }
  *
- * The file: metres, Y up (BimCraft's viewer axes = glTF's). One node per shown batch (a storey × a colour or library material),
+ * The file: metres, Y up (Bildra's viewer axes = glTF's). One node per shown batch (a storey × a colour or library material),
  * its world matrix on the node; edges are left out. Materials: pbrMetallicRoughness from the colour's look (render/looks.js)
  * or the library material (render/materials.js); a textured library material carries its texture (render/textures.js, drawn
  * by code, CC0) as an embedded PNG, with UVs in texture repeats (planar metres ÷ the tile's real size); glass is BLEND with
@@ -66,7 +66,7 @@ export function quatFromMinusZ(dir) {
   return [x / l, y / l, z / l, w / l].map((v) => round(v, 7));
 }
 
-export async function sceneGlb(scene, { settings = null, lamps = [], site = null, names = {}, texSize = 256, generator = 'BimCraft' } = {}) {
+export async function sceneGlb(scene, { settings = null, lamps = [], site = null, names = {}, texSize = 256, generator = 'Bildra' } = {}) {
   const gltf = { asset: { version: '2.0', generator }, scene: 0, scenes: [{ nodes: [] }], nodes: [], meshes: [], materials: [], accessors: [], bufferViews: [], buffers: [] };
   const used = new Set();
   const chunks = [];

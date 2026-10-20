@@ -24,7 +24,7 @@ Cut through an IFC model with one plane to see inside it: from the top for a pla
 
 Click {{ui:Box}} in the same bar to keep only what is inside a box. Each of {{ui:X}}, {{ui:Y}} and {{ui:Z}} has two sliders: where the box starts and where it ends, in metres from the model's edge. The values show beside them.
 
-- {{ui:Box round the pick}} fits the box round the elements you picked and zooms to them. It leaves 300 mm to spare on every side; change that in {{ui:Settings}} › {{ui:BimCraft}} › {{ui:Room round the pick}}.
+- {{ui:Box round the pick}} fits the box round the elements you picked and zooms to them. It leaves 300 mm to spare on every side; change that in {{ui:Settings}} › {{ui:Bildra}} › {{ui:Room round the pick}}.
 - With elements picked, {{ui:Show}} › {{ui:Section box round the pick}} or {{key:Shift+X}} does the same in one step, even when no cut is on.
 - **Grips** on the box move it with the pointer: drag a square in the middle of a face to move that face, one in the middle of an edge to move the two faces that meet there, or one at a corner to move the three. The sliders follow. In {{ui:Top}} a corner moves the box in plan, in {{ui:Front}} or {{ui:Side}} in elevation.
 - {{ui:Whole model}} opens the box to the whole model again.
@@ -46,7 +46,7 @@ If the outline disappears and nothing is left, the tilts or planes leave nothing
 
 ## A building turned in its site
 
-Many models put the building at an angle to the file's axes (true north, shared coordinates). When the walls run at an angle, a new section starts square to the building: {{ui:Front}}, {{ui:Side}} and the box run along its own walls, and {{ui:Square to the building}} in the section bar is on. Click it for the model's axes, and again to go back (the status line says by how much the building is turned). With **Settings › BimCraft › A building turned in its site › As placed in the site**, sections and views start on the model's axes instead. See [Settings](topic:settings).
+Many models put the building at an angle to the file's axes (true north, shared coordinates). When the walls run at an angle, a new section starts square to the building: {{ui:Front}}, {{ui:Side}} and the box run along its own walls, and {{ui:Square to the building}} in the section bar is on. Click it for the model's axes, and again to go back (the status line says by how much the building is turned). With **Settings › Bildra › A building turned in its site › As placed in the site**, sections and views start on the model's axes instead. See [Settings](topic:settings).
 
 ## What you should see
 

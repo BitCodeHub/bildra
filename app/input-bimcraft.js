@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * input-bimcraft.js — BimCraft's command registry for the shell's input engine (0.5 track IP: IP.1 here, IP.2 moved the
+ * input-bimcraft.js — Bildra's command registry for the shell's input engine (0.5 track IP: IP.1 here, IP.2 moved the
  * engine to assets/js/app-input.js + app-input-ui.js; manifest "input": "input-bimcraft.js"). DOM-free data, plus
  * hooks() which runs only on the page (docs/apps/app-input.md).
  *
@@ -10,7 +10,7 @@
  *   icon      Bootstrap Icons class
  *   sel       the button the shell (app-input-ui.js) clicks to run it (the app's own button: one code path for every style)
  *   draw      the button lives in Draw's model bar: hooks().prepare turns Draw on first
- *   defKeys   the keys BimCraft has without any profile (bimcraft.js / model-ui.js handlers) — the CadCraft style
+ *   defKeys   the keys Bildra has without any profile (bimcraft.js / model-ui.js handlers) — the CadCraft style
  *   fixed     keys nobody can take or move (Delete, Esc)
  *   keyOnly / optional   needs no menu place / exists only in some areas (the DetailCraft hand-off)
  * Labels are text keys `input.cmd.<id>` in lang/en.json.

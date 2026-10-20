@@ -37,8 +37,8 @@ Painting changes the IFC (one step each, {{key:Ctrl+Z}} undoes it) and stays pla
 - each painted element gets the property set `CadCraft_Render` naming its material, and one property per painted side;
 - its body gets a surface style with the material's color, so other BIM programs show the color. In IFC4 the style also names the texture.
 
-When BimCraft reshapes a wall you painted (you move its end, say), the wall keeps its material and its color, in BimCraft, in pictures and in other programs.
+When Bildra reshapes a wall you painted (you move its end, say), the wall keeps its material and its color, in Bildra, in pictures and in other programs.
 
 :::note
-The textures are drawn by BimCraft itself: they work offline and are free to use for anything (CC0). Your own image textures are not built yet.
+The textures are drawn by Bildra itself: they work offline and are free to use for anything (CC0). Your own image textures are not built yet.
 :::

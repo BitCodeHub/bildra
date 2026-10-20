@@ -1,6 +1,6 @@
 ---
 title: Let an AI assistant work with your model
-summary: Turn on assistants in Settings so an assistant on your computer can find elements, read their properties, isolate them in the view and draw walls, doors, windows, floors, levels and grids, through CadCraft Studio. Off until you turn it on.
+summary: Turn on assistants in Settings so an assistant on your computer can find elements, read their properties, isolate them in the view and draw walls, doors, windows, floors, levels and grids, through Bildra Desktop. Off until you turn it on.
 section: tasks
 order: 60
 keywords: ai, assistant, mcp, script, automation, studio, find elements, isolate, properties, permissions, disconnect, activity, draw walls, add doors, add windows, levels, grids, floors, undo, save, command line, cli, headless, use with ai assistants
@@ -10,7 +10,7 @@ keywords: ai, assistant, mcp, script, automation, studio, find elements, isolate
 
 How to let an AI assistant (any assistant that speaks MCP) look into the IFC model you have open and draw in it, what it can and cannot do, and how to stop it.
 
-## What an assistant can do in BimCraft
+## What an assistant can do in Bildra
 
 | It asks to | What happens | Needs |
 |---|---|---|
@@ -26,10 +26,10 @@ Each change an assistant makes is one step in **Changes**, named "Assistant: …
 
 ## Turn it on
 
-Assistants reach BimCraft through CadCraft Studio on your computer; the plain browser has no way in.
+Assistants reach Bildra through Bildra Desktop on your computer; the plain browser has no way in.
 
-1. Open {{ui:Settings}} and choose the **BimCraft** tab.
-2. Under **Assistants**, tick **Let AI assistants and scripts use BimCraft**.
+1. Open {{ui:Settings}} and choose the **Bildra** tab.
+2. Under **Assistants**, tick **Let AI assistants and scripts use Bildra**.
 3. **Read** is ticked for you. Tick **Change the view and draw** too if the assistant may isolate and hide elements and draw, and **Save** if it may save the model as a new file.
 4. Connect the assistant in Studio (Studio shows the address and the settings to paste into it).
 
@@ -49,10 +49,10 @@ The same drawing tools work on IFC files in folders you name, with no window ope
 
 ## Turn it off
 
-Untick **Let AI assistants and scripts use BimCraft**. Every assistant is disconnected straight away, and the setting is kept for next time.
+Untick **Let AI assistants and scripts use Bildra**. Every assistant is disconnected straight away, and the setting is kept for next time.
 
 ## See also
 
 - [Find elements by class, name or property](topic:find)
 - [Hide, isolate and see through elements](topic:hide-and-isolate)
-- [BimCraft settings](topic:settings)
+- [Bildra settings](topic:settings)

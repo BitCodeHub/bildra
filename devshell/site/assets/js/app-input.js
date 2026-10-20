@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
  * app-input.js — the shared input engine: menu styles, keys and mouse over an app's command registry (0.5 track IP:
- * IP.2 moved BimCraft's input-profiles.js here; IP.4 the style family for every app; IP.5 sharing; WL.18's carry).
+ * IP.2 moved Bildra's input-profiles.js here; IP.4 the style family for every app; IP.5 sharing; WL.18's carry).
  * Plan: docs/0.5-PART4.md § Track IP. Map: docs/apps/app-input.md. DOM-free and import-free (Node tests import it as it
  * is); the page side is app-input-ui.js, which app-shell.inc loads only for builds whose manifest says
  * "input": "<registry module>" — released builds never load either file.

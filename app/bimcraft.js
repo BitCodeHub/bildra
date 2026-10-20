@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * bimcraft.js — BimCraft browser UI controller (entry module; markup in ui.inc).
+ * bimcraft.js — Bildra browser UI controller (entry module; markup in ui.inc).
  * Opens a local file (picker or drop): IFC → 3D view + storeys + classes + properties;
  * RVT/RFA/RTE/RFT → file card, read by byte range (a 190 MB central costs ~100 KB of reads).
  * DWG/DXF → 2D drawing (DWG: our cc-dwg reader in a worker, dwg/read-async.js; dwg/ = byte-identical copies of lib/dwg; DXF: dxf-model.js; both
@@ -9,7 +9,7 @@
  * shows model space in 3D: dwg-compile3d.js and dwg-view3d.js (ModelCraft's camera, m3d/) are imported on the first switch;
  * a click there picks an object (Ctrl/Cmd+click more) and Properties shows its data (dwg-props.js; 0.4 B2). IFC: toolbar "Section" (key X) cuts the
  * model with one clipping plane (viewer3d.js setSection; search "Section plane").
- * BimCraft only views drawings: "Edit in CadCraft" hands the open DWG/DXF to the drafting app in a new tab
+ * Bildra only views drawings: "Edit in CadCraft" hands the open DWG/DXF to the drafting app in a new tab
  * (handoff.js, same-origin IndexedDB; shown only when ui.inc gives data-edit-url).
  * Opens a local folder (picker, folder input or drop): folder-scan.js → folder-view.js; any
  * model or IFC in it opens from there, and its card checks links against the folder.
@@ -30,7 +30,7 @@
  * of the box round them, R turns them, a click places a copy (same geometry and data, new GlobalIds). Cut = copy +
  * delete (a paste after a cut keeps item numbers). Delete takes parts and openings along (one undo step); storeys and
  * spaces are refused. Select all picks every element shown. Redo re-applies what Undo took back (IfcEditor.redo).
- * Settings › BimCraft (settings.inc; localStorage "bimcraft.settings"): spaces, edges and view when a model opens,
+ * Settings › Bildra (settings.inc; localStorage "bimcraft.settings"): spaces, edges and view when a model opens,
  * wall snap when placing starts.
  *
  * Hide and isolate (0.4 B12; ifc-vis.js): the toolbar's Show group and H / I / T / Shift+H hide the picked elements, show
@@ -245,7 +245,7 @@ function init(root) {
     try { await fn(); } catch (err) { if (!err.userFacing) console.error(err); status(err.message || String(err), true); } finally { busy = false; }
   };
 
-  // ---- Settings › BimCraft (settings.inc; per viewer conveniences, localStorage "bimcraft.settings") ----
+  // ---- Settings › Bildra (settings.inc; per viewer conveniences, localStorage "bimcraft.settings") ----
   //   spaces  show rooms and spaces (IfcSpace) when a model opens        default off
   //   edges   edges when a model opens: on / small (models under SMALL_MODEL triangles) / off   default on
   //           (the viewer never draws them above 1.5 million triangles)
@@ -342,7 +342,7 @@ function init(root) {
     });
     settingsDlg.addEventListener('cc-settings-reset', () => { Object.assign(settings, SET_DEFAULTS, { assistants: { enabled: false, groups: ['read'] } }); saveSettings(); syncSettingsForm(); applyCorner(); applyAssist(); });
   }
-  // ---- Corner indicator (Settings › BimCraft): the view cube or an X/Y/Z axis icon in each 3D view (m3d/viewcube.js,
+  // ---- Corner indicator (Settings › Bildra): the view cube or an X/Y/Z axis icon in each 3D view (m3d/viewcube.js,
   // byte-identical copies of ModelCraft's). Never on the 2D drawing: the hosts are the 3D views' own wrappers. ----
   const corners = [];   // { cube, axes } per 3D view
   let cube3d = null;     // the IFC view's cube (its compass follows the view turn: applyViewTurn)
@@ -1317,7 +1317,7 @@ function init(root) {
   // ---- Issues: BCF (0.4 B9) ----
   let issues = [], issueForm = false, currentIssue = null, guidKeys = null;
   // Your name on issues (0.5 SI.9): signed in, it is your account's (fileHost.account()) with nothing to type; a name typed in
-  // Settings › BimCraft or in the issue form wins until it is cleared. Signed out: the form's name box, as before.
+  // Settings › Bildra or in the issue form wins until it is cleared. Signed out: the form's name box, as before.
   const typedAuthor = () => { try { return localStorage.getItem('bimcraft.author') || ''; } catch (e) { return ''; } };
   const accountName = () => { const a = fileHost.account(); return a && typeof a.name === 'string' ? a.name.replace(/[\u0000-\u001f\u007f]/g, ' ').trim().slice(0, 120) : ''; };
   const authorOf = () => typedAuthor() || accountName();
@@ -1325,7 +1325,7 @@ function init(root) {
   const keepAuthor = (v) => {
     try { if (!v || v === accountName()) localStorage.removeItem('bimcraft.author'); else localStorage.setItem('bimcraft.author', v); } catch (err) { /* this tab keeps it */ }
   };
-  // Settings › BimCraft › Your name on issues: "From your account (<name>)" + "Use another name", or the typed name
+  // Settings › Bildra › Your name on issues: "From your account (<name>)" + "Use another name", or the typed name
   let authorOther = false;
   function syncAuthorForm() {
     const box = settingsDlg && settingsDlg.querySelector('[data-bc-author-set]');
@@ -1427,7 +1427,7 @@ function init(root) {
     status(t('bcf.shown', { title: tp0.title || t('bcf.untitled') }) + (missing ? ' ' + t('bcf.missing', { n: missing }) : '') + (clipNote ? ' ' + clipNote : ''));
   }
   /**
-   * One plane, or six making a box, along the model's axes → BimCraft's section plane or box. Any other set of planes (up to
+   * One plane, or six making a box, along the model's axes → Bildra's section plane or box. Any other set of planes (up to
    * MAX_PLANES, tilted or not) → a section volume: the whole model's box cut by those planes (WL.1). → false when too many.
    */
   function applyBcfClipping(planes, C) {
@@ -1483,7 +1483,7 @@ function init(root) {
         keepAuthor(who.value.trim());   // SI.9: the account's own name is not kept as a typed one
         const now = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
         const vp = captureViewpoint();
-        const tp = { guid: newGuid(), title: title.value.trim(), status: st.value, type: 'Issue', author: who.value.trim() || accountName() || 'BimCraft', created: now, description: comment.value.trim(), comments: [], viewpoints: [vp] };
+        const tp = { guid: newGuid(), title: title.value.trim(), status: st.value, type: 'Issue', author: who.value.trim() || accountName() || 'Bildra', created: now, description: comment.value.trim(), comments: [], viewpoints: [vp] };
         if (comment.value.trim()) tp.comments.push({ guid: newGuid(), date: now, author: tp.author, text: comment.value.trim(), viewpoint: vp.guid });
         issues.push(tp);
         issueForm = false;
@@ -2680,7 +2680,7 @@ function init(root) {
     if (turnOf?.model !== model) { let deg = 0; try { deg = editor.placer().planRotation(null); } catch (e) { deg = 0; } turnOf = { model, deg: deg > 45 ? deg - 90 : deg }; }
     return turnOf.deg;
   }
-  // 0.6 DC.57 (Discord: "the model imports at an angle", "section cuts don't line up"): with Settings › BimCraft › A building
+  // 0.6 DC.57 (Discord: "the model imports at an angle", "section cuts don't line up"): with Settings › Bildra › A building
   // turned in its site = Square to the building (the default), such a building is seen square — the view presets, the view
   // cube's faces and every new section follow its walls; the cube's compass keeps the model's north. 'placed' = the
   // model's axes, as in 0.5 (the section bar's "Square to the building" still turns a cut either way).
@@ -2906,7 +2906,7 @@ function init(root) {
     else if (e.target.closest('[data-sec-box-all]')) { cut.box = null; applyBox(); }
   });
   /**
-   * Section box round the pick (0.4 B4; 0.5 WL.2: the margin is Settings › BimCraft › Section box, default 300 mm): from the
+   * Section box round the pick (0.4 B4; 0.5 WL.2: the margin is Settings › Bildra › Section box, default 300 mm): from the
    * box's own button, the Show menu or Shift+X; turns the section box on when it is off. A volume of several boxes keeps the
    * others: the box being edited goes round the pick.
    */
@@ -3112,7 +3112,7 @@ function init(root) {
   }
   // ---- Location (0.5 WL.4; ifc-geo.js + the crs.js copy): where a picked point is on the earth. The point goes back to
   // its model's own file coordinates (each federated model has its own georeference), then through IfcMapConversion to
-  // the map grid of its IfcProjectedCRS and on to latitude / longitude in Settings › BimCraft › Location's system; with
+  // the map grid of its IfcProjectedCRS and on to latitude / longitude in Settings › Bildra › Location's system; with
   // no map conversion, from IfcSite's latitude / longitude (approximate). crs.js and its catalog load on the first use.
   let crsLib = null;
   const geoCache = new WeakMap();   // model entry → readGeoref result (null = none)
@@ -3258,7 +3258,7 @@ function init(root) {
           const C = frameC(), now = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
           const vp = { guid: newGuid(), camera: { kind: 'perspective', viewPoint: toIfcPoint(C, x.camera.viewPoint), direction: toIfcDir(C, x.camera.direction), up: toIfcDir(C, x.camera.up), fov: x.camera.fov },
             selection: [], visibility: { defaultVisible: true, exceptions: [] }, clipping: [], snapshot: x.snapshot };
-          issues.push({ guid: newGuid(), title: x.title, status: 'Open', type: 'Issue', author: authorOf() || 'BimCraft', created: now, description: x.description, comments: [], viewpoints: [vp] });   // i18n-ignore: BCF values
+          issues.push({ guid: newGuid(), title: x.title, status: 'Open', type: 'Issue', author: authorOf() || 'Bildra', created: now, description: x.description, comments: [], viewpoints: [vp] });   // i18n-ignore: BCF values
           renderIssues();
         },
         presence: live ? { send: (p) => live.setPresence(p), peers: () => live.peers(), nameOf: (c) => live.nameOf(c) } : null,
@@ -3431,7 +3431,7 @@ function init(root) {
       return { hidden: v.hidden.size };
     },
   })) fileHost.control.tool(def);
-  // Settings › BimCraft › Assistants turns them on (applyAssist); the banner at the top of the right panel says while one is
+  // Settings › Bildra › Assistants turns them on (applyAssist); the banner at the top of the right panel says while one is
   // connected, with Disconnect; the settings' Activity lists the calls (host.control.log).
   function applyAssist() {
     fileHost.control.configure({ enabled: settings.assistants.enabled, groups: settings.assistants.groups });
@@ -3455,7 +3455,7 @@ function init(root) {
   $('[data-assist-disconnect]')?.addEventListener('click', () => { fileHost.control.disconnect(); renderAssist(); status(t('assist.disconnected')); });
   fileHost.control.on('change', () => renderAssist());
   fileHost.control.configure({
-    title: 'BimCraft', enabled: settings.assistants.enabled, groups: settings.assistants.groups,   // i18n-ignore: the product name
+    title: 'Bildra', enabled: settings.assistants.enabled, groups: settings.assistants.groups,   // i18n-ignore: the product name
     info: () => ({ model: mode === 'ifc' ? ifcName || null : null, elements: mode === 'ifc' && model ? model.elements : 0, unsaved: models.some((m) => unsavedIn(m.editor)) }),
     busy: () => (busy ? 'opening or saving a file' : placing ? 'placing a library item' : null),   // i18n-ignore: read by the assistant
   });
@@ -3970,7 +3970,7 @@ function init(root) {
 
   // ==== Edit menu ===================================================================================
   // Toolbar Undo, Redo, Copy, Paste and the More menu (ui.inc), the same actions on keys. What each one can do in
-  // BimCraft is decided here; an action that cannot act right now is aria-disabled with the reason as its title, and a
+  // Bildra is decided here; an action that cannot act right now is aria-disabled with the reason as its title, and a
   // click or key says the reason in the status line instead of doing nothing.
   const store = (() => { try { return window.localStorage; } catch (e) { return null; } })();
   let clip = null;   // this tab's clip (clipboard.js); another tab's newer one in storage wins
@@ -4470,7 +4470,7 @@ function init(root) {
   if (modelUi) scanUi = mountCloudSlice(modelUi, { cloud: () => pc, viewer: () => viewer, entry: () => { const ent = mode === 'ifc' ? cur() : null; return ent ? { C: [...ent.ifc.api.GetCoordinationMatrix(ent.model.modelID)], P: viewer.modelMatrix(ent.mi) } : null; } });
 
   // ---- Menus, keys and mouse (0.5 track IP): the shell's input engine (assets/js/app-input-ui.js, manifest "input":
-  // input-bimcraft.js) runs the styles; it asks BimCraft for the status line, downloads and whether a tool is running ----
+  // input-bimcraft.js) runs the styles; it asks Bildra for the status line, downloads and whether a tool is running ----
   window.ccInputHooks = {
     status: (text, isError) => status(text, isError),
     download: (name, text, type) => download(name, text, type),
@@ -4479,10 +4479,10 @@ function init(root) {
 
   // A phone (owner, 2026-10-15): the shell's app-phone.js (manifest "phone") — the view keeps the screen, the panels are sheets.
 
-  // ---- Add-ons (0.5 AO.7; addons/bimcraft-api.js is session `addons`' module, docs/ADDONS-SPEC.md §5.7). BimCraft runs its
+  // ---- Add-ons (0.5 AO.7; addons/bimcraft-api.js is session `addons`' module, docs/ADDONS-SPEC.md §5.7). Bildra runs its
   // own loader (manifest "addons": "own"): add-ons get the open IFC model, the pick, one-undo-step edits, commands, sections
   // in Properties, tabs on the right, importers (a file → IFC) and exporters (buttons beside Save as IFC). An add-on that
-  // fails never stops BimCraft. ----
+  // fails never stops Bildra. ----
   // Only when the manifest says "addons": "own": then app-shell.inc prints no #cc-addons and the shell's generic loader stays
   // away. Until then the shell's loader runs as before and this stays off (the build needs its addons/index.json first).
   if (!document.getElementById('cc-addons')) startAddons({

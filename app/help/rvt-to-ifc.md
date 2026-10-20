@@ -1,6 +1,6 @@
 ---
-title: From a project file to BimCraft through IFC
-summary: The IFC export settings that open best in BimCraft (version, property sets, base quantities, rooms, linked models, coordinates), how to open the result, and what the export keeps.
+title: From a project file to Bildra through IFC
+summary: The IFC export settings that open best in Bildra (version, property sets, base quantities, rooms, linked models, coordinates), how to open the result, and what the export keeps.
 section: tasks
 order: 70
 keywords: export, ifc export, rvt to ifc, convert, 3d, geometry, ifc2x3, ifc4, coordination view, reference view, design transfer view, property sets, base quantities, rooms, spaces, linked files, shared coordinates, survey point, project base point, settings
@@ -8,25 +8,25 @@ keywords: export, ifc export, rvt to ifc, convert, 3d, geometry, ifc2x3, ifc4, c
 
 ## What you'll do
 
-Turn a project file into an IFC file you can orbit, inspect, check and edit in BimCraft. BimCraft does not read the 3D model inside an `.rvt` file yet, so the export happens in the program that made the file (Revit); BimCraft opens the result.
+Turn a project file into an IFC file you can orbit, inspect, check and edit in Bildra. Bildra does not read the 3D model inside an `.rvt` file yet, so the export happens in the program that made the file (Revit); Bildra opens the result.
 
 ## Steps
 
-1. Open the project in the program that made it. BimCraft's card names the release it was saved in.
+1. Open the project in the program that made it. Bildra's card names the release it was saved in.
 2. Open a 3D view that shows what you want to export.
 3. Choose **File > Export > IFC**.
 4. In the export dialog choose a setup (or **Modify setup…**) with the settings below.
 5. Choose a folder and file name, and export.
-6. In BimCraft, click {{ui:Choose a file}} and choose the new `.ifc` file. Linked models exported as their own files open into the same scene with {{ui:Add a model}}.
+6. In Bildra, click {{ui:Choose a file}} and choose the new `.ifc` file. Linked models exported as their own files open into the same scene with {{ui:Add a model}}.
 
 ## The settings that open best here
 
 | Setting in the exporter | Choose | Why |
 |---|---|---|
 | IFC version | **IFC4 Reference View** for looking, checking and taking off; **IFC2X3 Coordination View 2.0** when others need IFC2X3 | Both open fully. **IFC4 Design Transfer View** opens too, with more exact shapes, but the file is larger and slower. |
-| File type | **IFC** (plain) | BimCraft does not open `.ifczip` or `.ifcxml`. |
+| File type | **IFC** (plain) | Bildra does not open `.ifczip` or `.ifcxml`. |
 | Phase / visible elements | The phase you mean, and **Export only elements visible in view** when you set up the 3D view for it | Leaves out what you hid on purpose. |
-| Property sets | **Export Revit property sets** and **Export IFC common property sets** | They become the property sets BimCraft shows in {{ui:Properties}}, and that {{ui:Find}}, {{ui:Color}} and {{ui:Model checks}} use. |
+| Property sets | **Export Revit property sets** and **Export IFC common property sets** | They become the property sets Bildra shows in {{ui:Properties}}, and that {{ui:Find}}, {{ui:Color}} and {{ui:Model checks}} use. |
 | Base quantities | **Export base quantities** | {{ui:Quantity totals}} and schedules use them (lengths, areas, volumes) instead of guessing. |
 | Rooms and areas | **Export rooms in 3D views** (or the Rooms / Spaces option) | Rooms arrive as spaces: click {{ui:Spaces}} to see them. |
 | Linked files | **Export linked files as separate IFCs** | Each link becomes its own file; open them together with {{ui:Add a model}} and they line up. |
@@ -44,8 +44,8 @@ The model in 3D, with storeys taken from the project's levels and the project in
 
 ## Common mistakes
 
-- **Parameters missing in BimCraft.** Turn on the property set options above and export again.
+- **Parameters missing in Bildra.** Turn on the property set options above and export again.
 - **Rooms missing.** Turn on the rooms option, then click {{ui:Spaces}}.
 - **Saving as `.ifczip`.** Choose plain IFC, or unzip the `.ifczip`.
 - **No map place.** Export with shared coordinates; check that the project's survey point is set.
-- **Expecting edits to flow back.** Edits you save in BimCraft go into a new IFC file, not into the project file.
+- **Expecting edits to flow back.** Edits you save in Bildra go into a new IFC file, not into the project file.

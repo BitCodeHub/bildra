@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * model-ui.js — the building tools in BimCraft's page (0.5 part 3, track BM): the toolbar's Draw button, the plan view of
+ * model-ui.js — the building tools in Bildra's page (0.5 part 3, track BM): the toolbar's Draw button, the plan view of
  * a level beside the 3D view (model-planview.js), the model bar (level, tools, wall type and height, typed lengths, Plan /
  * Split / 3D), the Levels panel, and the tools themselves. Markup is server-rendered in ui.inc ([data-plan-wrap],
  * [data-modelbar], [data-levels-sec]); bimcraft.js mounts this with a small host object and tells it when a model opens,
@@ -10,7 +10,7 @@
  *   const m = mountModel(host)   host: { root, editor(), model(), ifc(), viewer(), rebuild(keyOrNull), select(keys),
  *                                       status(text, isError), afterEdit(), units() }
  *   m.opened()     a model was opened (or a new building made): Draw goes off, the plan starts again on its levels
- *   m.stage(which) BimCraft shows 'ifc' | 'dwg' | 'rvt' | … — the plan is for IFC models only
+ *   m.stage(which) Bildra shows 'ifc' | 'dwg' | 'rvt' | … — the plan is for IFC models only
  *   m.rebuilding() / m.rebuilt()   around bimcraft.js rebuild(): clicks wait while the model reloads, then the plan is cut again
  *   m.picked()     the 3D view's pick changed: the plan follows
  *   m.show(on)     Draw on / off (a new building turns it on)
@@ -126,7 +126,7 @@ export function mountModel(host) {
     requestAnimationFrame(() => fitPlan());   // the pane changed size: the whole level again
   });
   ui.fit?.addEventListener('click', () => fitPlan());
-  /** Fit the plan below BimCraft's toolbar and the model bar, which sit over its top. */
+  /** Fit the plan below Bildra's toolbar and the model bar, which sit over its top. */
   function fitPlan() {
     if (!pv) return;
     pv.resize();   // the pane may just have changed size (Split / Plan)

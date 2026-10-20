@@ -2,7 +2,7 @@
 /**
  * input-mouse.js — the mouse half of the input profile in use (0.5 part 4, track IP.1). DOM-free, import-free.
  * The shell's input engine sets it (input-bimcraft.js hooks().mouse); the views read it at each event (model-planview.js, dwg-view.js, dwg-view3d.js) or follow it
- * (viewer3d.js: OrbitControls' buttons and zoom speed). Before any profile is set it is BimCraft's own behaviour.
+ * (viewer3d.js: OrbitControls' buttons and zoom speed). Before any profile is set it is Bildra's own behaviour.
  *   mouse()           { wheel 1|-1, zoomSpeed 0.25–4, pan2d ['middle','right'], orbit3d { left, middle, right } | null }
  *                     orbit3d null = each 3D view keeps its own buttons (the CadCraft style)
  *   wheelFactor()     multiply a wheel delta's zoom exponent by this (direction × speed)

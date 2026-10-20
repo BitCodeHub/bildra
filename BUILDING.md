@@ -1,6 +1,6 @@
-# Building BimCraft from source
+# Building Bildra from source
 
-There is nothing to compile: BimCraft is plain ES modules, CSS and one page of markup that run in the browser. "Building"
+There is nothing to compile: Bildra is plain ES modules, CSS and one page of markup that run in the browser. "Building"
 means running it locally, testing it, and compiling its help.
 
 ## Requirements

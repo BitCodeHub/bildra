@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Apache-2.0
 // What survived a trip through other programs (0.6 DF.12 (c), session `bim-interop`). DOM-free.
 //
-// A model leaves (say, an IFC exported from one BIM program), goes through BimCraft and another program, and comes back as
+// A model leaves (say, an IFC exported from one BIM program), goes through Bildra and another program, and comes back as
 // another IFC. Elements are matched by GlobalId; for every matched element the report counts what was kept, changed or
 // lost: its IFC class, every property (each "<set>.<property>" of ifc-props.js propertyIndex, built-ins too) and its
 // classification references. Nothing is judged right or wrong: a changed value is listed with both values.

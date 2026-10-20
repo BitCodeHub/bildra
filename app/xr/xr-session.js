@@ -3,7 +3,7 @@
  * xr-session.js — design review in a headset (0.6 LC.19): a WebXR `immersive-vr` session showing the model at full size,
  * with teleport and snap turn, measuring, a section cut, issues placed where you point (with a picture from your eyes), a
  * table-top model, and the other people of a Studio Live session as heads, hands and pointers. Shared by ModelCraft and
- * BimCraft: canonical in modelcraft/dev/xr/, byte-identical copy in bimcraft/dev/xr/ (node tools/xr/sync.mjs). Words
+ * Bildra: canonical in modelcraft/dev/xr/, byte-identical copy in bimcraft/dev/xr/ (node tools/xr/sync.mjs). Words
  * through t() with keys `xr.*`. Maths in xr-core.js. Nothing is uploaded; the headset is driven by the browser.
  *
  *   xrSupport() → Promise<{vr: boolean, reason: null | 'none' | 'insecure' | 'unsupported'}>
@@ -148,8 +148,8 @@ export async function startXR(o) {
         obj.matrixAutoUpdate = false;
         if (it.matrix) obj.matrix.fromArray(it.matrix);
         if (!it.lines) {
-          // a BVH only for geometry drawn whole (BimCraft draws part of a batch: plain raycasting keeps to that part); `indirect`
-          // leaves the geometry's own index as it is (BimCraft's render items share index buffers with its live view)
+          // a BVH only for geometry drawn whole (Bildra draws part of a batch: plain raycasting keeps to that part); `indirect`
+          // leaves the geometry's own index as it is (Bildra's render items share index buffers with its live view)
           const whole = it.geometry.drawRange.start === 0 && it.geometry.drawRange.count === Infinity && !it.geometry.groups.length;
           if (bvh && whole) { try { if (!it.geometry.boundsTree) it.geometry.boundsTree = new bvh.MeshBVH(it.geometry, { indirect: true }); obj.raycast = bvh.acceleratedRaycast; } catch { /* plain raycast */ } }
           hits.push(obj);

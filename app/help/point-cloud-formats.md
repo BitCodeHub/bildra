@@ -21,7 +21,7 @@ Open these with {{ui:Open}} or by dropping them on the page (see the topic on sh
 
 ## Files that only the scanner's software reads
 
-Some scan files are a scanner maker's own format, with no published description and no open reader. BimCraft can't read them, and opening one shows a card that says what it is and what to do. Export the scan from the maker's software as E57 or LAS (or PTX, PTS), then open the exported file.
+Some scan files are a scanner maker's own format, with no published description and no open reader. Bildra can't read them, and opening one shows a card that says what it is and what to do. Export the scan from the maker's software as E57 or LAS (or PTX, PTS), then open the exported file.
 
 | File | Extension | Export it from |
 |---|---|---|
@@ -33,9 +33,9 @@ Some scan files are a scanner maker's own format, with no published description 
 | Z+F scan | `.zfs` | Z+F LaserControl. |
 
 :::tip
-When the export asks for a format, LAS or LAZ keeps everything BimCraft shows (colors, intensity, classes and the coordinate system) in the smallest file.
+When the export asks for a format, LAS or LAZ keeps everything Bildra shows (colors, intensity, classes and the coordinate system) in the smallest file.
 :::
 
 ## Why these files are not read
 
-Those formats are not published, and the only way to read them is each maker's own software library, under its own terms. BimCraft only reads formats it can read with its own code on your computer, so a scan never has to be sent anywhere to open.
+Those formats are not published, and the only way to read them is each maker's own software library, under its own terms. Bildra only reads formats it can read with its own code on your computer, so a scan never has to be sent anywhere to open.

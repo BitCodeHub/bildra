@@ -36,7 +36,7 @@ The card for each model is read from the main file when it is sound, and from th
    - **Not in this folder**: not found anywhere in the folder.
 4. Read **Used by** to see which models link each file.
 
-BimCraft looks for each link first by its relative path, then by the end of its saved path (so `\\server\jobs\Tower\Cad\X-Refs\site.dwg` is found at `X-Refs/site.dwg` when you picked the `Cad` folder), then by file name anywhere in the folder.
+Bildra looks for each link first by its relative path, then by the end of its saved path (so `\\server\jobs\Tower\Cad\X-Refs\site.dwg` is found at `X-Refs/site.dwg` when you picked the `Cad` folder), then by file name anywhere in the folder.
 
 ## Steps: leftovers
 
@@ -44,7 +44,7 @@ BimCraft looks for each link first by its relative path, then by the end of its 
 2. Read the three lines that may appear:
    - Housekeeping folders (`*_backup`, `*_log`, `Revit_temp`): not read.
    - Lock, log and backup leftovers: files such as `.dwl`, `.dwl2`, `.bak`, `.err`, `.log`, `.tmp`, `.sv$`. These are left by programs that crashed or were open when the folder was copied. They are usually safe to delete once nobody has the files open.
-   - Other files: everything else BimCraft does not read.
+   - Other files: everything else Bildra does not read.
 
 ## Common mistakes
 

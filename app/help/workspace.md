@@ -1,21 +1,21 @@
 ---
-title: The BimCraft screen
+title: The Bildra screen
 summary: A tour of every bar, panel and button, by its on-screen name, and how the screen changes for each kind of file.
 section: start
 order: 20
 keywords: screen, layout, panels, toolbar, interface, ui, tour, properties panel, browser, app bar
 ---
 
-The BimCraft screen has a bar across the top and three areas under it: a panel on the left, the stage in the middle and the {{ui:Properties}} panel on the right. What appears in each area depends on what you opened: an IFC model, a project or family file, a drawing or a folder.
+The Bildra screen has a bar across the top and three areas under it: a panel on the left, the stage in the middle and the {{ui:Properties}} panel on the right. What appears in each area depends on what you opened: an IFC model, a project or family file, a drawing or a folder.
 
 ## The app bar
 
-The thin bar across the top belongs to the CadCraft site, not to BimCraft itself. From left to right:
+The thin bar across the top is the app bar. From left to right:
 
-- The CadCraft mark: goes to the CadCraft home page.
+- The Bildra mark and name.
 - The app name and a version menu. In the staff build it shows which build you are running and lets you switch to a released version.
-- {{ui:About BimCraft}}: the app's page on the site.
-- {{ui:Settings}}: BimCraft's own settings and the ones every app shares. See [BimCraft settings](topic:settings).
+- {{ui:About Bildra}}: the app's page on the site.
+- {{ui:Settings}}: Bildra's own settings and the ones every app shares. See [Bildra settings](topic:settings).
 - {{ui:Full screen}}: cycles the screen modes. See [Screen modes](topic:workspace#screen-modes) below.
 - {{ui:Paper}} and {{ui:Model}}: the light and dark themes. The 3D view and the 2D drawings follow the theme you pick.
 
@@ -50,7 +50,7 @@ The middle of the screen shows the open file.
 - **DWG or DXF**: a row of tabs ({{ui:Model}}, then one per sheet, then {{ui:Equipment}} when the drawing has tagged equipment, {{ui:3D}}, {{ui:Fit}} and {{ui:Print view}}), the drawing, and live X and Y coordinates in a corner. See [View a DWG or DXF drawing](topic:view-dwg) and [See a DWG or DXF drawing in 3D](topic:dwg-in-3d).
 - **Folder**: the folder report, with the {{ui:Start here}} box and tables of models, links, IFC models and drawings. See [Open a whole project folder](topic:open-project-folder).
 
-The **status line** at the bottom of the stage tells you what BimCraft is doing ("Reading the model…", "Building geometry: 1200 of 5400 elements") and what went wrong, in red, when something fails. Messages about success fade after a few seconds.
+The **status line** at the bottom of the stage tells you what Bildra is doing ("Reading the model…", "Building geometry: 1200 of 5400 elements") and what went wrong, in red, when something fails. Messages about success fade after a few seconds.
 
 ## The Properties panel
 
@@ -62,7 +62,7 @@ The right panel shows:
 
 ## On a small screen
 
-When the window is narrower than a laptop screen, BimCraft stacks its areas: the stage on top, then the panels underneath. Scroll the page to reach the panels. On a phone they form one column; on a tablet, two.
+When the window is narrower than a laptop screen, Bildra stacks its areas: the stage on top, then the panels underneath. Scroll the page to reach the panels. On a phone they form one column; on a tablet, two.
 
 ## Screen modes
 
@@ -77,4 +77,4 @@ Press {{key:Esc}} to go back to normal. Browsers without full screen support (su
 ## Related
 
 - [Keys and mouse](topic:keyboard)
-- [Files BimCraft opens and saves](topic:files)
+- [Files Bildra opens and saves](topic:files)

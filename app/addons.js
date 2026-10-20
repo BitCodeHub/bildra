@@ -555,7 +555,7 @@ export class AddonLoader {
 
 const shellMain = () => document.querySelector('body.app-shell > main');
 
-/** The app's toolbar, the way app-settings.js finds it: <main>'s direct-child role=toolbar, else BimCraft's [data-toolbar]. */
+/** The app's toolbar, the way app-settings.js finds it: <main>'s direct-child role=toolbar, else Bildra's [data-toolbar]. */
 export function findToolbar() {
   const m = shellMain();
   if (!m) return null;
@@ -632,7 +632,7 @@ export function sharedApi(base, addon, registry) {
         el.append(row);
         tb.append(el);
       } else {
-        // A toolbar without groups (BimCraft): a separator and the buttons in a run of their own.
+        // A toolbar without groups (Bildra): a separator and the buttons in a run of their own.
         el = document.createElement('span');
         el.className = 'shell-addon-run';
         el.setAttribute('data-addon-group', key(id));

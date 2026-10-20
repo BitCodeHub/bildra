@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * comforts-ui.js — the drawing comforts in BimCraft's plan (0.6 round 2, DC.58 gap, session bim-comforts_PART_2), as one
+ * comforts-ui.js — the drawing comforts in Bildra's plan (0.6 round 2, DC.58 gap, session bim-comforts_PART_2), as one
  * extension of model-ui.js (extend()): moving and turning placed library items (model-move.js) and, as they land, the dormer
  * tool (res-dormer.js). bimcraft.js mounts it after the other plan tools: mountComforts(modelUi).
  *

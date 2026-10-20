@@ -8,11 +8,11 @@ keywords: live, studio live, work together, collaborate, share live, join, code,
 
 ## What you will learn
 
-How to share a file live from CadCraft Studio, let people in, and join a session someone else shares. What you see in the drawing itself while you work together is on the app's own page about live sessions.
+How to share a file live from Bildra Desktop, let people in, and join a session someone else shares. What you see in the drawing itself while you work together is on the app's own page about live sessions.
 
 ## Share the file you have open
 
-1. Open the file in its app inside CadCraft Studio on a computer.
+1. Open the file in its app inside Bildra Desktop on a computer.
 2. Choose {{ui:Live}} in the app's bar, type the name others should see, then choose {{ui:Share live}}.
 3. Studio shows a code like `K7-Q4M2X` with a picture to scan and the computer's address. Give the code to the people you want to invite.
 
@@ -64,7 +64,7 @@ Making an invite link will need you signed in, with a commercial license in forc
 
 ## Join someone else's session
 
-1. In CadCraft Studio's home screen, find {{ui:Join a live session}}.
+1. In Bildra Desktop's home screen, find {{ui:Join a live session}}.
 2. Type the code the host gave you, or type the address shown under their code followed by the code. (Once invite links open, you will paste the host's link here too.)
 3. Type your name and choose {{ui:Join}}. Studio opens the right app; it fills with the host's file once the host lets you in.
 

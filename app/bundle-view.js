@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// A project bundle in BimCraft's left panel (0.6 DF.12 (b), session `bim-interop`): the project, its views (each opens
+// A project bundle in Bildra's left panel (0.6 DF.12 (b), session `bim-interop`): the project, its views (each opens
 // with its storey, layer combination and scale), its layouts (PDF / DWG), its property groups and standards.
 // The DOM-free work is bundle-open.js and prop-map.js; this file only draws and wires. Every text from the bundle
 // goes through el() (text nodes): a bundle is untrusted.
@@ -19,7 +19,7 @@ export function bundleError(e, name) {
 
 /**
  * Mount the bundle section. ctx: { panel (element the section goes after), status(msg, isError, fade), mode() → 'ifc'|…,
- * openModel(bytes, fileLike) → Promise (BimCraft's openIfc), openFile(file) (BimCraft's open: DWG layouts),
+ * openModel(bytes, fileLike) → Promise (Bildra's openIfc), openFile(file) (Bildra's open: DWG layouts),
  * download(name, bytes, type), viewer() → Viewer3D, model() → the active model entry {mi, ifc, model}, afterVis() }.
  * → { open(file), clear(), picked(p), state() }
  */

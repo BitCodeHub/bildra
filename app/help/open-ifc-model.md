@@ -57,7 +57,7 @@ Orbiting always turns around a point in the middle of the model. Panning moves t
 
 ## Common mistakes
 
-- **Expecting named views.** BimCraft has four fixed views ({{ui:Fit}}, {{ui:Top}}, {{ui:Front}}, {{ui:Side}}), the view cube in the bottom-right corner and free orbit. It does not save views.
+- **Expecting named views.** Bildra has four fixed views ({{ui:Fit}}, {{ui:Top}}, {{ui:Front}}, {{ui:Side}}), the view cube in the bottom-right corner and free orbit. It does not save views.
 - **Looking for plans and sections.** There are no 2D plans or section boxes in this build. Cut the model with one {{ui:Section}} plane ([Cut an IFC model with a section plane](topic:section-plane)), or turn storeys off: [Show and hide storeys, spaces and edges](topic:storeys-and-spaces).
 - **Opening a project file and expecting 3D.** A project file opens as a file card. Export IFC first.
 - **Opening an `.ifczip`.** Unzip it, or export plain `.ifc`.

@@ -1,12 +1,12 @@
 ---
 title: Browsers, devices and memory
-summary: What differs in BimCraft between Chrome, Edge, Firefox and Safari, on Mac, Windows and Linux, with a mouse, a trackpad or touch, and how big a file it can take.
+summary: What differs in Bildra between Chrome, Edge, Firefox and Safari, on Mac, Windows and Linux, with a mouse, a trackpad or touch, and how big a file it can take.
 section: reference
 order: 50
 keywords: browser, chrome, edge, firefox, safari, brave, mac, windows, linux, ipad, tablet, phone, touch, trackpad, memory, large files, webgl, performance
 ---
 
-BimCraft runs in current versions of Chrome, Edge, Firefox and Safari, on Mac, Windows and Linux. The 3D view needs WebGL, which every current browser has. See [Browsers and computers](common:browsers) for what the apps need in general.
+Bildra runs in current versions of Chrome, Edge, Firefox and Safari, on Mac, Windows and Linux. The 3D view needs WebGL, which every current browser has. See [Browsers and computers](common:browsers) for what the apps need in general.
 
 ## Opening a folder
 
@@ -19,7 +19,7 @@ BimCraft runs in current versions of Chrome, Edge, Firefox and Safari, on Mac, W
 Behind the scenes: Chrome and Edge use the File System Access picker and can remember the folder. Firefox and Safari use the older folder chooser, which hands over every file in the folder at once and cannot be remembered. A dragged folder is read entry by entry in every browser.
 
 :::chromium
-Brave and some other Chromium browsers turn the folder picker off. BimCraft then uses the system's folder chooser instead, and the browser may ask "Upload *n* files to this site?". Nothing is uploaded; the files only go to the tab. Dragging the folder in avoids the question.
+Brave and some other Chromium browsers turn the folder picker off. Bildra then uses the system's folder chooser instead, and the browser may ask "Upload *n* files to this site?". Nothing is uploaded; the files only go to the tab. Dragging the folder in avoids the question.
 :::
 
 ## Mac, Windows and Linux
@@ -42,7 +42,7 @@ Tablets and phones can open single files and look at them, but the screen is sma
 
 ## Large files and memory
 
-Everything BimCraft reads lives in the browser tab's memory. How much a tab can use depends on the browser and your computer, more than on BimCraft.
+Everything Bildra reads lives in the browser tab's memory. How much a tab can use depends on the browser and your computer, more than on Bildra.
 
 | File | How much is read | What to expect |
 |---|---|---|
@@ -51,7 +51,7 @@ Everything BimCraft reads lives in the browser tab's memory. How much a tab can 
 | DWG and DXF | The whole file | Very large drawings show "This drawing is very large; only part of it is shown." |
 | Folders | The file list, plus a few kilobytes per model | Up to 20,000 files |
 
-If a tab runs out of memory, the browser shows its own error page ("Aw, Snap!" in Chrome, for example). Close other tabs, reload BimCraft and try again, or use a computer with more memory.
+If a tab runs out of memory, the browser shows its own error page ("Aw, Snap!" in Chrome, for example). Close other tabs, reload Bildra and try again, or use a computer with more memory.
 
 ## Related
 

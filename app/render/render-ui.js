@@ -1,8 +1,8 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * render-ui.js — the Render dialog (0.5 RC.11 (a)), shared by ModelCraft and BimCraft: canonical in modelcraft/dev/render/,
+ * render-ui.js — the Render dialog (0.5 RC.11 (a)), shared by ModelCraft and Bildra: canonical in modelcraft/dev/render/,
  * byte-identical copy in bimcraft/dev/render/ (node tools/render/sync.mjs). Words through t() with keys `render.*`; the
- * sync script copies those keys from ModelCraft's lang/en.json into BimCraft's.
+ * sync script copies those keys from ModelCraft's lang/en.json into Bildra's.
  *
  *   openRenderDialog({
  *     scene(settings) → scene        the app's adapter (render-mc.js / render-bim.js); called at each Render
@@ -13,7 +13,7 @@
  *     settings, save(settings)       the remembered settings (looks.js cleanSettings) and where to keep changes
  *     download(blob, name), fileBase() → string, onClose()
  *     lamps() → [{key, name, lumens, on}], setLamp(key, {on | lumens})   optional: the model's lamps listed to switch and dim
- *                                    (BimCraft's light fixtures; ModelCraft edits its lamps in its own Lights panel)
+ *                                    (Bildra's light fixtures; ModelCraft edits its lamps in its own Lights panel)
  *     parent                         where the dialog goes (the app's root, so its own key handling sees a dialog open)
  *   }) → {dialog, close()}
  *

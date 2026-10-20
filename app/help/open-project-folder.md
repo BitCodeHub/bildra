@@ -1,6 +1,6 @@
 ---
 title: Open a whole project folder
-summary: Point BimCraft at a project folder to see every model, its backups and links at once, and let the Start here box suggest which file to work on.
+summary: Point Bildra at a project folder to see every model, its backups and links at once, and let the Start here box suggest which file to work on.
 section: tasks
 order: 80
 keywords: folder, directory, project folder, network drive, server, start here, which file, backups, links, xrefs, recent folders, drag folder
@@ -8,7 +8,7 @@ keywords: folder, directory, project folder, network drive, server, start here, 
 
 ## What you'll do
 
-Open a whole project folder, such as the one you were handed for a job, and let BimCraft sort it out: which models are there, which copies are backups, what links to what, which files are damaged, and which file you most likely want to open.
+Open a whole project folder, such as the one you were handed for a job, and let Bildra sort it out: which models are there, which copies are backups, what links to what, which files are damaged, and which file you most likely want to open.
 
 Only the few kilobytes each model card needs are read, so a folder on a network drive or a synced cloud folder is fine.
 
@@ -41,7 +41,7 @@ The folder report fills the middle:
 
 - The folder name, counts of models, CAD drawings, IFC models and files, and the total size.
 - Red or amber notes if any files are incomplete or any linked files are missing from the folder.
-- The {{ui:Start here}} box: the file BimCraft suggests you open, with the reasons.
+- The {{ui:Start here}} box: the file Bildra suggests you open, with the reasons.
 - **Models**: one row per model, with its backups grouped under it.
 - **Linked and referenced files**, **IFC models**, **CAD drawings** and **Set aside**, when the folder has any.
 

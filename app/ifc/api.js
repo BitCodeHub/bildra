@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /* i18n-ignore-file: cc-ifc is a standalone library; its errors are English (an app translates what it shows). */
 /**
- * api.js — cc-ifc's IfcAPI: the calls BimCraft and DetailCraft make on an IFC engine, with the value shapes their code
+ * api.js — cc-ifc's IfcAPI: the calls Bildra and DetailCraft make on an IFC engine, with the value shapes their code
  * already reads (lines as objects with expressID / type / named attributes; values { type, name, value }; references
  * { type: 5, value: id } (Handle); enumerations { type: 3, value }; vectors with size()/get(i); meshes streamed as
  * { expressID, geometries } with a column-major flatTransformation in metres, Y up). So switching an app is one import.

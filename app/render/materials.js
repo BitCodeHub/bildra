@@ -2,7 +2,7 @@
 /**
  * materials.js — the material library (0.5 RC.11 (b) / RC.7): wood, brick, siding, roofing, stone, tile, concrete, finishes,
  * ground, glass and metal. No DOM, no imports. Every texture is drawn by textures.js from the numbers below, so the library is
- * our own work, CC0 (CadCraft). Shared by ModelCraft and BimCraft (render/ is synced, tools/render/sync.mjs).
+ * our own work, CC0 (CadCraft). Shared by ModelCraft and Bildra (render/ is synced, tools/render/sync.mjs).
  *
  *   MATERIALS   [{id, cat, color, rough, metal, glass, tex?: {kind, color, size: [w, h] metres, seed, …}, bump}]
  *               color = what the material looks like from afar: the 3D views, exports and files that cannot carry a texture

@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * cloud-ui.js — point clouds in BimCraft's 3D view (0.5 SG.1, suggestions #507 "test the workflow completely within
- * BimCraft" and #600 "as-built drawings"). Imported by bimcraft.js the first time a cloud is opened.
+ * cloud-ui.js — point clouds in Bildra's 3D view (0.5 SG.1, suggestions #507 "test the workflow completely within
+ * Bildra" and #600 "as-built drawings"). Imported by bimcraft.js the first time a cloud is opened.
  *
  *   const pc = installClouds(host)   host = { root, viewer(), ensureViewer(), models(), status, frame, sendHandoff }
  *   await pc.open(file)               LAS / LAZ / XYZ / PTS / PLY / PCD / PTX into the scene, beside an open model (or on its

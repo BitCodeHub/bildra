@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: Apache-2.0 */
-/* frame-panel.css — the frame analysis panel (0.6 LC.4; lib/frame/frame-panel.js), the same in DetailCraft and BimCraft
+/* frame-panel.css — the frame analysis panel (0.6 LC.4; lib/frame/frame-panel.js), the same in DetailCraft and Bildra
    (copied by tools/frame/sync.mjs; listed in each app's manifest css). Theme tokens only; sizes in rem. */
 .fa-aid { margin: 0 0 .6rem; padding: .4rem .6rem; border-left: var(--pen-3, 2px) solid var(--layer-ochre); background: var(--sheet); color: var(--ink); font-size: .8125rem; }
 .fa-block + .fa-block { margin-top: .9rem; padding-top: .75rem; border-top: var(--pen-1, 1px) solid var(--grid); }
@@ -17,7 +17,7 @@
 .fa-warn { border-left: var(--pen-3, 2px) solid var(--layer-ochre); padding-left: .5rem; }
 .fa-error { margin: .3rem 0 .6rem; padding: .4rem .6rem; border-left: var(--pen-3, 2px) solid var(--layer-red); background: var(--sheet); color: var(--ink); font-size: .875rem; }
 .fa-table td .fa-select { min-width: 6rem; }
-/* BimCraft's Points tab (0.6 LC.22, layout-bim-ui.js) uses the same panel pieces */
+/* Bildra's Points tab (0.6 LC.22, layout-bim-ui.js) uses the same panel pieces */
 .fa-check { display: inline-flex; align-items: center; gap: .35rem; font-size: .8125rem; color: var(--ink); }
 .fa-h3 { margin-top: 1rem; }
 .fa-table tr.fp-out td:nth-child(2) { color: var(--layer-red); font-weight: 700; }

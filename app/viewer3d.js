@@ -77,7 +77,7 @@ export class Viewer3D {
     this.controls = new OrbitControls(this.camera, canvas);
     this.controls.enableDamping = false;
     this.controls.screenSpacePanning = true;
-    // the input profile's mouse (Settings › BimCraft › Menus, keys and mouse): buttons → orbit / pan / zoom / nothing,
+    // the input profile's mouse (Settings › Bildra › Menus, keys and mouse): buttons → orbit / pan / zoom / nothing,
     // wheel direction and speed; null buttons = OrbitControls' own (left orbits, middle zooms, right pans)
     const ACT = { orbit: THREE.MOUSE.ROTATE, pan: THREE.MOUSE.PAN, zoom: THREE.MOUSE.DOLLY, none: -1 };
     this._mouseOff = onMouse((m) => {

@@ -1,12 +1,12 @@
 ---
 title: What is not built yet
-summary: What this BimCraft build does not do yet, and what to use instead today.
+summary: What this Bildra build does not do yet, and what to use instead today.
 section: trouble
 order: 20
 keywords: missing, limits, limitations, not supported, roadmap, authoring, modeling, sections, measure, clash, bcf, cloud, desktop, export
 ---
 
-BimCraft today is a reader, checker and IFC data editor that has started to draw buildings: walls, doors and windows, rooms, floors, ceilings and roofs (see [Draw walls](topic:draw-walls), [Doors and windows](topic:doors-and-windows) and [Rooms, floors, ceilings and roofs](topic:floors-and-roofs)). This is the honest list of what it does not do yet, with what to do instead.
+Bildra today is a reader, checker and IFC data editor that has started to draw buildings: walls, doors and windows, rooms, floors, ceilings and roofs (see [Draw walls](topic:draw-walls), [Doors and windows](topic:doors-and-windows) and [Rooms, floors, ceilings and roofs](topic:floors-and-roofs)). This is the honest list of what it does not do yet, with what to do instead.
 
 ## Modeling and authoring
 
@@ -23,7 +23,7 @@ BimCraft today is a reader, checker and IFC data editor that has started to draw
 | Pasting building elements into another model | Copy and paste within one model; placed library items paste into any model |
 | Adding new properties or property sets | Fill in existing values here, or add the parameter in your authoring program and export again |
 | Editing quantities, lists, enumerations | Your authoring program |
-| Saving project files of other programs | BimCraft saves IFC (and its own family files: see [Families and their sizes](topic:families)) |
+| Saving project files of other programs | Bildra saves IFC (and its own family files: see [Families and their sizes](topic:families)) |
 | Families: one family inside another, arrays of solids, a material as a parameter, a list of sizes read from a spreadsheet, a placed element showing other parts than its size, coarse / fine detail levels, a family's own plan lines (a new door or window family draws the plan symbol of its starter; furniture is drawn by its cut), families in the library | Families with parameters, formulas, Yes / No parameters, boxes, extrusions, revolves, sweeps and Booleans are made here: see [Edit a family](topic:family-editor). Make one family per variant, or duplicate one |
 | Editing other programs' types as families; turning a library item into a family | Other programs' types are listed, grouped by a guess, and their elements selected. Library items are placed as they are |
 | Makers' fittings, valves and equipment (air handlers, fans, pumps, diffusers, grilles); pressure losses through fittings and balancing; sprinklers; cable trays; sizing drains by fixture units; dragging a run's corners | Pipe and duct runs with generic standard fittings, systems, plans, schedules and the takeoff are drawn here: see [Pipes and ducts](topic:pipes-and-ducts). Bring makers' items from your MEP program as IFC |
@@ -62,7 +62,7 @@ BimCraft today is a reader, checker and IFC data editor that has started to draw
 | Editing, measuring or saving DWG and DXF | The CadCraft drafting app ({{ui:Edit in CadCraft}} on the 2D view) |
 | Printing or exporting PDF | Print from the program that made the drawing; check it first with {{ui:Print view}} |
 | Plot styles and pen tables | {{ui:Print view}} shows plain black with line weights |
-| DWG files older than R13, and binary DXF (BimCraft says so when you open one) | Save the drawing again as a newer DWG, or as ASCII DXF |
+| DWG files older than R13, and binary DXF (Bildra says so when you open one) | Save the drawing again as a newer DWG, or as ASCII DXF |
 | Drawings linked inside linked drawings | Open them directly |
 | TIFF pictures | Save a PNG or JPEG copy with the same name and add it |
 | DGN drawings | Listed in folder reports only |
@@ -80,5 +80,5 @@ BimCraft today is a reader, checker and IFC data editor that has started to draw
 | Cloud saving | Save copies on your computer or office server. Cloud saving is not available yet |
 | Remembering folders in Firefox and Safari | Choose the folder again, or drag it in |
 | Undo after saving | Open the original file again to start over |
-| Filling in the missing part of a cut-off project file | Copy the original again; in a folder, BimCraft reads the newest complete backup |
+| Filling in the missing part of a cut-off project file | Copy the original again; in a folder, Bildra reads the newest complete backup |
 | Reopening the files you had open | Unsaved changes are offered back as "Recover your work?" when you return; open the files again from the recent list |

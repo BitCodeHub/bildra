@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * analysis-bim.js — structural frame analysis of an IFC model in BimCraft (0.6 LC.4). No DOM: bin/test-frame.mjs runs it
+ * analysis-bim.js — structural frame analysis of an IFC model in Bildra (0.6 LC.4). No DOM: bin/test-frame.mjs runs it
  * in Node. An analysis aid, not a code check. The solver, report and panel are lib/frame (copied into ./frame/ by
  * `node tools/frame/sync.mjs`); this module turns the model's beams, columns and members into the analytical model and
  * keeps the analysis settings in the IFC itself.

@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * ui-util.js — small DOM and formatting helpers shared by the BimCraft UI modules.
+ * ui-util.js — small DOM and formatting helpers shared by the Bildra UI modules.
  * el() is the only way file-derived text reaches the page: children are appended as text
  * nodes (textContent semantics), never parsed as HTML. A model or folder is untrusted input.
  */

@@ -3,7 +3,7 @@
 /**
  * bcf.js — BCF 2.1 issues in and out, with a real model camera (0.4 B9). No DOM, no library: bin/test-bimcraft.mjs --bcf
  * runs it in Node and validates what it writes against the buildingSMART schemas (tools/markupcraft-test/bcf_check.py).
- * BimCraft's own module (MarkupCraft writes BCF for sheets; an app never imports another app's folder).
+ * Bildra's own module (MarkupCraft writes BCF for sheets; an app never imports another app's folder).
  *
  *   const bytes = await writeBcf({ topics, file })        a .bcf zip (stored entries): bcf.version, <guid>/markup.bcf,
  *                                                          <guid>/viewpoint.bcfv (+ snapshot.png)
@@ -183,11 +183,11 @@ export function markupXml(t, file) {
   const p = ['<?xml version="1.0" encoding="UTF-8"?>', '<Markup>'];
   if (file?.name) p.push('<Header><File' + (file.ifcProject ? ' IfcProject="' + esc(file.ifcProject) + '"' : '') + ' isExternal="true"><Filename>' + esc(file.name) + '</Filename>' + (file.date ? '<Date>' + esc(file.date) + '</Date>' : '') + '</File></Header>');
   p.push('<Topic Guid="' + esc(t.guid) + '"' + (t.type ? ' TopicType="' + esc(t.type) + '"' : '') + (t.status ? ' TopicStatus="' + esc(t.status) + '"' : '') + '>');
-  p.push('<Title>' + esc(t.title) + '</Title>', '<CreationDate>' + esc(t.created) + '</CreationDate>', '<CreationAuthor>' + esc(t.author || 'BimCraft') + '</CreationAuthor>');
+  p.push('<Title>' + esc(t.title) + '</Title>', '<CreationDate>' + esc(t.created) + '</CreationDate>', '<CreationAuthor>' + esc(t.author || 'Bildra') + '</CreationAuthor>');
   if (t.modified) p.push('<ModifiedDate>' + esc(t.modified) + '</ModifiedDate>');
   if (t.description) p.push('<Description>' + esc(t.description) + '</Description>');
   p.push('</Topic>');
-  for (const c of t.comments || []) p.push('<Comment Guid="' + esc(c.guid) + '"><Date>' + esc(c.date) + '</Date><Author>' + esc(c.author || 'BimCraft') + '</Author><Comment>' + esc(c.text) + '</Comment>' + (c.viewpoint ? '<Viewpoint Guid="' + esc(c.viewpoint) + '"/>' : '') + '</Comment>');
+  for (const c of t.comments || []) p.push('<Comment Guid="' + esc(c.guid) + '"><Date>' + esc(c.date) + '</Date><Author>' + esc(c.author || 'Bildra') + '</Author><Comment>' + esc(c.text) + '</Comment>' + (c.viewpoint ? '<Viewpoint Guid="' + esc(c.viewpoint) + '"/>' : '') + '</Comment>');
   (t.viewpoints || []).forEach((vp, i) => {
     const base = i ? 'viewpoint-' + (i + 1) : 'viewpoint';
     p.push('<Viewpoints Guid="' + esc(vp.guid) + '"><Viewpoint>' + base + '.bcfv</Viewpoint>' + (vp.snapshot ? '<Snapshot>' + (i ? 'snapshot-' + (i + 1) : 'snapshot') + '.png</Snapshot>' : '') + '</Viewpoints>');

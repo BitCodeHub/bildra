@@ -1,16 +1,16 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /* i18n-ignore-file — every word a person reads comes from the add-on (api.t) or the app's language file. */
 /**
- * bimcraft-api.js — BimCraft's add-on API 1.0 and its own add-on loader (0.5 AO.7; docs/ADDONS-SPEC.md §5.7).
- * Once BimCraft's manifest says "addons": "own", the shell's boot (app-addons.js) steps aside and bimcraft.js calls
+ * bimcraft-api.js — Bildra's add-on API 1.0 and its own add-on loader (0.5 AO.7; docs/ADDONS-SPEC.md §5.7).
+ * Once Bildra's manifest says "addons": "own", the shell's boot (app-addons.js) steps aside and bimcraft.js calls
  * startAddons({ … }) with the open model and the hooks listed below.
  *
  *   api = { ...sharedApi (ui.toolbarGroup, ui.panelSection, ui.settingsSection, files.importer / exporter),
  *           model: { current, properties, selection, select, onChange },
- *           edit: { setAttribute, setProperty },   (each one undo step through BimCraft's IfcEditor, then the panels refresh)
+ *           edit: { setAttribute, setProperty },   (each one undo step through Bildra's IfcEditor, then the panels refresh)
  *           commands: { add, run, has }, props: { section }, ui.panelTab, status }
  *
- * The model is BimCraft's IFC model (ifc-model.js: properties(id) → { id, cls, name, guid, tag, sets: [{ name, rows: [{ name,
+ * The model is Bildra's IFC model (ifc-model.js: properties(id) → { id, cls, name, guid, tag, sets: [{ name, rows: [{ name,
  * value, edit }] }] }); ids are the open model's express ids. Importers return { ifc: Uint8Array, name } (opened like an .ifc
  * file); exporters get { save: () => IFC bytes with the edits, name }.
  *
@@ -33,7 +33,7 @@ const clone = (v) => (v === undefined || v === null ? v ?? null : JSON.parse(JSO
  * [ids], select(ids), afterEdit() (the panels after an edit), status(text), registry, commands, props, tabs, changeListeners,
  * find(selector), showTab(key) }.
  */
-export function makeBimcraftApi(base, addon, ctx) {
+export function makeBildraApi(base, addon, ctx) {
   const shared = sharedApi(base, addon, ctx.registry);
   const id = addon.id;
   const track = (fn) => base.onDeactivate(fn);
@@ -129,13 +129,13 @@ function panelTabMaker(ctx, id, base, track, listSel, tabClass, paneIdPrefix) {
 }
 
 /**
- * Start BimCraft's add-ons. ctx: see makeBimcraftApi, plus openIfc(bytes, name) for importers, and loader options for tests
+ * Start Bildra's add-ons. ctx: see makeBildraApi, plus openIfc(bytes, name) for importers, and loader options for tests
  * (packages, storage, importer, fetchJson, base, verify, bundledOnly).
  */
 export async function startAddons(ctx) {
   const registry = { importers: new Map(), exporters: new Map(), listeners: new Set(), changed() { for (const fn of this.listeners) { try { fn(); } catch { /* app */ } } } };
   const full = { ...ctx, registry, commands: new Map(), props: new Map(), tabs: new Map(), changeListeners: new Set() };
-  const opts = { app: 'bimcraft', appName: ctx.appName || 'BimCraft', apiVersion: BIMCRAFT_API_VERSION, makeApi: (b, a) => makeBimcraftApi(b, a, full) };
+  const opts = { app: 'bimcraft', appName: ctx.appName || 'Bildra', apiVersion: BIMCRAFT_API_VERSION, makeApi: (b, a) => makeBildraApi(b, a, full) };
   for (const k of ['packages', 'storage', 'importer', 'fetchJson', 'base', 'locale', 'timeout']) if (ctx[k] !== undefined) opts[k] = ctx[k];
   if (ctx.bundledOnly ?? bundledOnly()) opts.packages = NO_PACKAGES;
   if (!ctx.verify) installTrust(AddonLoader); else AddonLoader.verify = ctx.verify;

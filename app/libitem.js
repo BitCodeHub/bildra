@@ -2,7 +2,7 @@
 /**
  * libitem.js — the "CadCraft library item", format 1 (docs/LIBRARY-SPEC.md §1), and the file adapters
  * that need nothing but bytes or an already-parsed file (§2). No DOM, no imports, no Node-only APIs:
- * BimCraft, CadCraft (a byte-identical copy at cadcraft/dev/libitem.js), the server-side converter
+ * Bildra, CadCraft (a byte-identical copy at cadcraft/dev/libitem.js), the server-side converter
  * (tools/library/convert.mjs) and the tests all run this same file.
  *
  * An item is one JSON document per version. Lengths in mm, angles in DEGREES, Z up, plan in XY at z 0,
@@ -980,7 +980,7 @@ function readGltf(u8, notes) {
 }
 
 // ---------------------------------------------------------------------------
-// DWG / DXF blocks (the drawing model of docs/DWG-LIB-SPEC.md: cc-dwg's readDwg or dxf-model.js, as BimCraft's 2D view uses)
+// DWG / DXF blocks (the drawing model of docs/DWG-LIB-SPEC.md: cc-dwg's readDwg or dxf-model.js, as Bildra's 2D view uses)
 
 /** Drawing units → mm per unit, the key, and a note when the drawing does not say. */
 export function drawingUnits(db, override) {

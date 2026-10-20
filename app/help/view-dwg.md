@@ -8,7 +8,7 @@ keywords: dynamic blocks, visibility states, dwg, dxf, cad, drawing, 2d, view, v
 
 ## What you'll do
 
-Open a CAD drawing in 2D, move around it, switch between model space and its sheets, and read coordinates. BimCraft shows DWG and DXF drawings; it does not edit or save them. To change one, click {{ui:Edit in CadCraft}} and the drawing opens in the CadCraft drafting app in a new tab.
+Open a CAD drawing in 2D, move around it, switch between model space and its sheets, and read coordinates. Bildra shows DWG and DXF drawings; it does not edit or save them. To change one, click {{ui:Edit in CadCraft}} and the drawing opens in the CadCraft drafting app in a new tab.
 
 ## Steps
 
@@ -47,21 +47,21 @@ Drag with one finger to pan. Pinch zoom is not built yet for drawings: tap {{ui:
 
 ## Dynamic blocks
 
-A dynamic block is drawn as the drawing shows it: each placed block in the visibility state the drawing was saved with ("Plan" or "Front", "Single bowl" or "Double bowl"). On the right, **Dynamic blocks** lists every one placed in model space: how many are placed, the states they show, and every state the block has. In {{ui:3D}}, click a placed block to see **Dynamic block**, **State shown** and **Other states** in Properties. BimCraft does not switch states.
+A dynamic block is drawn as the drawing shows it: each placed block in the visibility state the drawing was saved with ("Plan" or "Front", "Single bowl" or "Double bowl"). On the right, **Dynamic blocks** lists every one placed in model space: how many are placed, the states they show, and every state the block has. In {{ui:3D}}, click a placed block to see **Dynamic block**, **State shown** and **Other states** in Properties. Bildra does not switch states.
 
 ## Not drawn yet
 
 Some kinds of objects are not drawn in this build. They are counted under **Not drawn yet** on the right ("These parts of the drawing are skipped for now, not guessed at."), so you know something is missing. Lines, polylines, arcs, circles, ellipses, splines, hatches and solid fills, text and multiline text, blocks with attributes, dimensions, leaders and multileaders, tables, images and viewports are drawn. 3D faces, polyface meshes and polygon meshes are drawn as their edges seen from above; switch to {{ui:3D}} to see them as surfaces.
 
-A binary DXF does not open: BimCraft says so. Save it again as an ASCII DXF, or as a DWG, from the program that made it.
+A binary DXF does not open: Bildra says so. Save it again as an ASCII DXF, or as a DWG, from the program that made it.
 
 ## Common mistakes
 
 - **The drawing looks empty.** Some layers may be off or frozen in the drawing itself; they start unticked in {{ui:Layers}}. Click {{ui:All on}}. If the status says "*name* is an empty drawing: it holds no lines, text or blocks.", there is nothing in it.
 - **A sheet shows an empty frame.** The sheet may rely on linked drawings. See [Find linked drawings and pictures](topic:dwg-linked-files).
-- **Text looks a little different.** BimCraft draws text in a narrow sans-serif font, not the drawing's own fonts, so text can be a little wider or narrower than in the program that made it.
+- **Text looks a little different.** Bildra draws text in a narrow sans-serif font, not the drawing's own fonts, so text can be a little wider or narrower than in the program that made it.
 - **"*name* could not be read. It may be damaged, or saved in a format the reader does not handle yet."** The bracket at the end names the file's format code. Save it from the program that made it as an older DWG or as DXF, and try again.
-- **Expecting to measure, draw or edit.** BimCraft only views drawings. Click {{ui:Edit in CadCraft}} to open the same file in the CadCraft drafting app, which edits it and saves a copy as DWG or DXF. Your original file is not changed, and linked drawings stay in BimCraft. The button shows only where CadCraft is open to you.
+- **Expecting to measure, draw or edit.** Bildra only views drawings. Click {{ui:Edit in CadCraft}} to open the same file in the CadCraft drafting app, which edits it and saves a copy as DWG or DXF. Your original file is not changed, and linked drawings stay in Bildra. The button shows only where CadCraft is open to you.
 
 ## Next
 

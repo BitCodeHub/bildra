@@ -180,7 +180,7 @@ function assemble(content, W, H, title) {
     null,
     '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>',
     '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>',
-    `<< /Title ${t} /Producer (BimCraft) >>`,   // i18n-ignore: PDF metadata (the program's name)
+    `<< /Title ${t} /Producer (Bildra) >>`,   // i18n-ignore: PDF metadata (the program's name)
   ];
   const parts = [], offs = [];
   let size = 0;

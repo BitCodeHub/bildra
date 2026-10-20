@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * pointcloud.js — point clouds in BimCraft and CadCraft (0.5 SG.1, suggestions #507 and #600). No DOM, no three.js:
+ * pointcloud.js — point clouds in Bildra and CadCraft (0.5 SG.1, suggestions #507 and #600). No DOM, no three.js:
  * bin/test-pointcloud.mjs runs all of it in Node. Canonical here in bimcraft/dev; CadCraft carries a byte-identical copy
  * (`node tools/pointcloud/sync.mjs [--check]`, which also copies CivilCraft's las.js / terrain.js / crs.js that this reads
  * LAS and LAZ through — CivilCraft's reader and its laz-perf, never a second LAS reader).

@@ -1,12 +1,12 @@
 ---
 title: Keys and mouse
-summary: Every key, mouse, trackpad and touch action in BimCraft, grouped by what you are looking at.
+summary: Every key, mouse, trackpad and touch action in Bildra, grouped by what you are looking at.
 section: reference
 order: 10
 keywords: keyboard, shortcuts, hotkeys, keys, mouse, trackpad, touch, orbit, pan, zoom, hide, isolate, see-through, undo, redo, copy, paste, duplicate, save, fit, print view, escape, settings, draw, wall, door, window, plan
 ---
 
-BimCraft has few shortcuts. Most work is done with the mouse and the panels. Shortcuts written with {{key:Mod}} use Command on a Mac and Ctrl elsewhere. See [Keys, mice and trackpads](common:keys) for how keys are written in this help.
+Bildra has few shortcuts. Most work is done with the mouse and the panels. Shortcuts written with {{key:Mod}} use Command on a Mac and Ctrl elsewhere. See [Keys, mice and trackpads](common:keys) for how keys are written in this help.
 
 ## Everywhere
 
@@ -14,7 +14,7 @@ BimCraft has few shortcuts. Most work is done with the mouse and the panels. Sho
 |---|---|
 | {{key:Ctrl+Shift+F}} | Cycle the screen modes: normal, full screen, full screen with the bars hidden. Ctrl on every platform, including a Mac |
 | {{key:Esc}} | Leave full screen |
-| {{key:Mod+,}} | Open {{ui:Settings}}. See [BimCraft settings](topic:settings) |
+| {{key:Mod+,}} | Open {{ui:Settings}}. See [Bildra settings](topic:settings) |
 | {{key:Tab}} | Move between buttons, checkboxes and values. Every control can be reached from the keyboard |
 
 ## 3D view (IFC models)

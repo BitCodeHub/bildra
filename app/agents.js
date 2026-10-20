@@ -1,8 +1,8 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /* i18n-ignore-file — tool names, descriptions and results are read by the assistant program, not shown to the person (AGENTS-SPEC §5). */
 /**
- * agents.js — BimCraft for AI assistants and scripts: the Draw edits (0.6 DF.25, session `bim-draw`; docs/AGENTS-SPEC.md §5.2,
- * §6.3). The apps contain no AI: this gives the person's own assistant tools on the open model; Settings › BimCraft ›
+ * agents.js — Bildra for AI assistants and scripts: the Draw edits (0.6 DF.25, session `bim-draw`; docs/AGENTS-SPEC.md §5.2,
+ * §6.3). The apps contain no AI: this gives the person's own assistant tools on the open model; Settings › Bildra ›
  * Assistants decides which groups. Beside bim-agent.js (0.4 X.7: elements_find, elements_isolate, element_properties), which
  * keeps finding and showing elements; bimcraft.js configures the control channel. One source for both paths: the live window
  * (installAgents) and the headless core (tools/cli/headless/ifc.mjs).
@@ -17,7 +17,7 @@
  * Tools:
  *   model_describe  read    levels (name, guid, elevation, height), walls by type, doors, windows, rooms with areas, floors,
  *                           ramps, grids, columns, the site; the wall / door / window types the edit tools take
- *   walls_list      read    the walls drawn with BimCraft's tools on a level: guid, ends, type, thickness, height, length
+ *   walls_list      read    the walls drawn with Bildra's tools on a level: guid, ends, type, thickness, height, length
  *   walls_add       edit    walls along points on a level (closed: back to the first); joined, rooms follow; one undo step
  *   opening_add     edit    a door or window in a wall (by its guid), at an offset along it or in its middle; one undo step
  *   floor_add       edit    a floor or slab of any outline on a level; one undo step
@@ -83,19 +83,19 @@ export function describeModel(ed) {
 }
 
 export function modelTools(env) {
-  const E = () => { const ed = env.ed(); if (!ed) throw new Error('No IFC model is open in BimCraft.'); return ed; };
+  const E = () => { const ed = env.ed(); if (!ed) throw new Error('No IFC model is open in Bildra.'); return ed; };
   /** One undo step; a model op's refusal comes back as its sentence (nothing changed). */
   const edit = async (label, op) => { try { return await env.apply(label, op); } catch (e) { throw new Error(said(e)); } };
   const guidsOf = (r) => [...(r?.made?.keys?.() || [])];
   return [
     {
       name: 'model_describe', group: 'read', title: 'Describe the model',
-      description: 'The open BimCraft model in millimetres: its levels (name, GlobalId, elevation, height), walls by type, doors, windows, rooms with their areas, floors drawn by outline, ramps, grid line tags, columns and the site; also the wall, door and window types walls_add and opening_add take.',
+      description: 'The open Bildra model in millimetres: its levels (name, GlobalId, elevation, height), walls by type, doors, windows, rooms with their areas, floors drawn by outline, ramps, grid line tags, columns and the site; also the wall, door and window types walls_add and opening_add take.',
       run: () => describeModel(E()),
     },
     {
       name: 'walls_list', group: 'read', title: 'List walls',
-      description: 'The walls on a level that BimCraft\'s Draw tools can change: GlobalId, start and end (mm, in the level\'s plan), type, thickness, height, length, and the doors and windows in each.',
+      description: 'The walls on a level that Bildra\'s Draw tools can change: GlobalId, start and end (mm, in the level\'s plan), type, thickness, height, length, and the doors and windows in each.',
       inputSchema: obj({ level: LEVEL }),
       run: (a) => {
         const ed = E(), l = levelRef(ed, a.level), snap = snapshotModel(ed);
@@ -194,14 +194,14 @@ export function installAgents(modelUi, app) {
   const guidOf = (key) => { const e = ed(); if (!e) return null; try { return val(e.api.GetLine(e.mid, key - (app.model()?.keyBase || 0), false)?.GlobalId) || null; } catch (x) { return null; } };
   const info = () => {
     const e = ed();
-    return { app: 'bimcraft', title: 'BimCraft', file: A.host.fileName?.() || null, open: !!e, unsaved: !!e?.dirty, changes: e?.changes.length || 0, draw: !!A.S.on, busy: app.busy?.() || null,
+    return { app: 'bimcraft', title: 'Bildra', file: A.host.fileName?.() || null, open: !!e, unsaved: !!e?.dirty, changes: e?.changes.length || 0, draw: !!A.S.on, busy: app.busy?.() || null,
       levels: e ? snapshotModel(e).levels.length : 0, elements: app.model()?.elements ?? null };
   };
   const live = [
-    { name: 'app_info', group: 'read', title: 'About this window', description: 'BimCraft\'s window: the IFC file open, unsaved changes, whether Draw is on, levels and elements, and what the person is in the middle of.', run: () => info() },
+    { name: 'app_info', group: 'read', title: 'About this window', description: 'Bildra\'s window: the IFC file open, unsaved changes, whether Draw is on, levels and elements, and what the person is in the middle of.', run: () => info() },
     {
       name: 'selection_get', group: 'read', title: 'What is selected',
-      description: 'What the person has selected in BimCraft: GlobalId, class and name of each (up to 1000).',
+      description: 'What the person has selected in Bildra: GlobalId, class and name of each (up to 1000).',
       run: () => { const e = ed(); return { selected: [...(app.selection() || [])].slice(0, LIMIT).map((k) => { const g = guidOf(k), l = e && g ? e.api.GetLine(e.mid, k - (app.model()?.keyBase || 0), false) : null; return { guid: g, class: l?.constructor?.name || null, name: l ? val(l.Name) || '' : null }; }) }; },
     },
     {
@@ -236,7 +236,7 @@ export function installAgents(modelUi, app) {
         return { undone };
       },
     },
-    { name: 'model_save', group: 'save', title: 'Save the model', description: 'BimCraft\'s own Save as IFC: a new file with every change (desktop: the save dialog; browser: a download). The original file is never changed.', run: async () => ({ saved: await app.save(), ...info() }) },
+    { name: 'model_save', group: 'save', title: 'Save the model', description: 'Bildra\'s own Save as IFC: a new file with every change (desktop: the save dialog; browser: a download). The original file is never changed.', run: async () => ({ saved: await app.save(), ...info() }) },
   ];
   for (const def of [...live.slice(0, 1), ...modelTools({ ed, apply }), ...live.slice(1)]) C.tool(def);
   return C;

@@ -8,14 +8,14 @@ keywords: move, rotate, turn, drag, library, librarycraft, place, insert, equipm
 
 ## What you'll do
 
-Put a library item into an IFC model: a sink, a work table, a chair. BimCraft writes it as a proper IFC element with a type, so every copy of the same item shares one set of geometry, and its data, item number and license travel with it.
+Put a library item into an IFC model: a sink, a work table, a chair. Bildra writes it as a proper IFC element with a type, so every copy of the same item shares one set of geometry, and its data, item number and license travel with it.
 
 ## Steps
 
 1. Open an IFC model.
 2. Click the {{ui:Library}} tab beside {{ui:Properties}} on the right, or {{ui:Library}} in the toolbar above the model.
 3. Pick a source:
-   - **LibraryCraft**: the CadCraft library on this site. Public items need no sign-in.
+   - **LibraryCraft**: the CadCraft online library. Public items need no sign-in.
    - **This file**: the blocks of an open DWG or DXF drawing. A dynamic block with visibility states is offered once per state, named "Sink: Double bowl", each drawn with only that state's objects.
    - **Files…**: a DWG, DXF, IFC, glTF/GLB, OBJ, RFA or CSV file on your computer. It is read in this tab; nothing is uploaded.
    - **Other feeds**: another library that speaks the same feed format. Add its address once; it is kept in this browser.
@@ -52,15 +52,15 @@ Each move is one undo step and travels in Studio Live. The item keeps its item n
 
 - An item with no 3D body (a 2D symbol) is placed with a stand-in box; you give its height when asked.
 - More of the same: pick a placed item and use {{ui:Copy}} and {{ui:Paste}}, or {{key:Mod+D}}. See [Copy, paste and duplicate library items](topic:copy-paste).
-- To start every placement with wall snap on, turn on **Start with wall snap on** in [BimCraft settings](topic:settings).
+- To start every placement with wall snap on, turn on **Start with wall snap on** in [Bildra settings](topic:settings).
 - Lengths are converted to the model's own units, whatever they are.
-- **Entourage** (trees, shrubs, people, cars) is in the library too: search for "tree", "person" or "car". These are drawn by CadCraft (CC0) and keep their colors when placed (a trunk brown, leaves green, a car's windows see-through), in BimCraft and in other BIM programs. They show in [rendered pictures](topic:render).
+- **Entourage** (trees, shrubs, people, cars) is in the library too: search for "tree", "person" or "car". These are drawn by CadCraft (CC0) and keep their colors when placed (a trunk brown, leaves green, a car's windows see-through), in Bildra and in other BIM programs. They show in [rendered pictures](topic:render).
 - In an IFC2X3 file the body is written as a faceted solid; in IFC4 as a triangulated face set. Both open in other IFC tools.
 - A drawing (DWG or DXF) cannot be saved here, so items are placed into IFC models only. Use **This file** on a drawing to see what its blocks would become.
 
 ## Items in your language
 
-An item can carry its name, description and type in other languages. When it has them in the language BimCraft is set to (Settings › General › Language), the item's page shows those, with the name its maker gave it underneath, and **Place** writes the name in your language into the model, so the {{ui:Equipment}} schedule lists it that way. The item stays the same item: checking for updates and swapping go by the item itself, never by its name. Items without a translation keep their own words.
+An item can carry its name, description and type in other languages. When it has them in the language Bildra is set to (Settings › General › Language), the item's page shows those, with the name its maker gave it underneath, and **Place** writes the name in your language into the model, so the {{ui:Equipment}} schedule lists it that way. The item stays the same item: checking for updates and swapping go by the item itself, never by its name. Items without a translation keep their own words.
 
 ## Common mistakes
 

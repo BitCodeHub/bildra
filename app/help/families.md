@@ -1,6 +1,6 @@
 ---
 title: Families and their sizes
-summary: Doors, windows and furniture come in families. Each size of a family is one type in the IFC file, so the type list stays short in BimCraft while other programs read plain types.
+summary: Doors, windows and furniture come in families. Each size of a family is one type in the IFC file, so the type list stays short in Bildra while other programs read plain types.
 section: tasks
 order: 37
 keywords: family, families, type, types, size, sizes, door type, window type, furniture, table, shelf, cabinet, new size, duplicate, place family, family file, ccfamily, ifc library, project library, group, visibility, IfcDoorType, IfcWindowType, IfcGroup
@@ -8,9 +8,9 @@ keywords: family, families, type, types, size, sizes, door type, window type, fu
 
 ## What a family is
 
-A family is one kind of thing in several sizes: a single swing door that comes 32, 36 and 42 inches wide, or a table that comes long and short. In BimCraft you see the family once, with its sizes under it, instead of a long list of types.
+A family is one kind of thing in several sizes: a single swing door that comes 32, 36 and 42 inches wide, or a table that comes long and short. In Bildra you see the family once, with its sizes under it, instead of a long list of types.
 
-IFC has no families. In the file each size is an ordinary type (a door type, a window type, a furniture type…), and the family is a group that lists its sizes. Other BIM programs read the types and the group as they are; BimCraft reads the family back from them.
+IFC has no families. In the file each size is an ordinary type (a door type, a window type, a furniture type…), and the family is a group that lists its sizes. Other BIM programs read the types and the group as they are; Bildra reads the family back from them.
 
 ## Where to find them
 
@@ -49,7 +49,7 @@ You do not have to start from nothing. {{ui:Duplicate}} copies a family with its
 ## Family files
 
 - {{ui:Save the family file}} saves a `.ccfamily.json`: the family's parameters, solids and sizes. Open it in another model with {{ui:Open a family file…}} in the Families group.
-- {{ui:Save as IFC}} saves the family as a small IFC file: its sizes' types and its group, declared by an IFC project library. Other programs open it as a set of types; BimCraft opens it as the family again.
+- {{ui:Save as IFC}} saves the family as a small IFC file: its sizes' types and its group, declared by an IFC project library. Other programs open it as a set of types; Bildra opens it as the family again.
 
 A family file opened here is read as data and checked before anything is written. A family whose key is already in the model comes in as a separate family.
 

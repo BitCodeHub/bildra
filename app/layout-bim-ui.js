@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * layout-bim-ui.js — BimCraft's Points tab (0.6 LC.22, session lc-structure): field points from the open model (column
+ * layout-bim-ui.js — Bildra's Points tab (0.6 LC.22, session lc-structure): field points from the open model (column
  * centres, wall ends, anchor bolts, sleeves, the picked elements), numbered, written for a total station (CSV / TXT,
  * PNEZD / PENZD / XYZ — CivilCraft's and CadCraft's file), then an as-built file read back and compared point by point,
  * with the result on the 3D view and as a CSV report. layout-bim.js collects the points; layout/layout-points.js numbers,

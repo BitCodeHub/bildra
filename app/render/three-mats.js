@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
  * three-mats.js — library materials as three.js textures and materials (0.5 RC.11 (b)). Shared by the renderer and the apps'
- * live 3D views (render/ is synced into BimCraft, tools/render/sync.mjs).
+ * live 3D views (render/ is synced into Bildra, tools/render/sync.mjs).
  *
  *   libTextures(id, size = 256) → {map, bump, w, h, size: [w, h] metres} | null   cached per (id, size); map is sRGB, bump
  *                                  carries the height in red and the roughness in green (three reads .r for bump, .g for

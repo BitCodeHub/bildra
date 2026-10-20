@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * library-view.js — BimCraft's Library panel (docs/LIBRARY-SPEC.md §3.1, §3.3, §3.4). Sources:
+ * library-view.js — Bildra's Library panel (docs/LIBRARY-SPEC.md §3.1, §3.3, §3.4). Sources:
  *   This file    the blocks of the open DWG/DXF (libitem.js itemsFromDwg)
  *   Files…       a DWG, DXF, IFC, glTF/GLB, OBJ, RFA or CSV picked here, read by the adapters in this tab
  *   LibraryCraft the same-origin public API (/api/v1/library/*); team items too once signed in (Bearer token)

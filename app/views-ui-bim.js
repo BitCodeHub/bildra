@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * views-ui-bim.js — BimCraft's Views panel (0.5 RC.7, session `render`): save the 3D view's camera by name, go back to it,
+ * views-ui-bim.js — Bildra's Views panel (0.5 RC.7, session `render`): save the 3D view's camera by name, go back to it,
  * play the views in order, and record a walkthrough while walking and play it back. Kept in the IFC (views-bim.js); each
  * save, rename, reorder or delete is one undo step. Imported on first use by bimcraft.js ("Views").
  *

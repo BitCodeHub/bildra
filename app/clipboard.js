@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * clipboard.js — what Copy, Paste and Duplicate carry in BimCraft. No DOM: bin/test-bimcraft.mjs --clipboard runs it.
+ * clipboard.js — what Copy, Paste and Duplicate carry in Bildra. No DOM: bin/test-bimcraft.mjs --clipboard runs it.
  *
  * What copy and paste mean here (owner's brief, 2026-10-11):
  *   - a placed library item (an element with the CadCraft_Placement pset, ifc-place.js) is copied as a *placement clip*:
@@ -283,7 +283,7 @@ export function elementCopyRows(p) {
   for (const s of p.sets || []) for (const r of s.rows || []) rows.push([s.name, r.name, v(r.value)]);
   return rows;
 }
-/** The same rows as CSV (no BOM; formula-looking cells escaped as every other BimCraft CSV), with a Model column when given. */
+/** The same rows as CSV (no BOM; formula-looking cells escaped as every other Bildra CSV), with a Model column when given. */
 export function elementCsv(p, { file } = {}) {
   const rows = elementCopyRows(p);
   // i18n-ignore: CSV headers are file content (as the other CSVs here)

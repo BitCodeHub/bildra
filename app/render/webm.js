@@ -2,7 +2,7 @@
 /**
  * webm.js — writing a WebM video file from encoded frames (0.6 LC.10), our own, from the Matroska / EBML specifications
  * (IETF RFC 8794 EBML, RFC 9559 Matroska; WebM = the Matroska subset the WebM project names). Shared by ModelCraft and
- * BimCraft: canonical in modelcraft/dev/render/, byte-identical copy in bimcraft/dev/render/ (node tools/render/sync.mjs).
+ * Bildra: canonical in modelcraft/dev/render/, byte-identical copy in bimcraft/dev/render/ (node tools/render/sync.mjs).
  * DOM-free and import-free: the page's encoder (the browser's own WebCodecs VideoEncoder, video.js) hands it frames, and the
  * Node test writes files that ffprobe reads back.
  *

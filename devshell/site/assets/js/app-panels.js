@@ -172,7 +172,7 @@
     if (d.cols.length !== 3) return null;
     var center = null;
     if (!d.matrix.length) {
-      // No named areas (BimCraft): one row, the panels auto-placed beside one stage element.
+      // No named areas (Bildra): one row, the panels auto-placed beside one stage element.
       var flow = [].filter.call(main.children, function (ch) {
         if (panels.some(function (p) { return p.el === ch; })) return false;
         var cs = getComputedStyle(ch);

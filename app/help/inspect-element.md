@@ -38,7 +38,7 @@ Pick elements in an IFC model and read everything the file says about them: attr
 
 ## Common mistakes
 
-- **Dragging a little while clicking.** BimCraft treats that as an orbit and does not pick. Hold the mouse still.
+- **Dragging a little while clicking.** Bildra treats that as an orbit and does not pick. Hold the mouse still.
 - **Expecting units next to numbers.** Values are shown as stored in the file, rounded to four decimals, without a unit symbol. Lengths in a metric export are usually millimeters or meters; check the exporter's settings.
 - **Looking for a parameter by its familiar name.** Exporters rename and regroup parameters into IFC property sets such as `Pset_WallCommon`. Look through each set; custom parameters often sit in a set named after the exporting program or your company.
 - **Expecting a search box.** Click to pick an element; {{key:Mod}}+click or {{key:Shift}}+click picks more, and {{key:Mod+A}} picks every element shown. The {{ui:Elements}} list on the left only counts elements by kind; it is not clickable.

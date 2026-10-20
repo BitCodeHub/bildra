@@ -316,7 +316,7 @@
   "shell.split.title": "Seret untuk mengubah ukuran. Klik dua kali untuk mengatur ulang.",
   "shell.assistants.title": "Asisten",
   "shell.assistants.on": "Izinkan asisten AI dan skrip menggunakan {app}",
-  "shell.assistants.hint": "Mereka terhubung melalui CadCraft Studio di komputer ini, dengan token yang ditampilkan Studio. {app} tidak memiliki AI sendiri dan tidak mengirim apa pun ke mana pun.",
+  "shell.assistants.hint": "Mereka terhubung melalui Bildra Desktop di komputer ini, dengan token yang ditampilkan Studio. {app} tidak memiliki AI sendiri dan tidak mengirim apa pun ke mana pun.",
   "shell.assistants.groups": "Yang boleh mereka lakukan",
   "shell.assistants.group.read": "Baca: melihat gambar, mendaftar dan menjelaskan objek, melihat tampilan",
   "shell.assistants.group.edit": "Sunting: menjalankan perintah pada gambar (setiap tindakan adalah satu langkah yang dapat Anda urungkan)",

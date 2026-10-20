@@ -42,4 +42,4 @@ Every {{ui:Draw}} tool works on the level chosen in the plan's level list (or pi
 - Each of these changes is one step: {{key:Mod+Z}} takes it back.
 - In the IFC file: the site (IfcSite) with its outline and area, the building (IfcBuilding) placed on it, and the levels (IfcBuildingStorey) in the building.
 
-See also [Coordinates in BimCraft](topic:coordinates) for the project origin and the survey point.
+See also [Coordinates in Bildra](topic:coordinates) for the project origin and the survey point.

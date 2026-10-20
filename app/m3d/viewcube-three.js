@@ -2,7 +2,7 @@
 /**
  * viewcube-three.js — connects the view cube (viewcube.js) to a three.js camera + OrbitControls. Does not import three
  * (it only calls the camera's own methods), so Node runs it with a stand-in. Canonical copy: modelcraft/dev/; PartCraft,
- * DetailCraft and BimCraft keep BYTE-IDENTICAL copies next to their viewcube.js.
+ * DetailCraft and Bildra keep BYTE-IDENTICAL copies next to their viewcube.js.
  *
  *   import { mountViewCube } from './viewcube.js';
  *   import { threeCubeOptions } from './viewcube-three.js';

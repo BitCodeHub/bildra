@@ -1,5 +1,5 @@
 name: Bug report
-description: Something in BimCraft did the wrong thing
+description: Something in Bildra did the wrong thing
 labels: [bug]
 body:
   - type: textarea

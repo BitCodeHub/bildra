@@ -1,8 +1,8 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
  * video-ui.js — the Render video dialog (0.6 LC.10; the walkthrough video, WALK, is its first use), shared by ModelCraft and
- * BimCraft: canonical in modelcraft/dev/render/, byte-identical copy in bimcraft/dev/render/ (node tools/render/sync.mjs).
- * Words through t() with keys `render.video.*` (copied into BimCraft's en.json by the sync script).
+ * Bildra: canonical in modelcraft/dev/render/, byte-identical copy in bimcraft/dev/render/ (node tools/render/sync.mjs).
+ * Words through t() with keys `render.video.*` (copied into Bildra's en.json by the sync script).
  *
  *   openVideoDialog({
  *     scene(settings) → scene + frameAt(t seconds) → {camera(aspect), matrices?}   the app's adapter, at each Render

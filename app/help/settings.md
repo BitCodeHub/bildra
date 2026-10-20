@@ -1,16 +1,16 @@
 ---
-title: BimCraft settings
+title: Bildra settings
 summary: Choose whether rooms and spaces show, whether edges are drawn and which view a model opens in, and start placing with wall snap on.
 section: reference
 order: 5
 keywords: settings, preferences, options, spaces, rooms, ifcspace, edges, lines, performance, large model, opening view, camera, top view, wall snap, snapping
 ---
 
-Open {{ui:Settings}} with the gear in the app bar or {{key:Mod+,}}. The first tab, {{ui:BimCraft}}, holds the settings that belong to this app; {{ui:General}} holds the ones every CadCraft app shares (theme, toolbar, panels). BimCraft's settings exist only in the app: you change them here, and this browser remembers them. {{ui:Reset BimCraft settings}} at the bottom of the dialog puts them, and the shared ones, back to the start.
+Open {{ui:Settings}} with the gear in the app bar or {{key:Mod+,}}. The first tab, {{ui:Bildra}}, holds the settings that belong to this app; {{ui:General}} holds the ones every CadCraft app shares (theme, toolbar, panels). Bildra's settings exist only in the app: you change them here, and this browser remembers them. {{ui:Reset Bildra settings}} at the bottom of the dialog puts them, and the shared ones, back to the start.
 
 ## Menus, keys and mouse
 
-The menu style (BimCraft's own toolbar, a home-design menu bar, a BIM ribbon or a drafting command line), your own keys and menus, and what the wheel and mouse buttons do. See [Menus, keys and mouse](topic:menus-keys-and-mouse).
+The menu style (Bildra's own toolbar, a home-design menu bar, a BIM ribbon or a drafting command line), your own keys and menus, and what the wheel and mouse buttons do. See [Menus, keys and mouse](topic:menus-keys-and-mouse).
 
 ## When a model opens
 
@@ -43,11 +43,11 @@ On the view cube, click a face, an edge or a corner to look from that side, drag
 
 ## Your name on issues
 
-Signed in, issues carry your account's name and BimCraft asks for nothing: this part shows {{ui:From your account (<name>)}}. {{ui:Use another name}} opens a box for a different name, which wins until you choose {{ui:Use my account name}}. Signed out, the issue form asks for a name as before. See [Issues and BCF files](topic:issues-bcf).
+Signed in, issues carry your account's name and Bildra asks for nothing: this part shows {{ui:From your account (<name>)}}. {{ui:Use another name}} opens a box for a different name, which wins until you choose {{ui:Use my account name}}. Signed out, the issue form asks for a name as before. See [Issues and BCF files](topic:issues-bcf).
 
 ## Assistants
 
-**Let AI assistants and scripts use BimCraft** (off at the start) lets an assistant on your computer reach the open model through CadCraft Studio: **Read** finds elements and reads their properties, **Change the view** isolates, hides and shows them. **Activity** lists its calls. See [Let an AI assistant work with your model](topic:assistants).
+**Let AI assistants and scripts use Bildra** (off at the start) lets an assistant on your computer reach the open model through Bildra Desktop: **Read** finds elements and reads their properties, **Change the view** isolates, hides and shows them. **Activity** lists its calls. See [Let an AI assistant work with your model](topic:assistants).
 
 :::note
 The other settings apply when a model opens or placing starts. A model already open keeps how it looks until you use the toolbar buttons or open it again.
@@ -57,5 +57,5 @@ The other settings apply when a model opens or placing starts. A model already o
 
 - [Copy, paste and duplicate library items](topic:copy-paste)
 - [Place equipment and furniture from the library](topic:place-from-library)
-- [The BimCraft screen](topic:workspace)
+- [The Bildra screen](topic:workspace)
 - [Let an AI assistant work with your model](topic:assistants)

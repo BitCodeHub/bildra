@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// "Between two programs" in BimCraft's left panel (0.6 DF.12 (c), session `bim-interop`): the property mapping files for
+// "Between two programs" in Bildra's left panel (0.6 DF.12 (c), session `bim-interop`): the property mapping files for
 // the two programs a model travels between, and the round-trip report (what came back of a model that went out).
 // DOM only; the work is prop-map.js and roundtrip.js. Shown while the Models section is (it follows its `hidden`).
 import { el, num } from './ui-util.js';

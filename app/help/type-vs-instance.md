@@ -8,7 +8,7 @@ keywords: type, instance, type properties, family type, shared, copy on write, a
 
 ## What you'll do
 
-Set the manufacturer on a door type so every door of that type shows it, then give one door its own fire rating without touching the others. This shows the difference between type and instance properties in BimCraft.
+Set the manufacturer on a door type so every door of that type shows it, then give one door its own fire rating without touching the others. This shows the difference between type and instance properties in Bildra.
 
 ## Type or instance?
 
@@ -36,12 +36,12 @@ In the {{ui:Properties}} panel, sets that come from the type have " (type)" afte
 4. Click the door next to it, of the same type.
 5. Check the same value: it still shows the old value.
 
-Even if the exporter shared that property set between both doors, BimCraft gave the first door its own copy before changing it. See [Why your edit changes only one element](topic:edit-ifc-properties#why-your-edit-changes-only-one-element).
+Even if the exporter shared that property set between both doors, Bildra gave the first door its own copy before changing it. See [Why your edit changes only one element](topic:edit-ifc-properties#why-your-edit-changes-only-one-element).
 
 ## Save
 
 1. Click {{ui:Save as IFC}} or press {{key:Mod+S}}.
-2. Open the saved copy in BimCraft, or in any IFC viewer, to check both changes.
+2. Open the saved copy in Bildra, or in any IFC viewer, to check both changes.
 
 ## Common mistakes
 

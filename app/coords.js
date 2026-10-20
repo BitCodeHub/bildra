@@ -13,7 +13,7 @@
  *   mapText(georef, eM, nM) → { e, n, unit }        map grid values in the map's own unit (m, ft, US ft), 3 decimals
  *   readout({ x, y, z?, level, map }, fmt, t) → [lines]   the readout's lines (fmt = model-units.js fmtLen with the units)
  *   planToFile(M, p) / fileToPlan(M, q)              a storey's plan (its own X / Y, mm) ↔ file mm, M = ModelWriter.storeyWorld
- *   fileToViewer(p, place, C, fileUnitM)            file units (Z up) → BimCraft's viewer (metres, Y up); the inverse of
+ *   fileToViewer(p, place, C, fileUnitM)            file units (Z up) → Bildra's viewer (metres, Y up); the inverse of
  *                                                    ifc-geo.js viewerToFile
  */
 import { ids, val, lengthUnitMm, inv4, apply4 } from './ifc-util.js';

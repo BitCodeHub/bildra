@@ -3,7 +3,7 @@
  * model-schedule.js — the live schedules of what was drawn (0.5 part 3, BM.7): doors, windows, walls by type, rooms. No
  * DOM: bin/test-bimcraft.mjs --model runs it in Node. Built from the same reading the tools use (model-ops.js
  * snapshotModel + the levels' room loops), so they change with every edit; the CSV goes through ifc-qto.js tableCsv like
- * every other BimCraft table.
+ * every other Bildra table.
  *
  *   schedules(snap, loops, { fmtLen, fmtArea, t }) → { doors, windows, walls, rooms }, each { head: [labels], rows: [[cells]],
  *     total: [cells] | null, nums: [[numbers]] } — cells are text in the chosen units; nums the same rows in mm / mm² for tests

@@ -3,7 +3,7 @@
  * family-model.js — families on top of IFC types (0.6 DC.114, session bim-families_PART_2; spike docs/spikes/bim-families_PART_2.md).
  * No DOM: bin/test-bimcraft.mjs --families runs it in Node.
  *
- * A family is BimCraft's idea; the file holds only plain IFC that other programs read as ordinary types:
+ * A family is Bildra's idea; the file holds only plain IFC that other programs read as ordinary types:
  *   family  IfcGroup (ObjectType "Family") + IfcRelAssignsToGroup → its sizes' types; pset CadCraft_Family on the group
  *           (Key, Category, Version, Recipe = the recipe as JSON in one IfcText)
  *   size    one IfcDoorType / IfcWindowType / IfcFurnitureType / … (IFC2X3: IfcDoorStyle / IfcWindowStyle) per size, its

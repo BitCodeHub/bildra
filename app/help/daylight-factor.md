@@ -33,7 +33,7 @@ Average daylight factor (%) = T × Ag × θ × M ÷ (A × (1 − R²)), added up
 
 ## How the sky angle is measured
 
-For each window BimCraft cuts the model with an upright plane square to the window, from the outside face of the glass, and looks from the horizon straight up: everything the cut meets in front of the window (a building opposite, a balcony or an overhang above, the eaves) hides part of that 90°. θ is what is left. The window itself and the wall it sits in are left out. It does this at five places across the window's width and takes the mean, so a thin post in front of the middle takes its share, not the whole sky.
+For each window Bildra cuts the model with an upright plane square to the window, from the outside face of the glass, and looks from the horizon straight up: everything the cut meets in front of the window (a building opposite, a balcony or an overhang above, the eaves) hides part of that 90°. θ is what is left. The window itself and the wall it sits in are left out. It does this at five places across the window's width and takes the mean, so a thin post in front of the middle takes its share, not the whole sky.
 
 A building 8.5 m above the window's centre and 9.9 m away hides 40.65° (the angle whose tangent is 8.5 ÷ 9.9), leaving θ = 49.35°.
 

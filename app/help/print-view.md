@@ -29,6 +29,6 @@ In {{ui:Model}}, print view uses screen weights only (thin lines one pixel, heav
 
 ## Common mistakes
 
-- **Expecting it to print.** Print view is a preview. Printing and PDF export are not built in BimCraft yet; print from the program that made the drawing.
+- **Expecting it to print.** Print view is a preview. Printing and PDF export are not built in Bildra yet; print from the program that made the drawing.
 - **Expecting plot styles.** Pen tables and plot style colors are not read. Everything is plain black.
 - **Pressing P while typing.** {{key:F}} and {{key:P}} do nothing while you are typing in a field, or while the equipment schedule is showing.

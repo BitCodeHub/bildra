@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * maps-bim.js — map layers on the ground of BimCraft's 3D view (0.5 SG.3, suggestion #572): the site as a map or aerial
+ * maps-bim.js — map layers on the ground of Bildra's 3D view (0.5 SG.3, suggestion #572): the site as a map or aerial
  * picture under a georeferenced model. The shared maplayers.js (CadCraft's, copied here) draws the layers into a picture of
  * the area round the model (its drape), laid on a flat ground just under the model's lowest point.
  *

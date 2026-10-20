@@ -1,27 +1,27 @@
 ---
 title: Online and offline
-summary: What BimCraft loads from the site, how Save for offline makes IFC models and DWG drawings open with no connection, and why nothing you open is ever uploaded.
+summary: What Bildra loads from the site, how Save for offline makes IFC models and DWG drawings open with no connection, and why nothing you open is ever uploaded.
 section: reference
 order: 60
 keywords: offline, online, internet, connection, no network, airplane, site visit, save for offline, offline ready, upload, privacy, wasm, webassembly, ifc engine, dwg, cloud
 ---
 
-BimCraft reads your files inside the browser tab. Opening, inspecting, editing and saving never send your files anywhere, online or offline. [Working offline](common:offline) explains how offline copies work in every app; this page covers what is particular to BimCraft.
+Bildra reads your files inside the browser tab. Opening, inspecting, editing and saving never send your files anywhere, online or offline. [Working offline](common:offline) explains how offline copies work in every app; this page covers what is particular to Bildra.
 
-## What BimCraft loads from the site
+## What Bildra loads from the site
 
 | Part | When it loads without an offline copy | Size |
 |---|---|---|
-| The app itself, with the 3D viewer and the IFC engine's code | When you open BimCraft | Several megabytes |
+| The app itself, with the 3D viewer and the IFC engine's code | When you open Bildra | Several megabytes |
 | The IFC engine's WebAssembly part | The first IFC file you open in the tab: "Starting the IFC engine…" | About 1.6 MB |
 
 DWG and DXF drawings, project and family files and folders need nothing extra: their readers are part of the app.
 
-## Save BimCraft for offline use
+## Save Bildra for offline use
 
-1. Open BimCraft while you are online.
+1. Open Bildra while you are online.
 2. Click {{ui:Save for offline}} in the app bar at the top.
-3. Watch the button count up: "Saving 40 of 212", for example. BimCraft's copy is about 11 MB, because it includes the IFC engine.
+3. Watch the button count up: "Saving 40 of 212", for example. Bildra's copy is about 11 MB, because it includes the IFC engine.
 4. Wait for {{ui:Offline ready}}.
 
 Once it says {{ui:Offline ready}}, IFC models, DWG and DXF drawings, project files, folders and this help all open with no connection. You do not need to open an IFC or a DWG first to "warm up" the readers.
@@ -47,7 +47,7 @@ You are offline.
 
 ## What never needs a connection
 
-Once BimCraft is open in the tab, these work offline even without a saved copy:
+Once Bildra is open in the tab, these work offline even without a saved copy:
 
 - Reading project and family files and checking folders.
 - Picking elements, reading properties and editing IFC values in a model that is already open.

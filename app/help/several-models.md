@@ -8,7 +8,7 @@ keywords: federate, federation, federated model, several models, multiple files,
 
 ## What you'll do
 
-Look at models from different disciplines in one place: the architect's model with the structural and services models in it. Each stays its own file; BimCraft only shows them together.
+Look at models from different disciplines in one place: the architect's model with the structural and services models in it. Each stays its own file; Bildra only shows them together.
 
 ## Steps
 

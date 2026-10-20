@@ -1,7 +1,7 @@
 <?php
 // SPDX-License-Identifier: Apache-2.0
 /**
- * BimCraft browser UI (rendered inside app-shell.inc; $app, $__area, $__build and $__manifest are set).
+ * Bildra browser UI (rendered inside app-shell.inc; $app, $__area, $__build and $__manifest are set).
  * Server-rendered: the three panels, the file picker and the empty-state instructions.
  * bimcraft.js fills the panels from the opened file. Files are read in the browser and
  * never leave the visitor's computer; nothing here posts anywhere.

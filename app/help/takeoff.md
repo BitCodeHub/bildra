@@ -8,7 +8,7 @@ keywords: takeoff, quantity takeoff, estimate, estimating, materials list, bill 
 
 ## What you'll do
 
-Turn the model into a materials list and estimate in TakeoffCraft. BimCraft draws a plan of each level at a standard scale, marks every quantity on it, and puts the takeoff inside the PDF. TakeoffCraft measures the marks itself, so every number can be checked on the sheet.
+Turn the model into a materials list and estimate in TakeoffCraft. Bildra draws a plan of each level at a standard scale, marks every quantity on it, and puts the takeoff inside the PDF. TakeoffCraft measures the marks itself, so every number can be checked on the sheet.
 
 ## Send it
 

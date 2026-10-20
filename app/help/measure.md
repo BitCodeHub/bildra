@@ -33,7 +33,7 @@ Click {{ui:Location}} in the measure bar, then click a point on the model (it sn
 - the **map coordinates** (eastings and northings in metres) in the model's own map system, for example `EPSG:28356`;
 - the **height** and the vertical datum the file names, and the file's **own datum** (for example GDA94).
 
-{{ui:Copy}} puts it all on the clipboard in one line. Change the system the latitude and longitude are in under {{ui:Settings}} › {{ui:BimCraft}} › {{ui:Location}}: WGS 84 (as GPS and web maps), the file's own datum, or another common one such as ETRS89 or NAD83.
+{{ui:Copy}} puts it all on the clipboard in one line. Change the system the latitude and longitude are in under {{ui:Settings}} › {{ui:Bildra}} › {{ui:Location}}: WGS 84 (as GPS and web maps), the file's own datum, or another common one such as ETRS89 or NAD83.
 
 This needs a georeferenced model: one exported with map coordinates (a map conversion to a projected system with an EPSG code). A model that only has a site latitude and longitude gets an approximate position, worked out from the site's point and its true north, and the bar says so. With several models open, each point uses the georeference of its own model.
 

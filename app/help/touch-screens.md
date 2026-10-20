@@ -1,12 +1,12 @@
 ---
-title: Use BimCraft on a touch screen or tablet
+title: Use Bildra on a touch screen or tablet
 summary: Orbit, zoom and pick in the 3D model, pan and pinch a drawing, pick several elements, walk, and place items with your fingers.
 section: reference
 order: 52
 keywords: touch, tablet, ipad, android, finger, pinch, long press, tap, orbit, walk, gestures, stylus, pen
 ---
 
-BimCraft works with fingers as well as with a mouse. The first time you touch the screen, buttons, tabs and list rows grow to finger size.
+Bildra works with fingers as well as with a mouse. The first time you touch the screen, buttons, tabs and list rows grow to finger size.
 
 ## The 3D model
 

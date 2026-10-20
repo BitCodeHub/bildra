@@ -33,11 +33,11 @@ Layers disappear and reappear at once, on {{ui:Model}} and on every sheet. Layer
 
 ## How sheets work here
 
-A sheet (a layout, or paper space) holds a title block and viewports that look into model space. BimCraft draws each viewport clipped to its edge, at its own scale and twist, and hides the layers frozen in that viewport. Each sheet's first viewport is the sheet itself and is not drawn twice.
+A sheet (a layout, or paper space) holds a title block and viewports that look into model space. Bildra draws each viewport clipped to its edge, at its own scale and twist, and hides the layers frozen in that viewport. Each sheet's first viewport is the sheet itself and is not drawn twice.
 
 ## Common mistakes
 
 - **Expecting layer changes to be saved.** Layer settings only affect the view, until you open another file.
 - **Expecting per-viewport layer control.** The {{ui:Layers}} list switches a layer everywhere. Layers frozen in one viewport by the drawing stay frozen there.
 - **Looking for a layer search or layer states.** Not built yet. The list is in the drawing's order.
-- **Expecting to work inside a viewport.** There is nothing to activate: BimCraft only shows the sheet. Use {{ui:Model}} to look at model space directly.
+- **Expecting to work inside a viewport.** There is nothing to activate: Bildra only shows the sheet. Use {{ui:Model}} to look at model space directly.

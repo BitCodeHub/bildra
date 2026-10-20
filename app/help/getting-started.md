@@ -1,12 +1,12 @@
 ---
-title: Getting started with BimCraft
-summary: What BimCraft does today, how to open your first model, look at it in 3D, change one value and save a copy.
+title: Getting started with Bildra
+summary: What Bildra does today, how to open your first model, look at it in 3D, change one value and save a copy.
 section: start
 order: 10
 keywords: start, first run, open, ifc, rvt, dwg, quick start, introduction, viewer, bim
 ---
 
-BimCraft is the building-model app of the CadCraft family. In this build it **opens, reads and inspects** building files, and it **edits the data in IFC models**. It does not draw or model new elements yet. Think of it as a model viewer and checker that also lets you correct names, tags and property values in an IFC file.
+Bildra is a building-model app, based on the open-source BimCraft. In this build it **opens, reads and inspects** building files, and it **edits the data in IFC models**. It does not draw or model new elements yet. Think of it as a model viewer and checker that also lets you correct names, tags and property values in an IFC file.
 
 What it opens:
 
@@ -17,20 +17,20 @@ What it opens:
 | DWG and DXF | The drawing in 2D: model space and every sheet, layers, linked drawings, print view, and an equipment schedule for tagged foodservice drawings |
 | A project folder | A report of every model in the folder: backups, links, damaged copies, and a suggestion of which file to start with |
 
-Everything happens in your browser, on your computer. **Nothing is uploaded.** See [Files BimCraft opens and saves](topic:files) for the details.
+Everything happens in your browser, on your computer. **Nothing is uploaded.** See [Files Bildra opens and saves](topic:files) for the details.
 
-## Open BimCraft
+## Open Bildra
 
-1. Open BimCraft in a current browser. Chrome, Edge, Firefox and Safari all work; [Browsers, devices and memory](topic:platforms) lists the differences.
+1. Open Bildra in a current browser. Chrome, Edge, Firefox and Safari all work; [Browsers, devices and memory](topic:platforms) lists the differences.
 2. Wait for the empty screen that says "Open a building model."
 
 :::note
-BimCraft runs in the browser, and on the desktop inside CadCraft Studio, with the other apps. Cloud saving is not available yet: you open files from your computer and save copies back to it.
+Bildra runs in the browser, and on the desktop inside Bildra Desktop, with the other apps. Cloud saving is not available yet: you open files from your computer and save copies back to it.
 :::
 
 ## Open your first model
 
-The quickest way to see what BimCraft does is an IFC file.
+The quickest way to see what Bildra does is an IFC file.
 
 1. Click {{ui:Choose a file}} in the middle of the screen.
 2. Pick an `.ifc` file in {{pick:mac=Finder|windows=File Explorer|linux=your file manager}} and confirm.
@@ -43,7 +43,7 @@ You can also drag a file from {{pick:mac=Finder|windows=File Explorer|linux=your
 :::
 
 :::offline
-The IFC engine loads from the site the first time you open an IFC model, unless BimCraft was saved for offline use. DWG and DXF drawings, project files and folders need nothing extra: their readers are part of the app. If the app bar's button says {{ui:Offline ready}}, everything opens offline. If not, IFC models will not open until you reconnect unless one already opened in this tab. See [Online and offline](topic:online-offline).
+The IFC engine loads from the site the first time you open an IFC model, unless Bildra was saved for offline use. DWG and DXF drawings, project files and folders need nothing extra: their readers are part of the app. If the app bar's button says {{ui:Offline ready}}, everything opens offline. If not, IFC models will not open until you reconnect unless one already opened in this tab. See [Online and offline](topic:online-offline).
 :::
 
 :::online
@@ -81,7 +81,7 @@ Your original file is never changed. [Change IFC properties and save an edited c
 
 ## Where to go next
 
-- [The BimCraft screen](topic:workspace): every panel by name.
+- [The Bildra screen](topic:workspace): every panel by name.
 - [Coming from other BIM and drawing programs](topic:coming-from): what feels different if you are used to Revit.
-- [Open a whole project folder](topic:open-project-folder): point BimCraft at a project folder and let it sort the files out.
+- [Open a whole project folder](topic:open-project-folder): point Bildra at a project folder and let it sort the files out.
 - [View a DWG or DXF drawing](topic:view-dwg): sheets, layers and print view.

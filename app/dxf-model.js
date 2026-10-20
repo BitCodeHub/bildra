@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
  * dxf-model.js — an ASCII DXF file → the drawing model cc-dwg's readDwg() returns (docs/DWG-LIB-SPEC.md "Model";
- * lib/dwg/model.js), so BimCraft's views and the library adapters read DWG and DXF through the same code. No DOM.
+ * lib/dwg/model.js), so Bildra's views and the library adapters read DWG and DXF through the same code. No DOM.
  * Written from the public DXF reference (group codes) only. Byte-identical in bimcraft/dev and cadcraft/dev
  * (bin/test-bimcraft.mjs checks).
  *
@@ -465,7 +465,7 @@ export function readDxfModel(text) {
     return h;
   }
 
-  /** MULTILEADER: the context data's leaders (lines), text and block, as cc-dwg models them (as much as BimCraft draws). */
+  /** MULTILEADER: the context data's leaders (lines), text and block, as cc-dwg models them (as much as Bildra draws). */
   function mleader(e, g) {
     const ctx = { roots: [], text: null, block: null };
     let root = null, line = null, depth = '';

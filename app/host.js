@@ -1240,7 +1240,7 @@ export function createControlRelay({ channel, now = () => Date.now(), timeout = 
   const winProp = { type: 'string', maxLength: 90, description: 'The app window to use (from windows_list); default the one used last.' };
 
   const d = createDispatcher({
-    server: { name: 'cadcraft-studio', title: 'CadCraft Studio', version: '0.4', ...server },
+    server: { name: 'cadcraft-studio', title: 'Bildra Desktop', version: '0.4', ...server },
     listChanged: false,
     allowed: () => ['read'],
     now,

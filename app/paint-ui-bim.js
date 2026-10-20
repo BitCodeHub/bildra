@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * paint-ui-bim.js — BimCraft's Paint palette (0.5 RC.7, session `render`): the material library over the 3D view. While it
+ * paint-ui-bim.js — Bildra's Paint palette (0.5 RC.7, session `render`): the material library over the 3D view. While it
  * is open, a click on an element paints it (the whole element, or only the side clicked); a material clicked with
  * elements selected paints them all. Each paint is one undo step (IfcEditor.modelChange + paint-bim.js), then the model
  * reloads so the colour shows. Imported on first use by bimcraft.js ("Paint").

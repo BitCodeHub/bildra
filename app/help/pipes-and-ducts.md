@@ -8,7 +8,7 @@ keywords: pipe, pipes, piping, plumbing, duct, ducts, ductwork, hvac, mep, mecha
 
 ## What you'll do
 
-Draw the pipes and ducts of a building the way you draw walls: click the corners of a run's centre line at the height you set. BimCraft makes the fittings, puts each part in its system and connects them, so other programs read the run as one connected system.
+Draw the pipes and ducts of a building the way you draw walls: click the corners of a run's centre line at the height you set. Bildra makes the fittings, puts each part in its system and connects them, so other programs read the run as one connected system.
 
 ## Draw a pipe
 
@@ -23,19 +23,19 @@ The pipe snaps like walls do, and to other runs: start on a pipe's end to carry 
 
 1. Choose {{ui:Duct}}. Pick the system (supply, return, exhaust or outside air) and the shape: round, rectangular or flat oval.
 2. Type the width and height (a round duct's width is its diameter), and **At** for the centre line's height.
-3. To size it from the airflow, type the **Airflow** and the **Friction** rate and click {{ui:Size it}}. The duct is sized by equal friction, the method in the duct design chapter of the ASHRAE Handbook, and rounded up to a stocked size, so the friction comes out at or under the rate you typed. With no rate typed it uses 0.08 in. of water per 100 ft (0.8 Pa/m). A rectangular duct keeps the height you typed and gets a width; BimCraft says so when its sides are more than 4 to 1.
+3. To size it from the airflow, type the **Airflow** and the **Friction** rate and click {{ui:Size it}}. The duct is sized by equal friction, the method in the duct design chapter of the ASHRAE Handbook, and rounded up to a stocked size, so the friction comes out at or under the rate you typed. With no rate typed it uses 0.08 in. of water per 100 ft (0.8 Pa/m). A rectangular duct keeps the height you typed and gets a width; Bildra says so when its sides are more than 4 to 1.
 4. Click the corners as for a pipe.
 
 ## The fittings, made for you
 
-| Where | What BimCraft makes |
+| Where | What Bildra makes |
 |---|---|
 | A run turns | An elbow. Steel pipe at the long radius of ASME B16.9 (1.5 × the size), other pipe at one outside diameter, round duct at 1.5 diameters, rectangular duct at one width (or one height for a turn up or down) |
 | A run ends on another run's line | A tee; the other run is split there |
 | Two runs meet end to end at different sizes | A reducer (pipes) or a transition (ducts) |
 | Two runs of one size meet end to end at an angle | An elbow |
 
-When you change, move or delete a run, every fitting on that level is made again. If a leg is too short for the fittings at its ends, BimCraft says so and changes nothing: move the corner further away.
+When you change, move or delete a run, every fitting on that level is made again. If a leg is too short for the fittings at its ends, Bildra says so and changes nothing: move the corner further away.
 
 :::note
 The fittings and valves are generic: drawn from the pipe or duct size, not from a maker's catalogue. Socket, press and grooved fittings, valve bodies and equipment have makers' own sizes; check them with your supplier before you order.
@@ -63,7 +63,7 @@ Pick any part of a run, in the plan or the 3D view. In Properties:
 - **System**, **Material**, **Class** and **Size** (pipes), or **Shape**, **Width**, **Height** (ducts).
 - **Height above the level** moves the whole run up or down.
 - **Slope** (pipes).
-- **Flow** with {{ui:Size it}}: for water, the smallest size that keeps the water at 8 ft/s (2.4 m/s), or 5 ft/s (1.5 m/s) for hot water. For ducts, the velocity and friction rate of the duct as drawn. Drains are sized by fixture units, which BimCraft does not do yet: pick their size yourself.
+- **Flow** with {{ui:Size it}}: for water, the smallest size that keeps the water at 8 ft/s (2.4 m/s), or 5 ft/s (1.5 m/s) for hot water. For ducts, the velocity and friction rate of the duct as drawn. Drains are sized by fixture units, which Bildra does not do yet: pick their size yourself.
 
 Each change is one step of {{ui:Undo}}. {{key:Delete}} removes the whole run.
 
@@ -82,4 +82,4 @@ The {{ui:Schedules}} panel adds **Pipes** (by system, material and size, with th
 
 ## In the IFC file
 
-Each run is an assembly holding its parts: pipe and duct segments, fittings and valves, each with its type, material, a colour for its system and its ports. Touching ports are connected, and every part belongs to its distribution system (IFC2X3 files get the same as flow segments, fittings and controllers in a system). Other programs that read IFC systems see one connected run per system. The run's own definition is kept with it, so BimCraft makes it again the same way when you change it.
+Each run is an assembly holding its parts: pipe and duct segments, fittings and valves, each with its type, material, a colour for its system and its ports. Touching ports are connected, and every part belongs to its distribution system (IFC2X3 files get the same as flow segments, fittings and controllers in a system). Other programs that read IFC systems see one connected run per system. The run's own definition is kept with it, so Bildra makes it again the same way when you change it.

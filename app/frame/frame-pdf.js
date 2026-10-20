@@ -7,7 +7,7 @@
  *
  *   reportPdf(tables, { title, sub, paper: 'a4' | 'letter', page: (n, of) => text, continued }) → { bytes, pages, missing }
  *
- * Widths are Helvetica's (the AFM table BimCraft's model-pdf.js uses: Adobe's Core 14 metrics, ASCII 32–126; other
+ * Widths are Helvetica's (the AFM table Bildra's model-pdf.js uses: Adobe's Core 14 metrics, ASCII 32–126; other
  * characters count as a digit, bold as 1.05 × regular), so columns fit their contents and numbers line up on the right.
  */
 const HW = [278, 278, 355, 556, 556, 889, 667, 191, 333, 333, 389, 584, 278, 333, 278, 278, 556, 556, 556, 556, 556, 556, 556, 556, 556, 556, 278, 278, 584, 584, 584, 556, 1015, 667, 667, 722, 722, 667, 611, 778, 722, 278, 500, 667, 556, 833, 722, 778, 667, 778, 722, 667, 611, 722, 667, 944, 667, 667, 611, 278, 278, 278, 469, 556, 333, 556, 556, 500, 556, 556, 278, 556, 556, 222, 222, 500, 222, 833, 556, 556, 556, 556, 333, 500, 278, 556, 500, 722, 500, 500, 500, 334, 260, 334, 584];

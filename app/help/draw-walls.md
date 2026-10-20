@@ -8,7 +8,7 @@ keywords: curved, arc, location line, justification, wall, walls, draw, plan, fl
 
 ## What you'll do
 
-Draw the walls of a building on a plan of each level. Click where a wall starts and then each corner; BimCraft joins the corners for you, gives each wall its layers (siding, sheathing, studs, drywall …) and runs it up to the level above. The 3D view shows the walls as you go.
+Draw the walls of a building on a plan of each level. Click where a wall starts and then each corner; Bildra joins the corners for you, gives each wall its layers (siding, sheathing, studs, drywall …) and runs it up to the level above. The 3D view shows the walls as you go.
 
 ## Open the plan
 
@@ -33,7 +33,7 @@ The corners join by themselves: two walls meet at a mitre, a wall that ends on a
 
 ## Choose the drawing reference
 
-Choose **Centerline**, **Inside face** or **Outside face** before the first click. With a face selected, your clicks and typed lengths describe that face; BimCraft offsets the wall centerline by half the total thickness and joins consecutive corners. Choose **Outside on left** or **Outside on right** relative to the direction you draw. For a closed outline drawn counterclockwise, the outside is on the right; clockwise, on the left. Face drawing keeps your chosen outside side when you close the loop. Centerline drawing still sets the outside automatically on closing.
+Choose **Centerline**, **Inside face** or **Outside face** before the first click. With a face selected, your clicks and typed lengths describe that face; Bildra offsets the wall centerline by half the total thickness and joins consecutive corners. Choose **Outside on left** or **Outside on right** relative to the direction you draw. For a closed outline drawn counterclockwise, the outside is on the right; clockwise, on the left. Face drawing keeps your chosen outside side when you close the loop. Centerline drawing still sets the outside automatically on closing.
 
 Changing the wall type, reference or outside side ends the current chain. Near a reversing corner, long mitres are capped by leaving square ends.
 

@@ -54,7 +54,7 @@ A roof plane doesn't follow the walls. Pick it on the level above (click inside 
 3. In the options row choose **Dormer kind** (**Gable** or **Shed**) and set **Width**, **Front wall** (the height of the front wall from the roof's top to the dormer's eave), **Pitch** and **Overhang**.
 4. Click on a roof face where the middle of the dormer's front goes.
 
-BimCraft builds the front wall, two cheek walls and the dormer's roof, and runs it back until it meets the roof. A gable dormer has two planes that meet at a ridge. A shed dormer has one plane, which must be less steep than the roof. The roof below the dormer is cut away. The dormer follows the roof when the walls move.
+Bildra builds the front wall, two cheek walls and the dormer's roof, and runs it back until it meets the roof. A gable dormer has two planes that meet at a ridge. A shed dormer has one plane, which must be less steep than the roof. The roof below the dormer is cut away. The dormer follows the roof when the walls move.
 
 Pick it to change its kind, width, front wall, pitch or overhang in **Properties**. {{key:Delete}} removes it and closes the roof again. It must fit on one roof face, away from hips, valleys and the ridge, and only roofs made with the {{ui:Roof}} tool take dormers, not roof planes drawn by hand. Not built yet: a window in the dormer's front, and dormers on hand-drawn roof planes.
 

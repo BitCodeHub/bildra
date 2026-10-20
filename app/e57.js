@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * e57.js — E57 scans (ASTM E2807) for BimCraft and CadCraft (0.6 PF.1, session `pointcloud`). ONE call, `readE57`, so the
+ * e57.js — E57 scans (ASTM E2807) for Bildra and CadCraft (0.6 PF.1, session `pointcloud`). ONE call, `readE57`, so the
  * 0.7 Rust crate (docs/0.7-PART1.md, cc-e57-rs over the `e57` crate) can replace what is behind it without touching
  * pointcloud.js. Today it is `web-e57` 1.2.0 (assets/vendor/web-e57/<version>/, Apache-2.0; the `e57` crate 0.10.5 compiled
  * to WebAssembly — see its SOURCE.txt: the wrapper's source is not available, so it can't be rebuilt here).

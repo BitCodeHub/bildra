@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * daylight-bim-ui.js — BimCraft's Daylight tab (0.6 LC.20, session bim-extra_PART_2): the average daylight factor of every
+ * daylight-bim-ui.js — Bildra's Daylight tab (0.6 LC.20, session bim-extra_PART_2): the average daylight factor of every
  * room (IfcSpace) of the open model, with its inputs shown and editable, each window's sky angle measured in the model
  * (daylight-bim.js), a CSV. An early-design estimate, not a simulation or a compliance check: the tab says so. Nothing here
  * changes the model; the inputs are this browser's (localStorage `bimcraft.daylight`).

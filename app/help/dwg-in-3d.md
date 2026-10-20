@@ -53,7 +53,7 @@ Click an object in the 3D view. It turns the pick color and {{ui:Properties}} sh
 | Look from a side | Click a face, edge or corner of the view cube in the bottom-right corner |
 :::
 
-The view cube can be swapped for an axis icon, or hidden, in {{ui:Settings}}. See [BimCraft settings](topic:settings).
+The view cube can be swapped for an axis icon, or hidden, in {{ui:Settings}}. See [Bildra settings](topic:settings).
 
 :::mac mouse
 On a trackpad, swipe with two fingers to orbit, hold {{key:Shift}} and swipe to pan, and pinch to zoom.

@@ -1,8 +1,8 @@
 <?php
 // SPDX-License-Identifier: Apache-2.0
 /**
- * settings.inc — BimCraft's own panel of the Settings dialog (core/components/app-settings.inc includes it, as the
- * "BimCraft" tab). bimcraft.js reads and stores the fields (localStorage bimcraft.settings), shows the stored values
+ * settings.inc — Bildra's own panel of the Settings dialog (core/components/app-settings.inc includes it, as the
+ * "Bildra" tab). bimcraft.js reads and stores the fields (localStorage bimcraft.settings), shows the stored values
  * each time the dialog opens, and resets them on "cc-settings-reset".
  *   bcSpaces  show rooms and spaces (IfcSpace) when a model opens            default off
  *   bcEdges   edges when a model opens: on / small models only / off          default on

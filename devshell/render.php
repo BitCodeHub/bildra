@@ -130,7 +130,7 @@ ob_start();
 <?php else: ?>
   <title><?= e($app['name'] . ' ' . $edition) ?></title>
   <meta name="description" content="<?= e($app['short'] ?? '') ?>">
-  <meta name="generator" content="CadCraft browser edition">
+  <meta name="generator" content="Bildra browser edition">
 <?php endif; ?>
   <link rel="icon" type="image/svg+xml" href="<?= $R ?>favicon.svg">
 <?php foreach (devshell_shell_css() as $__c): ?>

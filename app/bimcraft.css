@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: Apache-2.0 */
-/* BimCraft browser UI — three columns: file panel | model stage | properties.
+/* Bildra browser UI — three columns: file panel | model stage | properties.
  * Tokens only (paper/model aware); hierarchy by line weight; no shadows. */
 
 .bc {
@@ -592,7 +592,7 @@
 @media (max-width: 600px) {
   .bc-menu .bc-menu-list, .bc-menu.is-right .bc-menu-list { position: fixed; top: auto; left: 1rem; right: 1rem; min-width: 0; }
 }
-/* Settings › BimCraft: the opening view has four choices */
+/* Settings › Bildra: the opening view has four choices */
 .shell-seg.bc-set-seg4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 @media (max-width: 480px) { .shell-seg.bc-set-seg4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
@@ -687,7 +687,7 @@
 .bc-stage.is-plan-split .bc-canvas { left: 50%; }
 .bc-stage.is-plan-only .bc-canvas { visibility: hidden; }
 .bc-stage.is-plan-split .bc-measurebar, .bc-stage.is-plan-split .bc-placebar { left: calc(50% + .75rem); }
-/* the model bar sits under BimCraft's toolbar (model-ui.js keeps --bc-tb-h = the toolbar's height) */
+/* the model bar sits under Bildra's toolbar (model-ui.js keeps --bc-tb-h = the toolbar's height) */
 .bc-modelbar { position: absolute; z-index: 3; left: .75rem; right: .75rem; top: calc(var(--bc-tb-h, 4.75rem) + 1.25rem); display: grid; gap: .3rem; padding: .35rem .45rem; font-size: var(--fs-sm);
   background: var(--sheet-2); border: var(--pen-2) solid var(--ink); border-radius: var(--radius); }
 .bc-modelbar-row { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .45rem; }
@@ -732,7 +732,7 @@ html:not(.cc-compact) .bc-mb-tools, html:not(.cc-compact) .bc-mb-layout, html:no
 .bc-msched tbody tr { cursor: pointer; }
 .bc-msched tbody tr:hover { background: var(--sheet); }
 
-/* ---- Menus, keys and mouse (0.5 track IP): the shell's assets/css/app-input.css styles the bar; BimCraft's floating
+/* ---- Menus, keys and mouse (0.5 track IP): the shell's assets/css/app-input.css styles the bar; Bildra's floating
    toolbar keeps its right edge when a style's bar replaces its buttons ---- */
 .bc-toolbar.cc-in-styled { right: .75rem; }
 /* an open menu of the toolbar drops over the plan pane and the model bar; the model bar's own menus drop over the section
@@ -769,7 +769,7 @@ dialog.bc-sheets[open] { display: grid; grid-template-rows: auto minmax(0, 1fr);
 
 /* ---- A phone (owner, 2026-10-15). The layout itself is the shell's (assets/js/app-phone.js + app-shell.css § Phones:
    the view keeps the screen, the panels are sheets from the bar at the bottom); manifest "phone" names the view's toolbar
-   ([data-toolbar]), the Draw bar ([data-modelbar]) and its hint. Here only what is BimCraft's own. ---- */
+   ([data-toolbar]), the Draw bar ([data-modelbar]) and its hint. Here only what is Bildra's own. ---- */
 /* the start screen: fills the view and scrolls; smaller type */
 html.cc-phone .bc-empty { padding: 1.25rem 1rem 2rem; }
 html.cc-phone .bc-empty-h { font-size: clamp(1.5rem, 1.1rem + 2.4vw, 1.9rem); line-height: 1.15; }

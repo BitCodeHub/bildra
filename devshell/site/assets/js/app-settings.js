@@ -41,7 +41,7 @@
  *                     reset of the order while locked; also a Settings checkbox), Reset the toolbar, Collapse the ribbon / Pin
  *                     the ribbon open (a ribbon style: app-input-ui.js ccInput.ribbon / setRibbon), Toolbar settings…. Text
  *                     fields keep the browser's own menu.
- * The toolbar is <main>'s direct-child role=toolbar (BimCraft: the [data-toolbar] one in its stage);
+ * The toolbar is <main>'s direct-child role=toolbar (Bildra: the [data-toolbar] one in its stage);
  * groups are its role=group children, tools the children of each group's *-tool-row.
  * The panels are found by shape, not by name: <main>'s direct-child <aside>s whose class ends in
  * -left / -right (every app's ui.inc follows that). Apps redraw through their ResizeObserver.

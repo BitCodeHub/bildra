@@ -1,6 +1,6 @@
-# Contributing to BimCraft
+# Contributing to Bildra
 
-Thanks for helping. BimCraft is the bim review & editing app in the [CadCraft](https://getcadcraft.com) family: eight
+Thanks for helping. Bildra is the bim review & editing app in the [CadCraft](https://getcadcraft.com) family: eight
 open-source apps for CAD and BIM work, each in its own repository. It is early: expect rough edges.
 
 ## Good first contributions
@@ -34,7 +34,7 @@ open-source apps for CAD and BIM work, each in its own repository. It is early: 
 
 ## Rules that are not negotiable
 
-- **License.** BimCraft is licensed under the Apache License 2.0 (`LICENSE`). By contributing you agree that your
+- **License.** Bildra is licensed under the Apache License 2.0 (`LICENSE`). By contributing you agree that your
   contribution is licensed under it too, and that you have the right to give it.
 - **Clean room.** Do not submit code, data or assets copied from proprietary CAD software, its SDKs or its file-format
   libraries, and do not port code from copyleft (GPL, LGPL, MPL) projects. Our file readers are written from published

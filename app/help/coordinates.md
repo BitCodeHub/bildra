@@ -1,5 +1,5 @@
 ---
-title: Coordinates in BimCraft
+title: Coordinates in Bildra
 summary: Where you are working: the pointer's position in the plan and the 3D view, the level you are on, the project origin and the site's survey point.
 section: start
 order: 22
@@ -23,7 +23,7 @@ Every X, Y and Z is measured from the **project origin**, in the units chosen in
 - **Project origin** (a red circle with a cross): the point 0, 0, 0 every coordinate in the model is measured from.
 - **Survey point** (a blue circle with a triangle): the site's reference point, the one its latitude, longitude and elevation, or its map coordinates, are given for. In the 3D view, point at it to read where it is.
 
-When the site sits on the project origin, as in a new building drawn here, one marker shows both. Click the crosshair button in either box to hide or show the markers; BimCraft remembers your choice in this browser.
+When the site sits on the project origin, as in a new building drawn here, one marker shows both. Click the crosshair button in either box to hide or show the markers; Bildra remembers your choice in this browser.
 
 ## What you should see
 

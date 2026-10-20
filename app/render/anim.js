@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
  * anim.js — an animation on a timeline (0.6 LC.10): a camera path and object keyframes, played in the view and rendered
- * to video frame by frame. Shared by ModelCraft and BimCraft: canonical in modelcraft/dev/render/, byte-identical copy in
+ * to video frame by frame. Shared by ModelCraft and Bildra: canonical in modelcraft/dev/render/, byte-identical copy in
  * bimcraft/dev/render/ (node tools/render/sync.mjs). DOM-free and import-free, so Node tests drive it as the page does.
  *
  *   anim = {

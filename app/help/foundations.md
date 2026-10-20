@@ -8,7 +8,7 @@ keywords: foundation, footing, slab on grade, thickened edge, monolithic slab, s
 
 ## What you'll do
 
-Give the building a foundation that matches its walls. BimCraft follows the outside of the walls, sizes the footings from the wall type and how many stories stand on them, and makes the foundation again whenever the walls change.
+Give the building a foundation that matches its walls. Bildra follows the outside of the walls, sizes the footings from the wall type and how many stories stand on them, and makes the foundation again whenever the walls change.
 
 ## Put a foundation in
 

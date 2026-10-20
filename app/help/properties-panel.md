@@ -57,7 +57,7 @@ At the top, {{ui:Copy all}} copies every value of the element as text, set by se
 | Kind | Project, Project template, Family or Family template |
 | Saved in | The release that last saved the file |
 | Build | The exact build of that release |
-| Read | How much of the file BimCraft read, out of its size |
+| Read | How much of the file Bildra read, out of its size |
 
 ## The Drawing panel (DWG and DXF)
 

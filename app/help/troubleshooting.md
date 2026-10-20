@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-summary: Messages BimCraft shows, what causes them, and what to do, for opening files, folders, 3D models, drawings and edits.
+summary: Messages Bildra shows, what causes them, and what to do, for opening files, folders, 3D models, drawings and edits.
 section: trouble
 order: 10
 keywords: problem, error, not working, cannot open, failed, incomplete, corrupt, slow, crash, blank, missing, message, help
@@ -11,19 +11,19 @@ Messages appear in the status line at the bottom of the stage, in red when somet
 ## Opening files
 
 **"*name* is not an IFC, RVT, RFA, DWG or DXF file."**
-BimCraft did not recognize the file. Check the extension and that the file is not empty. PDFs, images and office files do not open.
+Bildra did not recognize the file. Check the extension and that the file is not empty. PDFs, images and office files do not open.
 
 **".ifczip is not supported yet. Save or export the model as a plain .ifc file."** (also for `.ifcxml`)
 Unzip the `.ifczip` (it is an ordinary zip holding an `.ifc`) or export plain IFC.
 
-**"… is a project file BimCraft does not read yet."**
+**"… is a project file Bildra does not read yet."**
 A `.pln`, `.pla`, `.tpl` or `.bpn` file. Export IFC or DWG from it and open that: see [Open .pln and .pla project files](topic:pln-project-files).
 
 **"This IFC file could not be read."**
 The IFC file is damaged or not really IFC. Open it in a text editor: a real IFC file starts with `ISO-10303-21;`. Export it again.
 
 **"This file is incomplete: it is … MB, but its own index points to data at least … MB in. …"**
-The project or family file was cut off while being copied, uploaded or synced. A cloud-drive file that is "online only" looks the same. A file opened on its own still opens, with this message at the top of the card and "Showing what was recovered; copy the original again for the full model.": the card shows only the parts whose every byte is in the file and lists the rest under **Not in the file**. Make the file available offline in your cloud drive, or copy the original again, and reopen it. In a folder, BimCraft shows the newest complete backup instead.
+The project or family file was cut off while being copied, uploaded or synced. A cloud-drive file that is "online only" looks the same. A file opened on its own still opens, with this message at the top of the card and "Showing what was recovered; copy the original again for the full model.": the card shows only the parts whose every byte is in the file and lists the rest under **Not in the file**. Make the file available offline in your cloud drive, or copy the original again, and reopen it. In a folder, Bildra shows the newest complete backup instead.
 
 **"… The file's own list of contents is in the missing part too, so nothing in it can be opened."**
 The file was cut off so early that not even its list of contents is there. Nothing can be recovered from this copy. Copy the original again and reopen it.
@@ -32,10 +32,10 @@ The file was cut off so early that not even its list of contents is there. Nothi
 The file is a compound file of another kind (old office documents use the same container). Check you picked the right file.
 
 **"Still working on the last one…"**
-BimCraft is still busy with the previous file or folder. Wait for the status line to finish, then try again.
+Bildra is still busy with the previous file or folder. Wait for the status line to finish, then try again.
 
 **The file chooser greys out my file.**
-The chooser only offers `.ifc`, `.rvt`, `.rfa`, `.rte`, `.rft`, `.dwg` and `.dxf`. Drag other files onto the page instead, and BimCraft will tell you whether it can read them.
+The chooser only offers `.ifc`, `.rvt`, `.rfa`, `.rte`, `.rft`, `.dwg` and `.dxf`. Drag other files onto the page instead, and Bildra will tell you whether it can read them.
 
 ## Opening folders
 
@@ -46,7 +46,7 @@ You picked a folder too high up, such as a whole drive. Pick one project folder.
 You clicked {{ui:Reopen}} on a recent folder and the browser's permission was refused or has lapsed. Choose the folder again, or drag it in.
 
 **The browser says it will "upload" files.**
-That is the browser's own wording for handing files to a page. BimCraft does not send them anywhere. Drag the folder in to avoid the question.
+That is the browser's own wording for handing files to a page. Bildra does not send them anywhere. Drag the folder in to avoid the question.
 
 **Nothing happens on a phone or tablet.**
 Many mobile browsers cannot choose folders. Open single files, or use a computer.
@@ -73,9 +73,9 @@ Some files did not download, usually because the connection dropped. Check your 
 This window cannot keep an offline copy, for example a private window or a managed work computer. See [Working offline](common:offline).
 
 **The button stays on "Saving *n* of *m*" for a while.**
-BimCraft's copy is about 11 MB, most of it the IFC engine. Keep the tab open until it says {{ui:Offline ready}}.
+Bildra's copy is about 11 MB, most of it the IFC engine. Keep the tab open until it says {{ui:Offline ready}}.
 
-**BimCraft opened offline but looks out of date.**
+**Bildra opened offline but looks out of date.**
 Your saved copy is from an earlier visit. When you are online, click {{ui:Offline ready}} and choose {{ui:Save again (get the newest version)}}.
 
 ## 3D view
@@ -104,7 +104,7 @@ WebGL may be turned off or blocked. In the browser's settings, turn hardware acc
 **"Only single-value properties can be edited."** Lists, enumerations and quantities are read-only.
 
 **{{key:Mod+S}} opens the browser's "Save page" window.**
-There are no unsaved changes, so BimCraft left the key to the browser. Close the window.
+There are no unsaved changes, so Bildra left the key to the browser. Close the window.
 
 **{{key:Mod+Z}} does nothing.**
 It works only while you have unsaved changes and are not typing in a field. After a save, there is nothing left to undo.
@@ -121,10 +121,10 @@ You changed a property in a set marked "(type)". Type properties apply to every 
 Save the drawing from the program that made it as an older DWG (2018 or earlier) or as DXF, and try again.
 
 **"This drawing has nothing to show."** or **"*name* is an empty drawing: it holds no lines, text or blocks."**
-The drawing is empty, or holds only things BimCraft does not draw yet (see **Not drawn yet** on the right).
+The drawing is empty, or holds only things Bildra does not draw yet (see **Not drawn yet** on the right).
 
 **"This drawing is very large; only part of it is shown."**
-BimCraft stopped drawing to stay responsive. Turn off layers you do not need, or open the sheets you need from a smaller drawing.
+Bildra stopped drawing to stay responsive. Turn off layers you do not need, or open the sheets you need from a smaller drawing.
 
 **Parts of a sheet are missing.**
 Linked drawings may be missing: look under **Linked drawings** on the right. See [Find linked drawings and pictures](topic:dwg-linked-files). Layers may also be off: click {{ui:All on}}.
@@ -133,7 +133,7 @@ Linked drawings may be missing: look under **Linked drawings** on the right. See
 Its file was not found, or it is a TIFF ("TIFF cannot be shown in a browser"). Add a PNG or JPEG copy with {{ui:Add pictures…}}.
 
 **Scrolling on my trackpad zooms instead of moving the drawing.**
-That is how drawings work in BimCraft. Click and drag to pan.
+That is how drawings work in Bildra. Click and drag to pan.
 
 ## Still stuck
 

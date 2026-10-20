@@ -29,16 +29,16 @@ The card in the middle, with these sections when the file holds them:
 | Family, Family: … | For a family: its name, category, release, last update and its parameters, group by group |
 | Linked and referenced files | Every linked model, CAD link, image and keynote table the file points to, with its saved path |
 
-On the left, the {{ui:File}} panel repeats the key facts and adds **Read**: how much of the file BimCraft actually read, usually about 40 KB of a file many megabytes in size. On the right, the {{ui:Properties}} panel says element properties need the 3D model.
+On the left, the {{ui:File}} panel repeats the key facts and adds **Read**: how much of the file Bildra actually read, usually about 40 KB of a file many megabytes in size. On the right, the {{ui:Properties}} panel says element properties need the 3D model.
 
 ## Why there is no 3D
 
-The 3D model and the elements inside a project file are stored in an undocumented format. BimCraft reads only the parts of the file that are documented or plainly readable: the file information, project information, family data, the link list and the preview picture. It does not guess at the rest. To see the model in 3D and read element properties, export IFC from the program that made the file. See [Get a project file into 3D through IFC](topic:rvt-to-ifc).
+The 3D model and the elements inside a project file are stored in an undocumented format. Bildra reads only the parts of the file that are documented or plainly readable: the file information, project information, family data, the link list and the preview picture. It does not guess at the rest. To see the model in 3D and read element properties, export IFC from the program that made the file. See [Get a project file into 3D through IFC](topic:rvt-to-ifc).
 
 ## Common mistakes
 
 - **Expecting 3D.** See above.
-- **Links show only their saved path.** A file opened on its own cannot check whether its links exist. Open the folder it lives in instead, and BimCraft marks each link as found or not: [Open a whole project folder](topic:open-project-folder).
-- **"This file is incomplete…"** The file was cut off while being copied, uploaded or synced. A cloud-drive file that is still "online only" does this too. BimCraft still opens it and shows only what was recovered: an amber notice at the top of the card, a **Recovered from this file** section listing the parts whose every byte is in the file, and **Not in the file** for the rest. Nothing is filled in for the missing part, so the release, preview picture or project information can be missing when they were stored past the cut. If even the file's list of contents was cut off, nothing can be opened. Copy the original again and reopen it for the full file.
+- **Links show only their saved path.** A file opened on its own cannot check whether its links exist. Open the folder it lives in instead, and Bildra marks each link as found or not: [Open a whole project folder](topic:open-project-folder).
+- **"This file is incomplete…"** The file was cut off while being copied, uploaded or synced. A cloud-drive file that is still "online only" does this too. Bildra still opens it and shows only what was recovered: an amber notice at the top of the card, a **Recovered from this file** section listing the parts whose every byte is in the file, and **Not in the file** for the rest. Nothing is filled in for the missing part, so the release, preview picture or project information can be missing when they were stored past the cut. If even the file's list of contents was cut off, nothing can be opened. Copy the original again and reopen it for the full file.
 - **"No preview picture in this file".** Some files are saved without one. That is normal.
 - **Opening a backup by mistake.** Files named like `Tower.0004.rvt` are numbered backups. Opening the folder groups them with their model.

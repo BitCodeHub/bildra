@@ -14,7 +14,7 @@ Point at a problem in the model and keep the view that shows it, then hand it on
 
 1. Open an IFC model and set up the view: orbit to it, pick the elements involved, hide what is in the way, cut it with a section plane or box.
 2. Click the {{ui:Issues}} tab on the right, then {{ui:New issue from this view}}.
-3. Type a title, and a comment if you like; choose a status; give your name or e-mail (signed in, your account's name is filled in; see [BimCraft settings](topic:settings#your-name-on-issues)). Click {{ui:Create issue}}.
+3. Type a title, and a comment if you like; choose a status; give your name or e-mail (signed in, your account's name is filled in; see [Bildra settings](topic:settings#your-name-on-issues)). Click {{ui:Create issue}}.
 4. Click {{ui:Show}} on an issue to put its view back.
 5. Click {{ui:Save BCF}} to download every issue as one `.bcf` file.
 6. To see issues someone else made, click {{ui:Open BCF…}} and choose their `.bcf` or `.bcfzip` file.

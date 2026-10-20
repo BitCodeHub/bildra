@@ -16,7 +16,7 @@
  *   datumOf(proj4)     → the geographic system on a projected system's own datum ('+proj=longlat …' with its ellps/datum/towgs84)
  *   dms(deg, 'lat'|'lon') → '33° 51′ 35.9″ S'        compound(v) → degrees from an IfcCompoundPlaneAngleMeasure
  *
- * A model point in BimCraft's viewer is first taken back to the file's own coordinates (viewerToFile): undo the scene
+ * A model point in Bildra's viewer is first taken back to the file's own coordinates (viewerToFile): undo the scene
  * placement, the coordination matrix (cc-ifc moves every model to the origin), Y up → Z up and metres → file units.
  */
 
@@ -53,7 +53,7 @@ export function readGeoref(api, mid) {
       if (c.MapUnit) { const mm = unitMm(c.MapUnit); if (Number.isFinite(mm) && mm > 0) mapUnitM = mm / 1000; }
     }
     // IfcMapConversion's Scale is the unit difference between the model and the map, so heights take it too: cc-ifc's
-    // matrix does that itself since the 0.5 final sweep (geo-ctx.js georef; BimCraft corrected it here before).
+    // matrix does that itself since the 0.5 final sweep (geo-ctx.js georef; Bildra corrected it here before).
     const matrix = [...geo.matrix];
     return { kind: 'map', crs: { ...geo.crs, code: epsgOf(geo.crs.name) ?? epsgOf(geo.crs.description) }, matrix, mapUnitM, fileUnitM };
   }
@@ -105,7 +105,7 @@ export function dms(deg, axis) {
 }
 
 /**
- * A point in BimCraft's viewer (scene space, metres, Y up) → the file's own coordinates (file units, Z up).
+ * A point in Bildra's viewer (scene space, metres, Y up) → the file's own coordinates (file units, Z up).
  * `place` = the model's scene placement (viewer.modelMatrix), `C` = its coordination matrix (api.GetCoordinationMatrix).
  */
 export function viewerToFile(p, place, C, fileUnitM) {

@@ -310,7 +310,7 @@
   "shell.split.title": "اسحب لتغيير الحجم. نقرة مزدوجة لإعادة الضبط.",
   "shell.assistants.title": "المساعدون",
   "shell.assistants.on": "اسمح لمساعدي الذكاء الاصطناعي والنصوص باستخدام {app}",
-  "shell.assistants.hint": "يتصلون عبر CadCraft Studio على هذا الحاسوب، بالرمز الذي يعرضه Studio. ليس لدى {app} ذكاء اصطناعي خاص به ولا يرسل شيئًا إلى أي مكان.",
+  "shell.assistants.hint": "يتصلون عبر Bildra Desktop على هذا الحاسوب، بالرمز الذي يعرضه Studio. ليس لدى {app} ذكاء اصطناعي خاص به ولا يرسل شيئًا إلى أي مكان.",
   "shell.assistants.groups": "ما يجوز لهم فعله",
   "shell.assistants.group.read": "القراءة: النظر إلى الرسم، وسرد الكائنات ووصفها، ورؤية المنظر",
   "shell.assistants.group.edit": "التحرير: تشغيل أوامر على الرسم (كل إجراء خطوة واحدة يمكنك التراجع عنها)",

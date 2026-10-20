@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * assets-bim-ui.js — BimCraft's Assets tab (0.6 LC.12, session bim-extra_PART_2): the open model's assets (equipment and
+ * assets-bim-ui.js — Bildra's Assets tab (0.6 LC.12, session bim-extra_PART_2): the open model's assets (equipment and
  * fixtures, and any element you track), their data (maker, model, serial, warranty, service life) and a maintenance record,
  * all written into the IFC by assets-bim.js (each change one undo step); what is overdue or due within 30 days first; a CSV.
  *

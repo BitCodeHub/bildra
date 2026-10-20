@@ -20,7 +20,7 @@ This works on drawings whose equipment tags carry their data as block attributes
 4. Pick what to list in the menu above the table: **Every sheet**, one sheet, **Not on any sheet**, or **Everything tagged in the drawing**. Each choice shows its count.
 5. Type in the filter box ("Filter: category, maker, model…") to narrow the list, for example `refrigerator` or `208`.
 6. Click an item's sheet name in the **Where** column.
-7. Look at the drawing: BimCraft switches to that sheet, zooms in on the item and draws a ring round it. The status line says "Item *n*, *category* is ringed on *sheet*."
+7. Look at the drawing: Bildra switches to that sheet, zooms in on the item and draws a ring round it. The status line says "Item *n*, *category* is ringed on *sheet*."
 8. Click {{ui:Equipment}} to go back to the schedule.
 9. Click {{ui:Download CSV}}.
 

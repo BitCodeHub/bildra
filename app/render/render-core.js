@@ -1,8 +1,8 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * render-core.js — a rendered still of a 3D scene (0.5 RC.11 (a), from the SG.6 spike). Shared by ModelCraft and BimCraft:
+ * render-core.js — a rendered still of a 3D scene (0.5 RC.11 (a), from the SG.6 spike). Shared by ModelCraft and Bildra:
  * canonical in modelcraft/dev/render/, byte-identical copy in bimcraft/dev/render/ (node tools/render/sync.mjs). Each app
- * hands it a plain scene through its own adapter (ModelCraft: render-mc.js, Z up; BimCraft: render-bim.js, Y up), so this
+ * hands it a plain scene through its own adapter (ModelCraft: render-mc.js, Z up; Bildra: render-bim.js, Y up), so this
  * file knows nothing about either app's model.
  *
  *   renderStill(scene, settings, {w, h, onProgress(frac, canvas), signal, previewEvery}) → Promise<{blob, w, h, passes, ms, stopped}>

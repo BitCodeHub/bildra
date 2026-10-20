@@ -2,7 +2,7 @@
 /**
  * video.js — frames to a video file in the browser (0.6 LC.10), with the browser's own encoder: WebCodecs `VideoEncoder`
  * (VP9, else VP8) → webm.js (ours) → a .webm file. No encoder (an older browser) → the frames as numbered PNG pictures in a
- * ZIP, which any video editor turns into a video. Nothing leaves the computer. Shared by ModelCraft and BimCraft: canonical
+ * ZIP, which any video editor turns into a video. Nothing leaves the computer. Shared by ModelCraft and Bildra: canonical
  * in modelcraft/dev/render/, byte-identical copy in bimcraft/dev/render/ (node tools/render/sync.mjs).
  *
  *   videoSupport(w, h, fps) → Promise<{webm: {codec, id} | null}>   what this browser can encode at that size

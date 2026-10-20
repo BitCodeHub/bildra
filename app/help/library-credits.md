@@ -27,7 +27,7 @@ Click {{ui:Equipment}} in the toolbar. The schedule is built from the placed lib
 
 1. In the {{ui:Library}} tab, pick **LibraryCraft**.
 2. Click {{ui:Sign in to the library}}. A small window opens on this site.
-3. Sign in if asked, then click **Connect**. The window hands BimCraft a library key and you can close it.
+3. Sign in if asked, then click **Connect**. The window hands Bildra a library key and you can close it.
 
 ## What you should see
 
@@ -37,5 +37,5 @@ Click {{ui:Equipment}} in the toolbar. The schedule is built from the placed lib
 ## Good to know
 
 - The key is kept in this tab only and ends when you close it. {{ui:Forget sign-in}} drops it sooner.
-- Your account's security page lists the key as "BimCraft library (browser)"; revoke it there.
+- Your account's security page lists the key as "Bildra library (browser)"; revoke it there.
 - Nothing about your model is sent: only which library items you placed.

@@ -1,14 +1,14 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * live.js — BimCraft's Studio Live adapter (0.5 LV.21, session live-apps; spec docs/STUDIO-LIVE-SPEC.md § 4, keys and
+ * live.js — Bildra's Studio Live adapter (0.5 LV.21, session live-apps; spec docs/STUDIO-LIVE-SPEC.md § 4, keys and
  * `touched` rules docs/LIVE-PROTOCOL.md § 6). DOM-free: tools/live-apps-test/test-bimcraft-live.mjs drives it in Node with
- * cc-ifc and BimCraft's own IfcEditor against the real session server.
+ * cc-ifc and Bildra's own IfcEditor against the real session server.
  *
  *   const live = createLive({ editor: () => ed, open, refresh })   → the adapter (spec § 4)
  *   live.bind(client) / live.unbind();  live.reloading() / live.loaded()   around the app reloading its model
  *   createLiveAdapter({ host })                                    → Studio's entry point, for window.bimcraftLive
  *
- * An IFC model is lines (#id = TYPE(params)). Every edit BimCraft makes (IfcEditor: names, properties, library items placed
+ * An IFC model is lines (#id = TYPE(params)). Every edit Bildra makes (IfcEditor: names, properties, library items placed
  * or swapped, elements removed or pasted, and modelChange: the building tools' walls, doors, roofs …) writes lines
  * through cc-ifc's IfcFile (set / remove); the adapter watches those writes during an edit and sends, when the edit is
  * recorded (editor.record):
@@ -18,7 +18,7 @@
  * The inverse is the same lines as they were before the edit. New lines take ids from the client's own range
  * (1e9 + c × 1e7 + n), so two people's new lines never share an id; the file's own ids stay. Keys are STEP ids (spec § 4).
  * Holds and locks name elements by their STEP id too.
- * The model BimCraft shows is rebuilt from the edited file; while it reloads (rebuild(), a joiner opening the snapshot),
+ * The model Bildra shows is rebuilt from the edited file; while it reloads (rebuild(), a joiner opening the snapshot),
  * others' edits wait in a queue and land in the new file as soon as it is open.
  */
 
@@ -211,7 +211,7 @@ export function createLive(opts) {
 
 /**
  * Hooks on the app's IfcEditor while live: every recorded change goes out; undo / redo are per person. `editor` is read
- * each time (BimCraft makes a new editor for each model it opens). Returns the function that removes the hooks.
+ * each time (Bildra makes a new editor for each model it opens). Returns the function that removes the hooks.
  */
 export function watchEditor(getEditor, a, client) {
   let wrapped = null;

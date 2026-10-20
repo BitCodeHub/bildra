@@ -18,7 +18,7 @@ Carry on with a file in the app made for the next job, without saving it and ope
 
 ## What you should see
 
-- The file in the new tab. BimCraft keeps it open too.
+- The file in the new tab. Bildra keeps it open too.
 - A model with unsaved changes goes over with those changes in it. Your own copy is not saved.
 - A drawing goes over without its linked drawings.
 
@@ -31,4 +31,4 @@ Carry on with a file in the app made for the next job, without saving it and ope
 ## Next
 
 - [View a DWG or DXF drawing](topic:view-dwg)
-- [Files BimCraft opens and saves](topic:files)
+- [Files Bildra opens and saves](topic:files)

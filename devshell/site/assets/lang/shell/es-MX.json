@@ -322,7 +322,7 @@
   "shell.split.title": "Arrastre para cambiar el tamaño. Haga doble clic para restablecer.",
   "shell.assistants.title": "Asistentes",
   "shell.assistants.on": "Permitir que asistentes de IA y scripts usen {app}",
-  "shell.assistants.hint": "Se conectan a través de CadCraft Studio en esta computadora, con el token que muestra Studio. {app} no tiene IA propia y no envía nada a ninguna parte.",
+  "shell.assistants.hint": "Se conectan a través de Bildra Desktop en esta computadora, con el token que muestra Studio. {app} no tiene IA propia y no envía nada a ninguna parte.",
   "shell.assistants.groups": "Qué pueden hacer",
   "shell.assistants.group.read": "Leer: ver el dibujo, listar y describir objetos, ver la vista",
   "shell.assistants.group.edit": "Editar: ejecutar comandos en el dibujo (cada acción es un paso que puede deshacer)",

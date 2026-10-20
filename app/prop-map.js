@@ -169,7 +169,7 @@ export function readRevitSharedParams(text) {
  * model carries none for a set.
  */
 export function revitIfcPsets(map, { standard = true } = {}) {
-  const out = ['#', '# User Defined PropertySet Definition File', '# Written by CadCraft BimCraft from a property mapping (cadcraft-property-map 1).', '#',   // i18n-ignore: file format
+  const out = ['#', '# User Defined PropertySet Definition File', '# Written by CadCraft Bildra from a property mapping (cadcraft-property-map 1).', '#',   // i18n-ignore: file format
     '# Format:', '#\tPropertySet:\t<Pset Name>\tI[nstance]/T[ype]\t<element list separated by \',\'>', '#\t<Property Name>\t<Data type>\t<[opt] Revit parameter name, if different from IFC>', '#'];   // i18n-ignore: file format
   const sets = new Map();
   for (const r of map.rows) { if (!standard && r.standard) continue; if (!sets.has(r.pset)) sets.set(r.pset, []); sets.get(r.pset).push(r); }

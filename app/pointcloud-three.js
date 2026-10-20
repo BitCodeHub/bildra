@@ -1,11 +1,11 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * pointcloud-three.js — a point cloud (pointcloud.js) drawn with three.js, for BimCraft's IFC view and CadCraft's 3D tab
+ * pointcloud-three.js — a point cloud (pointcloud.js) drawn with three.js, for Bildra's IFC view and CadCraft's 3D tab
  * (0.5 SG.1). Canonical in bimcraft/dev; CadCraft carries a byte-identical copy (tools/pointcloud/sync.mjs). Imported only
  * when a cloud is opened.
  *
  *   const layer = new CloudLayer({ renderer, camera: () => cam, parent, render: () => …, patch: (mat) => mat })
- *     parent: the Object3D the cloud hangs under; patch: the viewer's own clipping (BimCraft: viewer.clipped, so the
+ *     parent: the Object3D the cloud hangs under; patch: the viewer's own clipping (Bildra: viewer.clipped, so the
  *     section plane / box cuts the cloud with the model)
  *   layer.set(cloud, matrix16)       a cloud and its placement (column-major 4 × 4: file units → the viewer's space)
  *   layer.setMatrix(m16) · setColors(Uint8Array rgb) · setSize(px) · setVisible(on)

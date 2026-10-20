@@ -6,7 +6,7 @@
  *   const text = newBuilding({ name, levels: [{ name, elevation, height }], author, now });   // lengths in mm
  *   const levels = stackLevels(count, heightMm, (i) => name);                                  // evenly stacked levels
  *
- * What it writes (Design Transfer View, millimetres, Z up): owner history (BimCraft), units, the 3D model context with
+ * What it writes (Design Transfer View, millimetres, Z up): owner history (Bildra), units, the 3D model context with
  * Body and FootPrint sub-contexts (ifc-place.js reuses them when items are placed), IfcProject → IfcSite → IfcBuilding →
  * one IfcBuildingStorey per level (placement and Elevation at the level's height above the building), each level's
  * storey height in a `CadCraft_Level` property set (IFC has no height attribute; walls drawn later read it).
@@ -80,7 +80,7 @@ export function newBuilding({ name, siteName, levels, author = '', fileName = 'b
   const person = add(`IFCPERSON($,${S(author || '')},$,$,$,$,$,$)`);
   const org = add(`IFCORGANIZATION($,${S('CadCraft')},$,$,$)`);   // i18n-ignore: the maker named in the file
   const po = add(`IFCPERSONANDORGANIZATION(${person},${org},$)`);
-  const appl = add(`IFCAPPLICATION(${org},${S(version || 'dev')},${S('BimCraft')},${S('BimCraft')})`);   // i18n-ignore: product names in the file
+  const appl = add(`IFCAPPLICATION(${org},${S(version || 'dev')},${S('Bildra')},${S('Bildra')})`);   // i18n-ignore: product names in the file
   const oh = add(`IFCOWNERHISTORY(${po},${appl},$,.ADDED.,$,$,$,${ts})`);
 
   const units = [
@@ -125,7 +125,7 @@ export function newBuilding({ name, siteName, levels, author = '', fileName = 'b
     'ISO-10303-21;',
     'HEADER;',
     "FILE_DESCRIPTION(('ViewDefinition [DesignTransferView]'),'2;1');",
-    `FILE_NAME(${S(fileName)},'${iso}',(${S(author || '')}),(''),'BimCraft','BimCraft','');`,   // i18n-ignore: STEP header fields
+    `FILE_NAME(${S(fileName)},'${iso}',(${S(author || '')}),(''),'Bildra','Bildra','');`,   // i18n-ignore: STEP header fields
     "FILE_SCHEMA(('IFC4'));",
     'ENDSEC;',
     'DATA;',

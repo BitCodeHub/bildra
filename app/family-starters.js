@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * family-starters.js — the families BimCraft starts with (0.6 DC.114, session bim-families_PART_2). No DOM.
+ * family-starters.js — the families Bildra starts with (0.6 DC.114, session bim-families_PART_2). No DOM.
  *
  *   starterRecipe(key) → a family recipe (family-model.js format) for a starter door / window kind of model-openings.js
  *                        (DOOR_TYPES / WINDOW_TYPES keys), or for a starter furniture family (STARTER_FURNITURE keys)

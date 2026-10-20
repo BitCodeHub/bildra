@@ -2,7 +2,7 @@
 /**
  * model-trace.js — from a traced drawing to walls (0.6 DF.23, session `bim-draw`): walls from a DWG / DXF's lines and
  * polylines on chosen layers, doors and windows from chosen blocks, and the drawing kept as a reference underlay on its level.
- * No DOM: bin/test-bimcraft.mjs --draw06 runs it in Node. The drawing is read by BimCraft's own cc-dwg copy (dwg/read.js) or
+ * No DOM: bin/test-bimcraft.mjs --draw06 runs it in Node. The drawing is read by Bildra's own cc-dwg copy (dwg/read.js) or
  * dxf-model.js — the same model either way. Plan millimetres.
  *
  *   drawingParts(model, { unitMm }) → { unitMm, layers: [{ name, segs, curved }], blocks: [{ name, count }], segs: Map(layer →

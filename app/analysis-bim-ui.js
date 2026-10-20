@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * analysis-bim-ui.js — BimCraft's Analysis tab (0.6 LC.4, session lc-structure): the shared frame analysis panel
+ * analysis-bim-ui.js — Bildra's Analysis tab (0.6 LC.4, session lc-structure): the shared frame analysis panel
  * (frame/frame-panel.js, the same in DetailCraft) on the open IFC's beams, columns and members. analysis-bim.js reads
  * the model and keeps the settings in it (one undo step each, saved with the IFC); results are drawn on the 3D view in
  * a group of their own. An analysis aid, not a code check.

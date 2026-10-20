@@ -30,7 +30,7 @@ The plan shows each drawn wall's length along its outside face (an inside wall: 
 
 1. Show the level you want and set the units in the **Levels** panel.
 2. Click {{ui:Print}} in the model bar.
-3. BimCraft saves "<file> — <level>.pdf": the plan in black and white at the largest standard scale that fits the page (1/4" = 1'-0", 1/8" = 1'-0" … on Letter in feet and inches; 1:50, 1:100 … on A4 in millimeters), with the walls filled, doors, windows, room names and areas, dimensions, and a title strip with the level, the file, the cut height, the date and the scale.
+3. Bildra saves "<file> — <level>.pdf": the plan in black and white at the largest standard scale that fits the page (1/4" = 1'-0", 1/8" = 1'-0" … on Letter in feet and inches; 1:50, 1:100 … on A4 in millimeters), with the walls filled, doors, windows, room names and areas, dimensions, and a title strip with the level, the file, the cut height, the date and the scale.
 
 The PDF is drawn as lines and text, so it stays sharp at any zoom and its text can be searched.
 

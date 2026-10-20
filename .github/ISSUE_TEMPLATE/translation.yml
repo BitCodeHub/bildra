@@ -1,5 +1,5 @@
 name: Translation
-description: Offer or improve a translation of BimCraft
+description: Offer or improve a translation of Bildra
 labels: [translation]
 body:
   - type: input

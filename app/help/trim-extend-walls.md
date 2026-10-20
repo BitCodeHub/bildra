@@ -14,7 +14,7 @@ Tidy the walls you drew: cut back a wall that runs past another, lengthen one th
 
 1. Turn on {{ui:Draw}} and choose the level in the plan's level list.
 2. **Trim or extend to a wall:** choose {{ui:Modify}} › {{ui:Trim / extend}}. Click the wall to trim or extend to (the edge), then click each wall you want to change. A wall that runs past the edge is cut back to it, and the part you click is the part that stays; a wall that stops short is lengthened until it meets the edge. The edge stays chosen, so you can click several walls one after the other. Press {{key:Esc}} to choose another edge.
-3. **Join two walls at a corner:** choose {{ui:Modify}} › {{ui:Corner}}, click the first wall, then the second. Both run to the point where they meet, and BimCraft cleans the corner. When a wall crosses the other one, the part you clicked stays.
+3. **Join two walls at a corner:** choose {{ui:Modify}} › {{ui:Corner}}, click the first wall, then the second. Both run to the point where they meet, and Bildra cleans the corner. When a wall crosses the other one, the part you clicked stays.
 4. Press {{key:Esc}} to start again, or {{key:V}} to go back to {{ui:Select}}.
 
 ## What you should see
@@ -27,7 +27,7 @@ Tidy the walls you drew: cut back a wall that runs past another, lengthen one th
 ## Good to know
 
 - Walls are drawn on their center line, so they are trimmed and extended along it: a wall meets the other wall's center line, and the joint is cleaned into a T or an L.
-- BimCraft says why when it cannot do it: the two walls are parallel, the wall's line passes beside the other wall, a door or window is in the way (move or delete it first), or what is left would be shorter than 50 mm.
-- Only walls drawn in BimCraft can be trimmed or extended.
+- Bildra says why when it cannot do it: the two walls are parallel, the wall's line passes beside the other wall, a door or window is in the way (move or delete it first), or what is left would be shorter than 50 mm.
+- Only walls drawn in Bildra can be trimmed or extended.
 
 See also [Draw walls](topic:draw-walls) and [Change a wall, door or window](topic:change-a-wall-or-door).

@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
  * maplayers.js — map layers (picture + world file, XYZ tiles, WMS, WMTS, ArcGIS services) under CadCraft's model space and on
- * the ground of BimCraft's 3D view (0.5 SG.3, suggestion #572). Canonical in cadcraft/dev; BimCraft carries a byte-identical
+ * the ground of Bildra's 3D view (0.5 SG.3, suggestion #572). Canonical in cadcraft/dev; Bildra carries a byte-identical
  * copy (`node tools/maplayers/sync.mjs [--check]`, which also copies CivilCraft's DOM-free basemap.js + xml.js). Adapted from
  * CivilCraft's gis-map-ui.js (GIS builder C): the same fetching, cache, warping and Map dialog, behind a small host, so it is
  * not tied to a CivilCraft project.
@@ -10,10 +10,10 @@
  *   host = {
  *     root                    the element the dialog is added to · attrib: the element the attribution line goes in
  *     load() → { layers: [records], internet: bool }   the saved layers (records as basemap.js; pictures are not saved)
- *     save({ layers, internet })   keep them (CadCraft and BimCraft: localStorage; the host keeps its system itself)
+ *     save({ layers, internet })   keep them (CadCraft and Bildra: localStorage; the host keeps its system itself)
  *     crs() → crs | null      the "project" system the layers are placed in (crs.js shape, may carry `local`); null = none
  *     canSetCrs               true: the dialog offers a system and a placement (CadCraft: the drawing's); false: the host's
- *                              own (BimCraft: the model's IfcProjectedCRS)
+ *                              own (Bildra: the model's IfcProjectedCRS)
  *     setCrs({ code, place } | null)   (canSetCrs) the dialog's choice: an EPSG code and where the drawing sits on it · crsHelp: text shown when there is no system
  *     invalidate()            redraw · say(text) · busy(text) · ask({ title, text, buttons }) → key · refocus() · fit(box)
  *   }

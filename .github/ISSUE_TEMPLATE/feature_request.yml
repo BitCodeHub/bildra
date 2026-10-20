@@ -1,5 +1,5 @@
 name: Feature request
-description: A tool or workflow you need in BimCraft
+description: A tool or workflow you need in Bildra
 labels: [enhancement]
 body:
   - type: textarea

@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /* i18n-ignore-file: tool definitions and results are read by the assistant (MCP), not shown on the page (AGENTS-SPEC §5) */
 /**
- * bim-agent.js — BimCraft's live tools for AI assistants and scripts (0.4 X.7; docs/AGENTS-SPEC.md §5.2, §6.3). No DOM:
+ * bim-agent.js — Bildra's live tools for AI assistants and scripts (0.4 X.7; docs/AGENTS-SPEC.md §5.2, §6.3). No DOM:
  * bin/test-bimcraft.mjs --agent runs them in Node through host.js's dispatcher on the fixture's property index.
  *
  *   bimTools(app) → [tool definitions] for host.control.tool(def) (one call each; each returns its unregister function)
@@ -11,9 +11,9 @@
  *                              'show_all' — the Show menu's own calls, so the person sees the same as after the menu
  *     app.name()             → the open model's file name
  *
- * Tools (ids are BimCraft's element keys, the same numbers in every tool; guid is the IFC GlobalId):
+ * Tools (ids are Bildra's element keys, the same numbers in every tool; guid is the IFC GlobalId):
  *   elements_find      read   class?, storey?, name? (contains), property? {set?, name, equals? | contains?}, rules?
- *                             (BimCraft's own Find rules: [{field, op, value}]), mode all|any, offset, limit ≤ 500
+ *                             (Bildra's own Find rules: [{field, op, value}]), mode all|any, offset, limit ≤ 500
  *                             → {total, offset, elements: [{id, guid, class, name, storey, type}]}
  *   elements_isolate   edit   ids? or the same filters as elements_find, how isolate|ghost|hide|show_all → {how, elements,
  *                             hidden}; visibility only: the model is not changed, so there is no undo step
@@ -33,7 +33,7 @@ const FILTERS = {
     required: ['name'], additionalProperties: false,
   },
   rules: {
-    type: 'array', maxItems: 20, description: 'BimCraft Find rules; field = cls, type, storey, material, name, longname, objtype, tag, predefined, guid or p:<Set>.<Property>.',
+    type: 'array', maxItems: 20, description: 'Bildra Find rules; field = cls, type, storey, material, name, longname, objtype, tag, predefined, guid or p:<Set>.<Property>.',
     items: { type: 'object', properties: { field: { type: 'string' }, op: { type: 'string', enum: OPS }, value: { type: 'string' } }, required: ['field', 'op'], additionalProperties: false },
   },
   mode: { type: 'string', enum: ['all', 'any'], description: 'all = every rule must match (default), any = one is enough.' },
@@ -76,7 +76,7 @@ export function describe(ix, key) {
 }
 
 export function bimTools(app) {
-  const model = () => { const ix = app.index(); if (!ix) throw new ToolError('No IFC model is open in BimCraft. Open one first (the person opens files; there is no open tool).'); return ix; };
+  const model = () => { const ix = app.index(); if (!ix) throw new ToolError('No IFC model is open in Bildra. Open one first (the person opens files; there is no open tool).'); return ix; };
   const keyOf = (ix, a) => {
     if (a.id !== undefined) { if (!ix.keys.includes(a.id)) throw new ToolError('No element ' + a.id + ' in ' + app.name() + '.'); return a.id; }
     if (a.guid) { const k = ix.keys.find((x) => ix.value('guid', x - ix.keyBase) === a.guid); if (k === undefined) throw new ToolError('No element with GlobalId ' + a.guid + '.'); return k; }
