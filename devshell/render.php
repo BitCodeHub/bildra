@@ -174,6 +174,7 @@ ob_start();
     <button type="submit" name="space" value="model" aria-pressed="false" title="Model space: dark theme">Model</button>
   </form>
 </header>
+<?php $__editUrl = null; $__rvtPreview = $R . "assets/vendor/rvt/0.6.1/rvt.js";   // Bildra: Revit projects open in 3D ?>
 <?php require "$__appDir/ui.inc"; ?>
 <?php require __DIR__ . '/site/core/components/app-settings.inc'; ?>
 <aside class="help-panel" data-help-panel role="complementary" aria-label="Help" data-os-default="windows"<?= $edition !== null ? ' data-site="' . e($__site) . '"' : '' ?> hidden></aside>

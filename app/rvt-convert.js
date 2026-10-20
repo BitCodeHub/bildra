@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: Apache-2.0 */
 /**
- * rvt-convert.js — the RVT preview (0.5 SG.8 b), lab only. A project file saved in 2023–2026 is converted to IFC4 by the
+ * rvt-convert.js — opening a Revit project in 3D (0.5 SG.8 b; on in Bildra, not lab only). A project file saved in 2023–2026 is converted to IFC4 by the
  * `rvt` crate's WebAssembly (assets/vendor/rvt/<version>/, Apache-2.0, built from source — see its SOURCE.txt) in a
  * worker (rvt-convert-worker.js), and the page opens the IFC with cc-ifc like any other. DOM-free: Node runs it too
  * (bin/test-rvt-preview.mjs; browser: tools/rvt-preview-test/browser.mjs). The page side is bimcraft.js (the card's "Preview the model" button) and the
@@ -20,8 +20,12 @@
  *   fabric — false when no wall, floor, roof or curtain wall was read (only fixtures and equipment came in).
  */
 
-/** What each release gives, from the crate's README (0.4.0), checked here on the 2023 and 2024 samples. */
-export const PREVIEW_RELEASES = Object.freeze({ 2023: 'boxes', 2024: 'typed', 2025: 'typed', 2026: 'experimental' });
+/** What each release gives, from the crate's README (0.6.1), checked here on the 2023 and 2024 samples: 2015 to 2022, 2026
+ *  and 2027 are the crate's experimental releases. */
+export const PREVIEW_RELEASES = Object.freeze({
+  2015: 'experimental', 2016: 'experimental', 2017: 'experimental', 2018: 'experimental', 2019: 'experimental',
+  2020: 'experimental', 2021: 'experimental', 2022: 'experimental',
+  2023: 'boxes', 2024: 'typed', 2025: 'typed', 2026: 'experimental', 2027: 'experimental' });
 
 export function previewSupport(info, fileName = info?.fileName || '') {
   const ext = String(fileName).split('.').pop().toLowerCase();
@@ -33,7 +37,7 @@ export function previewSupport(info, fileName = info?.fileName || '') {
   if (ext === 'rte') return no('template');
   if (!release) return no('unknown');
   const level = PREVIEW_RELEASES[release] || null;
-  if (!level) return no(release < 2023 ? 'old' : 'unknown');
+  if (!level) return no(release < 2015 ? 'old' : 'unknown');
   return { ok: true, release, level, why: null };
 }
 

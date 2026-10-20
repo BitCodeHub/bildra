@@ -2111,6 +2111,8 @@ function init(root) {
     rvtOpen = { file, path, info };
     showStage('rvt');
     renderCard(info, fromFolder(path) ? path : null);
+    // Bildra: a project the rvt library reads opens in 3D at once; the card stays if it can't.
+    const autoOpen = root?.dataset.rvtPreview && previewSupport(info, file.name).ok;
     ui.infoH.textContent = t('info.h.file');
     fillDl(ui.infoDl, [
       [t('info.file'), file.name], [t('info.size'), bytes(file.size)], [t('info.kind'), info.kind],
@@ -2125,6 +2127,7 @@ function init(root) {
     ui.props.replaceChildren(el('p', { className: 'bc-muted' }, t('rvt.props.need')));
     // Not "Opened": a partial open is not a success, and the line stays until the next action.
     status(info.partial ? t('rvt.partly', { file: file.name }) : t('rvt.opened', { file: file.name }), false, !info.partial);
+    if (autoOpen) await previewRevit().catch((e) => status(e.message || String(e), true));
   }
 
   /** 0.5 SG.8 (b), lab only (ui.inc data-rvt-preview = the library's pinned rvt.js): the card's offer to read the model with the rvt library, or why

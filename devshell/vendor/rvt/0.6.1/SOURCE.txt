@@ -1,0 +1,3 @@
+rvt 0.6.1 (Apache-2.0), https://github.com/DrunkOnJava/rvt-rs, tag v0.6.1 (ab8a778ce35a411ea153a4bf0ea05a8778d9d7bb).
+Built here: cargo build --release -p rvt-wasm --target wasm32-unknown-unknown, then
+wasm-bindgen 0.2.118 --target web --out-name rvt (no wasm-opt, as the crate's own config says).

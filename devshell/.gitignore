@@ -1,2 +1,3 @@
-# libraries serve.mjs downloads by version
-vendor/
+# libraries serve.mjs downloads by version; rvt is built from source here (vendor/rvt/*/SOURCE.txt)
+vendor/*
+!vendor/rvt/
