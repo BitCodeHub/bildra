@@ -5187,5 +5187,22 @@
   "res.lx.empty": "{name} has fewer than three points: left out.",
   "res.lx.choose": "Which surface is the ground?",
   "res.lx.option": "{name} ({n} points)",
-  "res.lx.done": "The ground is {name} from LandXML ({n} points, its own triangles)."
+  "res.lx.done": "The ground is {name} from LandXML ({n} points, its own triangles).",
+  "code.title": "California code check",
+  "code.intro": "Checks this model against the {edition}: stairs, handrails, guards, the egress door, hallways, room sizes, ceilings, escape windows and smoke alarms. These are state minimums; your city can require more. A designer or the building official decides.",
+  "code.run": "Run the code check",
+  "code.done": "Code check: {fail} to fix, {check} to confirm, {pass} pass.",
+  "code.sum.fail": "To fix",
+  "code.sum.check": "To confirm",
+  "code.sum.pass": "Pass",
+  "code.status.pass": "Pass",
+  "code.status.fail": "Fix",
+  "code.status.check": "Confirm",
+  "code.sources": "Sources",
+  "code.onesource": "one source so far",
+  "code.passes": "{n} that pass",
+  "code.rooms.unknown": "{n} rooms are not named by use (such as \"Room 1\"). Name them Bedroom, Living room, Kitchen, Bath, Hall and so on, so the room rules can check them.",
+  "code.notchecked": "Not checked by Bildra",
+  "code.notchecked.hint": "These rules in the same sections cannot be read from the model. Check them on the drawings.",
+  "code.empty": "Nothing in this model for {n} rules"
 }

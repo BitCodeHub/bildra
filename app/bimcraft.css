@@ -852,3 +852,20 @@ html.cc-phone .bc-status { max-width: calc(100% - 7rem) !important; }
 /* 0.6 round 2 (bim-comforts_PART_2): a room's interior elevations — the sheet as it prints, in a dialog */
 .bc-cf-ie-stage { max-height: 70vh; overflow: auto; border: var(--pen-1) solid var(--line); margin: .5rem 0 .75rem; }
 .bc-cf-ie-stage svg { display: block; width: 100%; height: auto; }
+
+/* Bildra: California code check (code-check.js) — fail / confirm / pass in the layer colours */
+.bc-code-sum { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0; }
+.bc-code-chip { display: inline-block; padding: 0 .4rem; border: var(--pen-1) solid currentColor; border-radius: var(--radius); font-size: var(--fs-sm); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bc-code-chip.is-fail { color: var(--layer-red); }
+.bc-code-chip.is-check { color: var(--layer-ochre); }
+.bc-code-chip.is-pass { color: var(--layer-green); }
+.bc-code-counts { display: inline-flex; gap: .25rem; }
+.bc-code-note { padding: .4rem .5rem; border-left: var(--pen-3) solid var(--layer-ochre); font-size: var(--fs-sm); }
+.bc-code-rule { margin: .2rem 0; font-size: var(--fs-sm); }
+.bc-code-small { margin: .2rem 0; font-size: .8125rem; }
+.bc-code-src a { color: var(--ink-2); }
+.bc-code-items { list-style: none; margin: .25rem 0; padding: 0; font-size: var(--fs-sm); }
+.bc-code-items > li { padding: .2rem 0; }
+.bc-code-measured { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.bc-code-why { display: block; color: var(--ink-2); font-size: .8125rem; }
+.bc-code-passed > summary { cursor: pointer; font-size: .8125rem; color: var(--ink-2); }

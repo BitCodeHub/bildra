@@ -13,7 +13,7 @@
  *
  * A drawn railing is IfcRailing (IFC4 .GUARDRAIL. or .HANDRAIL.) contained in its level, CadCraft_Railing (Level, Points,
  * Height, Base, Kind), Qto: CadCraft_RailingQuantities (Length, Balusters, Posts). Defaults (labelled, not engineering):
- * guards 36" high (42" is common where a drop is higher or the code asks for it), handrails 36" over the stair nosings,
+ * guards 42" high (Bildra: the 2025 California Residential Code, R321.1.2), handrails 36" over the stair nosings,
  * balusters 1½" square with gaps under 4", posts 3½" square, a 2" × 2" top rail.
  */
 import { ModelWriter, round } from './model-write.js';
@@ -24,6 +24,8 @@ import { t as tr } from './i18n.js';
 const IN = 25.4;
 export const RAIL_PSET = 'CadCraft_Railing';
 export const RAIL_DEFAULTS = { height: 36 * IN, baluster: 1.5 * IN, gap: 4 * IN - 0.5, post: 3.5 * IN, rail: 2 * IN };
+/** Bildra: a drawn guard is 42" high, the 2025 California Residential Code's R321.1.2 (code-rules-ca.js). */
+export const GUARD_HEIGHT = 42 * IN;
 
 export function railingParts(path3, o = {}) {
   const { height, baluster, gap, post, rail } = { ...RAIL_DEFAULTS, ...o };
@@ -98,7 +100,8 @@ function writeRailing(w, r) {
 const op = (fn) => (ed) => new ModelWriter(ed.W, ed.api, ed.mid).run(fn);
 const fail = (key) => { throw Object.assign(new Error(key), { key }); };
 export function placeRailing(spec) {
-  const s = { height: RAIL_DEFAULTS.height, base: 0, kind: 'guard', ...spec, points: spec.points.map((p) => [p[0], p[1]]) };
+  const kind = spec.kind || 'guard';
+  const s = { height: kind === 'guard' ? GUARD_HEIGHT : RAIL_DEFAULTS.height, base: 0, kind, ...spec, points: spec.points.map((p) => [p[0], p[1]]) };
   return op((w) => {
     if (s.points.length < 2) fail('res.err.rail');
     if (!(s.height >= 300)) fail('model.err.length');

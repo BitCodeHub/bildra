@@ -145,6 +145,13 @@ $__rvtPreview = $__rvtVer !== '' ? "/assets/vendor/$__rvtLib/$__rvtVer/rvt.js" :
         <div data-checks></div>
       </details>
     </section>
+    <section class="bc-sec" data-code-sec hidden>
+      <?php /* Bildra: California code check (code-check.js, code-rules-ca.js); built when opened. */ ?>
+      <details class="bc-find-details" data-code-details>
+        <summary class="bc-h"><?= Lang::e('code.title') ?></summary>
+        <div data-code></div>
+      </details>
+    </section>
     <section class="bc-sec" data-clash-sec hidden>
       <?php /* Clash check (0.4 B17): built when opened; bimcraft.js "Clash check", clash.js in clash-worker.js. */ ?>
       <details class="bc-find-details" data-clash-details>

@@ -43,7 +43,7 @@ import { placedItems } from './model-move.js';
 const interiorCtx = new Map();   // per setInput: a level's triangles, rooms and items for its interior elevations   // 0.6 round 2 (bim-comforts_PART_2): dimensions, level marks, tags
 import { wallGeom } from './model-arcs.js';
 import { STAIR_KINDS, STAIR_DEFAULTS, STAIR_LIMITS, stairLayout, readStairs, placeStair, changeStair, removeStairs, stairHeight, SPIRAL_DEFAULTS } from './res-stair.js';
-import { RAIL_DEFAULTS, railingParts, readRailings, placeRailing, changeRailing, removeRailings } from './res-railing.js';
+import { RAIL_DEFAULTS, GUARD_HEIGHT, railingParts, readRailings, placeRailing, changeRailing, removeRailings } from './res-railing.js';
 import { FRAME_DEFAULTS, readFraming, frameHosts, changeFraming, removeFraming, keepPiece, lumberList, frameWall, LUMBER } from './res-framing.js';
 import { readOpenings, openingType, openingTypeName } from './model-openings.js';
 import { wallType, typeName as wallTypeName } from './model-walls.js';
@@ -72,7 +72,7 @@ function inv4m(m) {
 
 export function mountRes(modelUi) {
   if (!modelUi?.extend) return null;
-  const R = { planes: [], plane: { pitch: Math.atan(4 / 12) / D2R, base: null, pts: null, at: null }, founds: [], found: { kind: 'slab', hover: null }, stairs: [], stair: { ...STAIR_DEFAULTS, start: null, at: null }, rails: [], rail: { kind: 'guard', height: RAIL_DEFAULTS.height, pts: null, at: null }, frames: [], frame: { ...FRAME_DEFAULTS, show: true, see: false, hover: null }, terrain: null, pads: [], hards: [], tr: { spots: [], z: 0, unit: 'ft', tinReady: false, fin: null, finKey: null, contours: null, pad: { ...PAD_DEFAULTS }, hard: { kind: 'walk', pts: null, at: null } }, devs: [], el: { kind: 'socket.double', circuit: '', height: null, at: null, link: null }, secs: [], sec: { a: null, at: null }, sheets: null, counters: [], counter: { overhang: COUNTER_DEFAULTS.overhang, thickness: COUNTER_DEFAULTS.thickness, hover: null }, cabinets: [] };
+  const R = { planes: [], plane: { pitch: Math.atan(4 / 12) / D2R, base: null, pts: null, at: null }, founds: [], found: { kind: 'slab', hover: null }, stairs: [], stair: { ...STAIR_DEFAULTS, start: null, at: null }, rails: [], rail: { kind: 'guard', height: GUARD_HEIGHT, pts: null, at: null }, frames: [], frame: { ...FRAME_DEFAULTS, show: true, see: false, hover: null }, terrain: null, pads: [], hards: [], tr: { spots: [], z: 0, unit: 'ft', tinReady: false, fin: null, finKey: null, contours: null, pad: { ...PAD_DEFAULTS }, hard: { kind: 'walk', pts: null, at: null } }, devs: [], el: { kind: 'socket.double', circuit: '', height: null, at: null, link: null }, secs: [], sec: { a: null, at: null }, sheets: null, counters: [], counter: { overhang: COUNTER_DEFAULTS.overhang, thickness: COUNTER_DEFAULTS.thickness, hover: null }, cabinets: [] };
   let A = null;   // the plan's API (model-ui.js extend)
   const t = (k, v) => A.t(k, v);
   /** A stair kind's name (0.6 round 2: the spiral stair's words are comforts.* keys, beside the res.* set); needs t, so inside. */
@@ -144,7 +144,7 @@ export function mountRes(modelUi) {
         if (A.S.tool === 'stair' && A.root.querySelector('[data-model-hint]')) A.root.querySelector('[data-model-hint]').textContent = t(e.target.value === 'spiral' ? 'comforts.hint.spiral' : 'res.hint.stair');
       });
       sw?.addEventListener('change', () => { const mm = parseLen(sw.value, A.units()); if (mm >= 500) R.stair.width = mm; else A.host.status(t('res.err.stairwidth'), true); sw.value = L(R.stair.width); A.drawOverlay(); });
-      root.querySelector('[data-res-rlkind]')?.addEventListener('change', (e) => { R.rail.kind = e.target.value; R.rail.height = e.target.value === 'handrail' ? 36 * 25.4 : RAIL_DEFAULTS.height; const rh = root.querySelector('[data-res-rlheight]'); if (rh) rh.value = L(R.rail.height); });
+      root.querySelector('[data-res-rlkind]')?.addEventListener('change', (e) => { R.rail.kind = e.target.value; R.rail.height = e.target.value === 'handrail' ? RAIL_DEFAULTS.height : GUARD_HEIGHT; const rh = root.querySelector('[data-res-rlheight]'); if (rh) rh.value = L(R.rail.height); });
       const rh = root.querySelector('[data-res-rlheight]');
       rh?.addEventListener('change', () => { const mm = parseLen(rh.value, A.units()); if (mm >= 300) R.rail.height = mm; else A.host.status(t('model.err.length'), true); rh.value = L(R.rail.height); });
     }

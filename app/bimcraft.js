@@ -137,7 +137,7 @@ import { CLIP_KEY, placementClip, elementsClip, pasteMove, readClip, writeClip, 
   besideSpot, pickStorey, elementText, elementCsv } from './clipboard.js';
 import { boundsOf } from './ifc-vis.js';
 import { cleanVolume, FACE_AXES, MAX_CELLS, MAX_PLANES, MAX_TILT, planeFromPoint, boxGrips, dragDelta, dragBox } from './section-volume.js';
-import { inv4, placementMatrix } from './ifc-util.js';
+import { inv4, placementMatrix, lengthUnitMm, ids as idsOf } from './ifc-util.js';
 import { distance, ifcDelta, fmtLength, fmtArea } from './measure.js';
 import { readGeoref, fileToMap, siteLonLat, datumOf, dms, viewerToFile } from './ifc-geo.js';
 import { writeBcf, readBcf, newGuid, toIfcPoint, toIfcDir, fromIfcPoint, fromIfcDir } from './bcf.js';
@@ -148,6 +148,8 @@ import { parseTasks, matchTasks, statusAt, span, templateCsv, dayText, groupsOf,
 import { find, cleanSets, suggestions, OPS, SETS_KEY } from './ifc-find.js';
 import { elementsOf, clashes } from './clash.js';
 import { runChecks, cleanRules } from './ifc-checks.js';
+import { gatherModel, runCodeCheck, wholesOf } from './code-check.js';   // Bildra: California code check
+import { SOURCES as CODE_SOURCES } from './code-rules-ca.js';
 import { totals, totalsCsv, quantityFields, MAX_GROUP, elementRows, spaceSchedule, tableCsv } from './ifc-qto.js';
 import { TreeView } from './tree-view.js';
 import { bimTools } from './bim-agent.js';
@@ -186,6 +188,7 @@ function init(root) {
     fdSec: $('[data-4d-sec]'), fd: $('[data-4d]'), fdDetails: $('[data-4d-details]'), fdInput: $('[data-4d-input]'),
     qtoSec: $('[data-qto-sec]'), qto: $('[data-qto]'), qtoDetails: $('[data-qto-details]'),
     checksSec: $('[data-checks-sec]'), checks: $('[data-checks]'), checksDetails: $('[data-checks-details]'),
+    codeSec: $('[data-code-sec]'), code: $('[data-code]'), codeDetails: $('[data-code-details]'),
     clashSec: $('[data-clash-sec]'), clash: $('[data-clash]'), clashDetails: $('[data-clash-details]'),
     library: $('[data-library]'), color: $('[data-color]'), colorInput: $('[data-color-input]'), findSec: $('[data-find-sec]'), find: $('[data-find]'), findDetails: $('[data-find-details]'), issues: $('[data-issues]'), bcfInput: $('[data-bcf-input]'),
     cmp: $('[data-compare]'), cmpDetails: $('[data-compare-details]'),
@@ -720,6 +723,9 @@ function init(root) {
     checkRes = null;
     if (ui.checksSec) ui.checksSec.hidden = false;
     renderChecks();
+    codeRes = null;
+    if (ui.codeSec) ui.codeSec.hidden = false;
+    renderCode();
     qtoSums = null; qtoGroups = ['cls'];
     if (ui.qtoSec) ui.qtoSec.hidden = false;
     renderQto();
@@ -1217,6 +1223,64 @@ function init(root) {
   }
   ui.checksDetails?.addEventListener('toggle', () => { if (ui.checksDetails.open) renderChecks(); });
   window.bimcraftChecks = { run: () => { ui.checksDetails.open = true; runModelChecks(); return checkRes; } };   // for tests
+
+  // ---- California code check (Bildra; code-check.js, code-rules-ca.js) ----
+  let codeRes = null;
+  function runCode() {
+    const ent = cur();
+    if (!ent || !model) return;
+    const { api } = ent.ifc, mid = ent.model.modelID;
+    const aggregates = idsOf(api, mid, 'IFCRELAGGREGATES').map((r) => { const l = api.GetLine(mid, r, false); return [l.RelatingObject?.value, (l.RelatedObjects || []).map((h) => h.value)]; });
+    const data = gatherModel({ ix: index(), spaceIx: spacesIndex(), model, unitMm: lengthUnitMm(api, mid), line: (id) => api.GetLine(mid, id, false), aggregates, wholes: wholesOf(api, mid, aggregates) });
+    codeRes = runCodeCheck(data);
+    renderCode();
+    const n = { pass: 0, fail: 0, check: 0 };
+    for (const r of codeRes.rules) for (const k of Object.keys(n)) n[k] += r.counts[k];
+    status(t('code.done', n));
+  }
+  function renderCode() {
+    if (!ui.code) return;
+    ui.codeSec.hidden = mode !== 'ifc' || !model;
+    if (ui.codeSec.hidden || !ui.codeDetails.open) return;
+    const kids = [el('p', { className: 'bc-muted' }, t('code.intro', { edition: '2025 California Residential Code' })),   // i18n-ignore: the code's name
+      el('div', { className: 'bc-find-row' }, el('button', { type: 'button', className: 'btn-plot btn-sm-cc', 'data-code-run': '', onClick: () => runCode() }, t('code.run')))];
+    if (codeRes) {
+      const tot = { fail: 0, check: 0, pass: 0 };
+      for (const r of codeRes.rules) for (const k of Object.keys(tot)) tot[k] += r.counts[k];
+      kids.push(el('p', { className: 'bc-code-sum', 'data-code-sum': '' }, ...['fail', 'check', 'pass'].map((k) => el('span', { className: 'bc-code-chip is-' + k }, t('code.sum.' + k) + ' ' + tot[k]))));
+      if (codeRes.rooms.unknown) kids.push(el('p', { className: 'bc-code-note', 'data-code-rooms': '' }, t('code.rooms.unknown', { n: codeRes.rooms.unknown })));
+      const order = { fail: 0, check: 1, pass: 2 };
+      const row = (i) => el('li', { className: 'bc-code-item is-' + i.status },
+        el('span', { className: 'bc-code-chip is-' + i.status }, t('code.status.' + i.status)), ' ',
+        i.keys.length ? el('button', { type: 'button', className: 'bc-linkbtn', 'data-code-pick': '', onClick: () => pickKeys(i.keys) }, i.label) : el('span', {}, i.label),
+        i.measured ? el('span', { className: 'bc-code-measured' }, ' · ' + i.measured) : null,
+        i.why ? el('span', { className: 'bc-code-why' }, i.why) : null);
+      // fails first, then rules to confirm, then passes; rules with nothing in this model fold away at the end
+      const rank = (r) => (r.counts.fail ? 0 : r.counts.check ? 1 : r.counts.pass ? 2 : 3);
+      const ruled = [...codeRes.rules].sort((a, b) => rank(a) - rank(b)), empty = ruled.filter((r) => rank(r) === 3);
+      kids.push(el('ul', { className: 'bc-checks-res bc-code-res', 'data-code-res': '' }, ruled.filter((r) => rank(r) < 3).map((r) => {
+        const items = [...r.items].sort((a, b) => order[a.status] - order[b.status]);
+        const open = items.filter((i) => i.status !== 'pass'), passed = items.filter((i) => i.status === 'pass');
+        return el('li', { 'data-code-rule': r.rule.id },
+          el('div', { className: 'bc-check-head' }, el('span', {}, r.rule.section),
+            el('span', { className: 'bc-code-counts' }, ...['fail', 'check', 'pass'].filter((k) => r.counts[k]).map((k) => el('span', { className: 'bc-code-chip is-' + k }, String(r.counts[k]))))),
+          el('p', { className: 'bc-code-rule' }, r.rule.rule),
+          r.rule.note ? el('p', { className: 'bc-muted bc-code-small' }, r.rule.note) : null,
+          open.length ? el('ul', { className: 'bc-code-items' }, open.map(row)) : null,
+          passed.length ? el('details', { className: 'bc-code-passed' }, el('summary', {}, t('code.passes', { n: passed.length })), el('ul', { className: 'bc-code-items' }, passed.map(row))) : null,
+          el('p', { className: 'bc-code-small bc-code-src' }, t('code.sources') + (r.rule.sources.length === 1 ? ' (' + t('code.onesource') + ')' : '') + ': ',
+            ...r.rule.sources.flatMap((k, j) => [j ? ' · ' : '', el('a', { href: CODE_SOURCES[k].url, target: '_blank', rel: 'noopener', title: CODE_SOURCES[k].title }, CODE_SOURCES[k].short)])));
+      })));
+      if (empty.length) kids.push(el('details', { className: 'bc-code-passed', 'data-code-empty': '' }, el('summary', {}, t('code.empty', { n: empty.length })),
+        el('ul', { className: 'bc-code-items' }, empty.map((r) => el('li', {}, el('strong', {}, r.rule.section), ' ' + r.rule.rule)))));
+      kids.push(el('details', { className: 'bc-code-passed', 'data-code-notchecked': '' }, el('summary', {}, t('code.notchecked') + ' (' + codeRes.notChecked.length + ')'),
+        el('p', { className: 'bc-muted bc-code-small' }, t('code.notchecked.hint')),
+        el('ul', { className: 'bc-code-items' }, codeRes.notChecked.map((n) => el('li', {}, el('strong', {}, n.section), ' ' + n.what)))));
+    }
+    ui.code.replaceChildren(el('div', { className: 'bc-find' }, ...kids));
+  }
+  ui.codeDetails?.addEventListener('toggle', () => { if (ui.codeDetails.open) renderCode(); });
+  window.bildraCode = { run: () => { ui.codeDetails.open = true; runCode(); return codeRes; } };   // for tests
 
   // ---- Clash check (0.4 B17) ----
   let clashA = 'pick', clashB = 'all', clashTol = '0.01', clashRes = null, clashRun = null, clashAt = -1, clashMsg = '';
@@ -3512,7 +3576,7 @@ function init(root) {
     if (which !== 'ifc' && which !== 'dwg') mode = 'none';
     if (which !== 'dwg') dwgOpen = which === 'dwg' ? dwgOpen : null;
     if (which !== 'dwg') ui.layers.hidden = true;   // renderLayers() shows it for a drawing
-    if (which !== 'ifc') { ui.treeSec.hidden = true; if (ui.modelsSec) ui.modelsSec.hidden = true; if (ui.findSec) ui.findSec.hidden = true; if (ui.clashSec) ui.clashSec.hidden = true; if (ui.checksSec) ui.checksSec.hidden = true; if (ui.qtoSec) ui.qtoSec.hidden = true; if (ui.fdSec) ui.fdSec.hidden = true; }   // fillTree() / renderModels() show them for a model
+    if (which !== 'ifc') { ui.treeSec.hidden = true; if (ui.modelsSec) ui.modelsSec.hidden = true; if (ui.findSec) ui.findSec.hidden = true; if (ui.clashSec) ui.clashSec.hidden = true; if (ui.checksSec) ui.checksSec.hidden = true; if (ui.codeSec) ui.codeSec.hidden = true; if (ui.qtoSec) ui.qtoSec.hidden = true; if (ui.fdSec) ui.fdSec.hidden = true; }   // fillTree() / renderModels() show them for a model
     if (which === 'ifc' && viewer) viewer.resize();
     if (which === 'dwg' && dwgView) dwgView.resize();
     if (which !== 'ifc') selInfo = null;
